@@ -30,6 +30,7 @@ class CreateUsersTable extends Migration
             'email'=>'maiz@gmail.com',
             'tipo_usuario'=>'1',
             'password'=>bcrypt('123456')
+            
         ]);
     }
 

@@ -95,7 +95,34 @@
                                         </div>
                                     </div>
                                 </div>
-                            </form>
+                             
+                                <div class="row g-3 px -6">
+                                    <div class ="col">
+                                    <h5> Estado</h5>
+                                    <select class="form-select" aria-label="Default select example">
+                                <option selected>active</option>
+                                <option value="1">inactivo</option>
+                                <option value="2">en proceso</option>
+                                </select>
+
+                                    </div>
+                                    <div class ="col">
+                                    <h5> Roles y Permisos</h5>
+                                    <select class="form-select" aria-label="Default select example">
+                                <option selected>administrator</option>
+                                <option value="1"></option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                                </select>
+
+                                    </div>
+                                
+                                    <div class="btn">
+                                    <button class="btn btn-primary me-md-2" type="button"><i class='bx bxs-user-plus'></i>Registrar</button>
+                                    <button class="btn btn-primary" type="button"><i class='bx bxs-left-arrow-square'></i>Atrás</button>
+                                    </div>
+
+                          </form>
                         </div>
                     </div>
                 </div>
