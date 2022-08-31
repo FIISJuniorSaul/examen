@@ -96,8 +96,8 @@
                 <h6 class="dropdown-header d-flex align-items-center dropdown-notifications-header">
                     <em class='bx bxs-user'></em>
                     <div class="dropdown-user-details">
-                        <div class="dropdown-user-details-name">RAYO SAC</div>
-                        <div class="dropdown-user-details-email"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="94e2f8e1faf5d4f5fbf8baf7fbf9">[email&#160;protected]</a></div>
+                        <div class="dropdown-user-details-name"><div class="sidenav-footer-title">{{Auth::user()->name}}</div></div>
+                        <div class="sidenav-footer-title">{{Auth::user()->email}}</div>
                     </div>
                 </h6>
                 <!--<div class="dropdown-divider"></div>-->

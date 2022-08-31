@@ -35,5 +35,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/roles', function () {
         return view('admin.roles.index');
     });
+    Route::get('/infoempresa', function () {
+        return view('admin.infoempresa.modifi');
+    });
 });
 

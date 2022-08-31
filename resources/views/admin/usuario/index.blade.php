@@ -48,7 +48,7 @@
                                         <td>80156048</td>
                                         <td>Maiz</td>
                                         <td>Echevarria</td>
-                                        <td>Junior Saul</td>
+                                        <td>Junior Saul</td>    
                                         <td>76988211</td>
                                         <td>Administrador</td>
                                         <td><div class="badge bg-primary text-white rounded-pill">Activo</div></td>

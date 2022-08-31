@@ -22,7 +22,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/admin/usuario">Usuario</a>
                             <a class="nav-link" href="/admin/roles">Roles/Permiso</a>
-                            <a class="nav-link" href="#">Informacion de la empresa</a>
+                            <a class="nav-link" href="/admin/infoempresa">Informacion de la empresa</a>
 
                         </li>
                     </nav>
