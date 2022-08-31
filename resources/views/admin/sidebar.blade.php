@@ -85,19 +85,9 @@
                     <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
                         <li class="nav-item">
                             <a class="nav-link" href="#">Acerca de nosotros</a>
-
-
                         </li>
                     </nav>
                 </div>
-
-
-
-
-
-
-
-
                 <!-- Divider -->
                 <hr class="sidebar-divider">
             </div>
