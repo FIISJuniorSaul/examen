@@ -57,7 +57,7 @@
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="facturación">
                     <label class="form-check-label" for="facturación">
-                        Facturación
+                        Facturacion
                     </label>
                 </div>
                 <div class="form-check">
