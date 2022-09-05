@@ -23,6 +23,7 @@
                             <a class="nav-link" href="/admin/usuario">Usuario</a>
                             <a class="nav-link" href="/admin/roles">Roles/Permiso</a>
                             <a class="nav-link" href="/admin/infoempresa">Informacion de la empresa</a>
+                            
 
                         </li>
                     </nav>
@@ -36,7 +37,7 @@
                             <div class="collapse" id="collapseOperation" data-bs-parent="#accordionSidenav">
                                 <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Vehiculos</a>
+                                        <a class="nav-link" href={{ route('vehiculos.index') }}>Vehiculos</a>
                                         <a class="nav-link" href="#">Rutas</a>
                                         <a class="nav-link" href="#">Clientes</a>
                                         <a class="nav-link" href="#">Cotizar</a>

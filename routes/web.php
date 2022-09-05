@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\VehiculoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +24,9 @@ Auth::routes();
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
+
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
+    
 
     Route::get('/main', function () {
         return view('admin.desktop');
@@ -40,5 +43,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/infoempresa', function () {
         return view('admin.infoempresa.modifi');
     });
+
 });
 
+Route::resource('vehiculos', VehiculoController::class);
