@@ -20,7 +20,7 @@
                     <div class="card card-header-actions">
                         <div class="card-header">
                             Portafolio
-                            <a href="/admin/roles/addroles" class="btn btn-primary lift"><em
+                            <a href="/admin/configuracion/roles/addroles" class="btn btn-primary lift"><em
                                     class='bx bxs-user-plus'></em>{{ __('Nuevo') }}</a>
                         </div>
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end py-2 px-4">
