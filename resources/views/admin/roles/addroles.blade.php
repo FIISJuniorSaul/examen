@@ -66,6 +66,10 @@
                         Reportes
                     </label>
                 </div>
+                <div class="btn">
+                    <button class="btn btn-primary me-md-2" type="button">Guardar</button>
+                    <button class="btn btn-primary" type="button"><i class='bx bxs-left-arrow-square'></i>Cancelar</button>
+                    </div>
 
         </div>
         </main>
