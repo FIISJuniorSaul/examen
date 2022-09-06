@@ -20093,16 +20093,17 @@ body {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   height: 5rem;
-  background-color: #ffebf6!important;
+  background-color: #212832!important;
 }
 .sidenav .sidenav-footer .sidenav-footer-content {
   font-size: 0.9rem;
 }
 .sidenav .sidenav-footer .sidenav-footer-content .sidenav-footer-subtitle {
-  font-size: 0.75rem;
+  font-size: 0.90rem;
 }
 .sidenav .sidenav-footer .sidenav-footer-content .sidenav-footer-title {
-  font-weight: 500;
+  font-weight: 900;
+  color: #e3ddfa;
 }
 
 .sidenav-dark {
@@ -20183,7 +20184,7 @@ body {
   background-color: rgba(33, 40, 50, 0.05);
 }
 .sidenav-light .sidenav-footer .sidenav-footer-subtitle {
-  color: #69707a;
+  color: #fff;
 }
 .page-header .page-header-content {
   padding-top: 0.4rem;
@@ -21149,4 +21150,8 @@ pre[class*=language-] {
 
 .logo{
     text-align: center;
+}
+.img-profile{
+    border-radius: 200px;
+    border: 2px solid #ffffff;
 }
