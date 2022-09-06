@@ -20,7 +20,7 @@
                     <div class="card card-header-actions">
                         <div class="card-header">
                             Portafolio
-                            <a href="/admin/usuario/add" class="btn btn-primary lift"><em class='bx bxs-user-plus'></em>{{ __('Crear Usuario') }}</a>
+                            <a href="/admin/configuracion/usuario/add" class="btn btn-primary lift"><em class='bx bxs-user-plus'></em>{{ __('Crear Usuario') }}</a>
                         </div>
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end py-2 px-4">
                             <form class="input-group">
@@ -48,7 +48,7 @@
                                         <td>80156048</td>
                                         <td>Maiz</td>
                                         <td>Echevarria</td>
-                                        <td>Junior Saul</td>    
+                                        <td>Junior Saul</td>
                                         <td>76988211</td>
                                         <td>Administrador</td>
                                         <td><div class="badge bg-primary text-white rounded-pill">Activo</div></td>

@@ -26,25 +26,29 @@ Auth::routes();
 
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
-    
+
 
     Route::get('/main', function () {
         return view('admin.desktop');
     });
-    Route::get('/usuario', function () {
-        return view('admin.usuario.index');
+    Route::get('/configuracion/usuario', function () {
+        return view('admin.configuracion.usuario.index');
     });
-    Route::get('/usuario/add', function () {
-        return view('admin.usuario.add');
+    Route::get('/configuracion/usuario/add', function () {
+        return view('admin.configuracion.usuario.add');
     });
-    Route::get('/roles', function () {
-        return view('admin.roles.index');
+    Route::get('/configuracion/roles', function () {
+        return view('admin.configuracion.roles.index');
     });
-    Route::get('/roles/addroles', function () {
-        return view('admin.roles.addroles');
+    Route::get('/configuracion/roles/addroles', function () {
+        return view('admin.configuracion.roles.addroles');
     });
-    Route::get('/infoempresa', function () {
-        return view('admin.infoempresa.modifi');
+    Route::get('/configuracion/infoempresa', function () {
+        return view('admin.configuracion.infoempresa.modifi');
+    });
+
+    Route::get('/operaciones/vehiculos', function () {
+        return view('admin.operaciones.vehiculos.index');
     });
 
 });
