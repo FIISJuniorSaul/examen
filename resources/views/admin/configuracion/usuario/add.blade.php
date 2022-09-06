@@ -95,7 +95,7 @@
                                         </div>
                                     </div>
                                 </div>
-                             
+
                                 <div class="row g-3 px -6">
                                     <div class ="col">
                                     <h5> Estado</h5>
@@ -116,7 +116,7 @@
                                 </select>
 
                                     </div>
-                                
+
                                     <div class="btn">
                                     <button class="btn btn-primary me-md-2" type="button"><i class='bx bxs-user-plus'></i>Registrar</button>
                                     <button class="btn btn-primary" type="button"><i class='bx bxs-left-arrow-square'></i>Atrás</button>

@@ -1,6 +1,7 @@
 @extends('layouts.config')
 
 @section('content')
+
     <div class="container-xl px-4">
         <div class="row justify-content-center">
             <div class="col-lg-5">
@@ -11,7 +12,7 @@
                     </div>
                     <div class="card-body">
                         <!-- Login form-->
-                        <div class="text-center">
+                        <div class="text-center imglogo">
                             <img src="../image/logo.jpg" alt="" height="200" width="200">
                         </div>
                         <h3 class = "text-center namerayo">TRANSPORTES RAYO SAC</h3>
