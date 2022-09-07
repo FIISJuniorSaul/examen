@@ -16,6 +16,7 @@
                         </div>
                     </div>
                 </div>
+                <br>
                 <div class="page-body page-body-light pt-3 px-2">
                     <div class="card card-header-actions">
                         <div class="card-header">
@@ -25,6 +26,7 @@
 
                             <div class="row g-2 px-3">
                                 <div class="col">
+                                    <br>
                                     <h5>Rol</h5>
                                 </div>
                                 <div class="col">
@@ -36,43 +38,148 @@
                                                     class='bx bx-search-alt'></em>Buscar</button>
                                         </form>
                                     </div>
-
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="configuración">
-                    <label class="form-check-label" for="configuración">
-                        Configuración
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="operaciones">
-                    <label class="form-check-label" for="operaciones">
-                        Operaciones
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="facturación">
-                    <label class="form-check-label" for="facturación">
-                        Facturacion
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="reportes">
-                    <label class="form-check-label" for="reportes">
-                        Reportes
-                    </label>
-                </div>
-                <div class="btn">
-                    <button class="btn btn-primary me-md-2" type="button">Guardar</button>
-                    <button class="btn btn-primary" type="button"><i class='bx bxs-left-arrow-square'></i>Cancelar</button>
+                <br>
+                <div class="container text-center">
+                    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                        <div class="col">
+
+                            <div class="p-3 border bg-light">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="configuración">
+                                    <label class="form-check-label" for="configuración">
+                                        Configuración
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="operaciones">
+                                    <label class="form-check-label" for="operaciones">
+                                        usuario
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="operaciones">
+                                    <label class="form-check-label" for="operaciones">
+                                        empresa
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="operaciones">
+                                    <label class="form-check-label" for="operaciones">
+                                        roles y privilegios
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col">
+                            <div class="p-3 border bg-light">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="operaciones">
+                                    <label class="form-check-label" for="operaciones">
+                                        Operaciones
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="operaciones">
+                                    <label class="form-check-label" for="operaciones">
+                                        Vehiculos
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="operaciones">
+                                    <label class="form-check-label" for="operaciones">
+                                        rutas
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="operaciones">
+                                    <label class="form-check-label" for="operaciones">
+                                        clientes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="operaciones">
+                                    <label class="form-check-label" for="operaciones">
+                                        cotizar
+                                    </label>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="col">
+                            <div class="p-3 border bg-light">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="facturación">
+                                    <label class="form-check-label" for="facturación">
+                                        Facturacion
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="operaciones">
+                                    <label class="form-check-label" for="operaciones">
+                                        Ver facturas
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col">
+                            <div class="p-3 border bg-light">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="reportes">
+                                    <label class="form-check-label" for="reportes">
+                                        Reportes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="operaciones">
+                                    <label class="form-check-label" for="operaciones">
+                                        Vehiculo
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="operaciones">
+                                    <label class="form-check-label" for="operaciones">
+                                        rutas
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="operaciones">
+                                    <label class="form-check-label" for="operaciones">
+                                        clientes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="operaciones">
+                                    <label class="form-check-label" for="operaciones">
+                                        usuarios
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <div class="btn">
+                        <button class="btn btn-primary me-md-2" type="button">Guardar</button>
+                        <button class="btn btn-primary" type="button"><i
+                                class='bx bxs-left-arrow-square'></i>Cancelar</button>
                     </div>
 
+                </div>
+
         </div>
+
         </main>
+
     </div>
+
     </div>
 @endsection
