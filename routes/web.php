@@ -47,9 +47,24 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
         return view('admin.configuracion.infoempresa.modifi');
     });
 
+
     Route::get('/operaciones/vehiculos', function () {
         return view('admin.operaciones.vehiculos.index');
     });
+    Route::get('/operaciones/vehiculos/add', function () {
+        return view('admin.operaciones.vehiculos.create');
+    });
+
+
+    Route::get('/operaciones/rutas', function () {
+        return view('admin.operaciones.rutas.index');
+    });
+    Route::get('/operaciones/rutas/add', function () {
+        return view('admin.operaciones.rutas.createRutas');
+    });
+
+
+
 
 });
 
