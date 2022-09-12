@@ -20,7 +20,7 @@
                     <div class="card card-header-actions">
                         <div class="card-header">
                             Portafolio
-                            <a href="/admin/configuracion/usuario/add" class="btn btn-primary lift"><em class='bx bxs-user-plus'></em>{{ __('Crear Usuario') }}</a>
+                            <a href="{{route('user.create')}}" class="btn btn-primary lift"><em class='bx bxs-user-plus'></em>{{ __('Crear Usuario') }}</a>
                         </div>
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end py-2 px-4">
                             <form class="input-group">
@@ -33,30 +33,36 @@
                                 <thead>
                                     <tr>
                                         <th>DNI</th>
+                                        <th>Nombres</th>
                                         <th>Apellido Paterno</th>
                                         <th>Apellido Materno</th>
-                                        <th>Nombres</th>
-                                        <th>Telefono</th>
+                                        <!--<th>Telefono</th>
                                         <th>Rol</th>
                                         <th>Estado</th>
-                                        <th>Acciones</th>
+                                        <th>Acciones</th>-->
                                     </tr>
                                 </thead>
 
                                 <tbody>
+                                    @foreach ($personas as $item)
                                     <tr>
-                                        <td>80156048</td>
-                                        <td>Maiz</td>
-                                        <td>Echevarria</td>
-                                        <td>Junior Saul</td>
-                                        <td>76988211</td>
-                                        <td>Administrador</td>
+                                        <td>{{$item->dni}}</td>
+                                        <td>{{$item->nombre}}</td>
+                                        <td>{{$item->apellido_paterno}}</td>
+                                        <td>{{$item->apellido_materno}}</td>
                                         <td><div class="badge bg-primary text-white rounded-pill">Activo</div></td>
                                         <td>
+                                            <form action="{{route('user.destroy', $item->id)}}" method="post">
+                                                @csrf
+                                                @method('DELETE')
                                             <button class="btn btn-datatable btn-icon btn-transparent-table me-2"><i class='bx bx-dots-vertical-rounded'></i></button>
-                                            <button class="btn btn-datatable btn-icon btn-transparent-table"><i class='bx bx-trash' ></i></button>
+                                            <button class="btn btn-datatable btn-icon btn-transparent-table" type="submit" return =("alert('estas seguro de eliminar')")><i class='bx bx-trash' ></i></button>
+                                        </form>
                                         </td>
                                     </tr>
+
+                                    @endforeach
+
                                 </tbody>
                             </table>
 
