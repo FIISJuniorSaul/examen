@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VehiculoController;
+use App\Http\Controllers\PersonaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,9 +32,12 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/main', function () {
         return view('admin.desktop');
     });
-    Route::get('/configuracion/usuario', function () {
+    /*Route::get('/configuracion/usuario', function () {
         return view('admin.configuracion.usuario.index');
-    });
+    });*/
+    Route::resource('user', PersonaController::class);
+
+
     Route::get('/configuracion/usuario/add', function () {
         return view('admin.configuracion.usuario.add');
     });
