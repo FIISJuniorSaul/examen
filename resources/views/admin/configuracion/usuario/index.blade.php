@@ -33,30 +33,31 @@
                                 <thead>
                                     <tr>
                                         <th>DNI</th>
+                                        <th>Nombres</th>
                                         <th>Apellido Paterno</th>
                                         <th>Apellido Materno</th>
-                                        <th>Nombres</th>
-                                        <th>Telefono</th>
+                                        <!--<th>Telefono</th>
                                         <th>Rol</th>
                                         <th>Estado</th>
-                                        <th>Acciones</th>
+                                        <th>Acciones</th>-->
                                     </tr>
                                 </thead>
 
                                 <tbody>
+                                    @foreach ( $item as $personas )
                                     <tr>
-                                        <td>80156048</td>
-                                        <td>Maiz</td>
-                                        <td>Echevarria</td>
-                                        <td>Junior Saul</td>
-                                        <td>76988211</td>
-                                        <td>Administrador</td>
+                                        <td>{{$item->dni}}</td>
+                                        <td>{{$item->nombre}}</td>
+                                        <td>{{$item->apelido_paterno}}</td>
+                                        <td>{{$item->apelido_materno}}</td>
                                         <td><div class="badge bg-primary text-white rounded-pill">Activo</div></td>
                                         <td>
                                             <button class="btn btn-datatable btn-icon btn-transparent-table me-2"><i class='bx bx-dots-vertical-rounded'></i></button>
                                             <button class="btn btn-datatable btn-icon btn-transparent-table"><i class='bx bx-trash' ></i></button>
                                         </td>
                                     </tr>
+                                    @endforeach
+
                                 </tbody>
                             </table>
 
