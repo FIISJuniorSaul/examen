@@ -22,14 +22,7 @@ class CreatePersonasTable extends Migration
             $table->string('apellido_materno');
             $table->timestamps();
         });
-        DB::table('personas')->insert([
-            'id'=>'1',
-            'dni'=>'78563135',
-            'nombre'=>'Maiz',
-            'apellido_paterno'=>'Maiz2',
-            'apellido_materno'=>'Maiz3',
 
-        ]);
     }
 
     /**
