@@ -34,7 +34,7 @@
                 <div class="collapse" id="collapseConfiguration" data-bs-parent="#accordionSidenav">
                     <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
                         <li class="nav-item">
-                            <a class="nav-link separado" href="/admin/configuracion/usuario"><em
+                            <a class="nav-link separado" href="{{route('user.index')}}"><em
                                     class='bx bxs-user'></em> Usuario</a>
                             <a class="nav-link" href="/admin/configuracion/roles"><em
                                     class='bx bxs-key'></em>Roles/Permiso</a>
