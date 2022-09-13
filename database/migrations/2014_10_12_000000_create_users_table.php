@@ -16,7 +16,10 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('telefono');
+            $table->string('contraseña');
+            $table->boolean('estado');
+            $table->string('rol');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
@@ -26,11 +29,10 @@ class CreateUsersTable extends Migration
         });
         DB::table('users')->insert([
             'id'=>'1',
-            'name'=>'Maiz',
             'email'=>'maiz@gmail.com',
             'tipo_usuario'=>'1',
             'password'=>bcrypt('123456')
-            
+
         ]);
     }
 
