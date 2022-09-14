@@ -72,7 +72,10 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
         return view('admin.facturacion.addfactura');
     });
 
-
+    Route::get('/reportes/vehiculoReport', function () {
+        return view('admin.reportes.reporte vehiculos.index');
+    });
+    
 
 });
 
