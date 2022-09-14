@@ -10,7 +10,7 @@
                         <div class="row justify-content-center">
                             <div class="col-12 col-xl-auto">
                                 <h1 class="page-title">
-                                    VEHÍCULOS
+                                    CLIENTES
                                 </h1>
                             </div>
                         </div>
@@ -19,16 +19,16 @@
                 <div class="page-body page-body-light pt-3 px-2">
                     <div class="card card-header-actions">
                         <div class="card-header">
-                            Vehículos/Datos en la tabla
+                            Clientes/Datos en la tabla
                             <div>
                                <!-- <a href="/admin/configuracion/usuario/add" class="btn btn-primary lift"><em class='bx bxs-user-plus'></em>{{ __('Crear Usuario') }}</a> --> 
-                            <a href='/admin/operaciones/vehiculos/add' class="btn btn-primary lift" type="button"><em class='bx bxs-truck'></em>Nuevo Vehículo</a>
+                            <a href='/admin/operaciones/clientes/add' class="btn btn-primary lift" type="button"><em class='bx bx-group'></em>Nuevo Cliente</a>
                             </div>
                         </div>
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end py-2 px-4">
                             <form class="input-group">
                                 <button class="btn btn-outline-primary btn-sm me-md-2" type="submit"> <em class='bx bx-search-alt'></em>Buscar</button>
-                                <input name="busqueda" class="form-control " type="search" placeholder="Ingrese nombre del vehiculo" aria-label="Search" autocomplete="off">
+                                <input name="busqueda" class="form-control " type="search" placeholder="Ingrese nombre del cliente" aria-label="Search" autocomplete="off">
                                
                             </form>
                         </div>
@@ -36,30 +36,25 @@
                             <table class="table table-sm table-bordered table-hover " id="datatablesSimple">
                                 <thead>
                                     <tr>
-                                        <th>Tipo de Vehículo</th>
-                                        <th>Placa</th>
-                                        <th>Marca</th>
-                                        <th>Consumo Galones</th>
-                                        <th>Capacidad de Carga</th>
-                                        <th>Conductor</th>
-                                        <th>actions</th>
+                                        <th>Nº de RUC</th>
+                                        <th>Razón Social</th>
+                                        <th>E-mail</th>
+                                        <th>Actions</th>
+
                                         
                                     </tr>
                                 </thead>
 
                                 <tbody>
                                     <tr>
-                                        <td>M1</td>
-                                        <td>F5U-597</td>
-                                        <td>HILUX</td>
-                                        <td>50</td>
-                                        <td>15T</td>
-                                        <td>ALVARO SAMANIEGO</td>
+                                        <td>15-9-1329-1</td>
+                                        <td>LUNA DE CRISTAL, E.I.R.L</td>
+                                        <td>lunaCristal_2001@hotmail.com</td>
+
                                         <td>
                                             <button class="btn btn-datatable btn-icon btn-transparent-table me-2"><i class='bx bx-dots-vertical-rounded'></i></button>
                                             <button class="btn btn-datatable btn-icon btn-transparent-table"><i class='bx bx-trash' ></i></button>
                                         </td>
-
                                     </tr>
                                 </tbody>
                             </table>

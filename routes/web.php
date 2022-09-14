@@ -66,10 +66,20 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/operaciones/rutas/add', function () {
         return view('admin.operaciones.rutas.createRutas');
     });
+    
+    
+    Route::get('/operaciones/clientes', function () {
+        return view('admin.operaciones.clientes.index');
+    });
+    Route::get('/operaciones/clientes/add', function () {
+        return view('admin.operaciones.clientes.createClientes');
+    });
+        
+    Route::get('/operaciones/cotizar', function () {
+        return view('/admin/operaciones/cotizar.index');
+    });
+    
 
-
-
-
-});
+}); 
 
 Route::resource('vehiculos', VehiculoController::class);
