@@ -36,7 +36,9 @@
                                         <th>Nombres</th>
                                         <th>Apellido Paterno</th>
                                         <th>Apellido Materno</th>
-                                        <!--<th>Telefono</th>
+                                        <th>Telefono</th>
+                                        <th>Estado</th>
+                                        <!--
                                         <th>Rol</th>
                                         <th>Estado</th>
                                         <th>Acciones</th>-->
@@ -50,6 +52,7 @@
                                         <td>{{$item->nombre}}</td>
                                         <td>{{$item->apellido_paterno}}</td>
                                         <td>{{$item->apellido_materno}}</td>
+                                        <td>{{$item->teléfono}}</td>
                                         <td><div class="badge bg-primary text-white rounded-pill">Activo</div></td>
                                         <td>
                                             <form action="{{route('user.destroy', $item->id)}}" method="post">
