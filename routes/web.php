@@ -77,6 +77,10 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/operaciones/cotizar/add', function () {
         return view('/admin/operaciones/cotizar.createCotizacion');
     });
+         
+    Route::get('/ogi', function () {
+        return view('/admin/operaciones/cotizar.index');
+    });
     
 
 }); 
