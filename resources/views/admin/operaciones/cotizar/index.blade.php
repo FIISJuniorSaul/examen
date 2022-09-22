@@ -4,21 +4,74 @@
     <div id="layoutSidenav">
         @include('admin.sidebar')
         <div id="layoutSidenav_content">
+            <main>
+                <div class="page-header page-header-dark bg-gradient-primary-to-secondary mt-1">
+                    <div class="page-header-content">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-xl-auto">
+                                <h1 class="page-title">
+                                    COTIZAR
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-body page-body-light pt-3 px-2">
+                    <div class="card card-header-actions">
+                        <div class="card-header">
+                            COTIZACIONES/Datos en la tabla
+                            <div>
+                               <!-- <a href="/admin/configuracion/usuario/add" class="btn btn-primary lift"><em class='bx bxs-user-plus'></em>{{ __('Crear Usuario') }}</a> --> 
+                            <a href='/admin/operaciones/cotizar/add' class="btn btn-primary lift" type="button"><em class='bx bxs-truck'></em>Nueva Cotización</a>
+                            </div>
+                        </div>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end py-2 px-4">
+                            <form class="input-group">
+                                <button class="btn btn-outline-primary btn-sm me-md-2" type="submit"> <em class='bx bx-search-alt'></em>Buscar</button>
+                                <input name="busqueda" class="form-control " type="search" placeholder="Ingrese nombre del vehiculo" aria-label="Search" autocomplete="off">
+                               
+                            </form>
+                        </div>
+                        <div class="card-body py-2">
+                            <table class="table table-sm table-bordered table-hover " id="datatablesSimple">
+                                <thead>
+                                    <tr>
+                                        <th>USUARIO</th>
+                                        <th>RAZON SOCIAL</th>
+                                        <th>E-MAIL</th>
+                                        <th>TIPO DE COMPROBANTE</th>
+                                        <th>Nº COTIZACIÓN</th>
+                                        <th>RUTA</th>
+                                        <th>VEHÍCULO</th>
+                                        <th>TOTAL(S/.)</th>
+                                        <th>ACTIONS</th>
+                                        
+                                    </tr>
+                                </thead>
 
+                                <tbody>
+                                    <tr>
+                                        <td>alvar01</td>
+                                        <td>Hermanos cuellar S.A.C</td>
+                                        <td>cuellar12_2022@hotmail.com</td>
+                                        <td>comprobante01</td>
+                                        <td>45-239-2022</td>
+                                        <td>Lima-Callao</td>
+                                        <th>Fuso_AAA</th>
+                                        <th>25mil</th>
+                                        <td>
+                                            <button class="btn btn-datatable btn-icon btn-transparent-table me-2"><i class='bx bx-dots-vertical-rounded'></i></button>
+                                            <button class="btn btn-datatable btn-icon btn-transparent-table"><i class='bx bx-trash' ></i></button>
+                                        </td>
 
+                                    </tr>
+                                </tbody>
+                            </table>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOLA MUNDO</title>
-</head>
-<body>
-    perraaa
-</body>
-</html>
-</div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
     </div>
 @endsection
