@@ -77,12 +77,6 @@
                                                                 id="inputLastName" type="text"
                                                                 placeholder="Apellido Materno" />
                                                         </div>
-                                                        <div class="col-md-6">
-                                                            <label class="small mb-1" for="inputLastName">N° Telefono</label>
-                                                            <input class="form-control" name="telefono"
-                                                                id="inputLastName" type="text"
-                                                                placeholder="928033951" />
-                                                        </div>
                                                     </div>
                                             </div>
 

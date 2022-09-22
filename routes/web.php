@@ -51,32 +51,38 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
         return view('admin.configuracion.infoempresa.modifi');
     });
 
+
     Route::get('/operaciones/vehiculos', function () {
         return view('admin.operaciones.vehiculos.index');
     });
     Route::get('/operaciones/vehiculos/add', function () {
         return view('admin.operaciones.vehiculos.create');
     });
+
+
     Route::get('/operaciones/rutas', function () {
         return view('admin.operaciones.rutas.index');
     });
     Route::get('/operaciones/rutas/add', function () {
         return view('admin.operaciones.rutas.createRutas');
     });
-
-    Route::get('/facturacion/factura', function () {
-        return view('admin.facturacion.index');
+    Route::get('/operaciones/clientes/empresa', function () {
+        return view('admin.operaciones.clientes.empresa.index');
+    });
+ 
+     
+    Route::get('/operaciones/cotizar', function () {
+        return view('/admin/operaciones/cotizar.index');
+    });
+    Route::get('/operaciones/cotizar/add', function () {
+        return view('/admin/operaciones/cotizar.createCotizacion');
+    });
+         
+    Route::get('/ogi', function () {
+        return view('/admin/operaciones/cotizar.index');
     });
     
-    Route::get('/facturacion/addfactura', function () {
-        return view('admin.facturacion.addfactura');
-    });
 
-    Route::get('/reportes/vehiculoReport', function () {
-        return view('admin.reportes.reporte vehiculos.index');
-    });
-    
-
-});
+}); 
 
 Route::resource('vehiculos', VehiculoController::class);
