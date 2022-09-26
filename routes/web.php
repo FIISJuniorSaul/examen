@@ -37,21 +37,21 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     });*/
     Route::resource('user', PersonaController::class);
 
-
+/* rutas-usuario*/
     Route::get('/configuracion/usuario/add', function () {
         return view('admin.configuracion.usuario.add');
     });
     Route::get('/configuracion/roles', function () {
         return view('admin.configuracion.roles.index');
     });
+    /* rutas-roles*/
     Route::get('/configuracion/roles/addroles', function () {
         return view('admin.configuracion.roles.addroles');
     });
     Route::get('/configuracion/infoempresa', function () {
         return view('admin.configuracion.infoempresa.modifi');
     });
-
-
+ /* rutas-vehiculos*/
     Route::get('/operaciones/vehiculos', function () {
         return view('admin.operaciones.vehiculos.index');
     });
@@ -59,29 +59,33 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
         return view('admin.operaciones.vehiculos.create');
     });
 
-
+   /* rutas-rutas*/
     Route::get('/operaciones/rutas', function () {
         return view('admin.operaciones.rutas.index');
     });
     Route::get('/operaciones/rutas/add', function () {
         return view('admin.operaciones.rutas.createRutas');
+
     });
+    /* rutas-cliente-contactos*/
+    Route::get('/operaciones/clientes/contacto', function () {
+        return view('admin.operaciones.clientes.contacto.index');
+    });
+   
+   /* rutas-cliente-empresa*/
     Route::get('/operaciones/clientes/empresa', function () {
         return view('admin.operaciones.clientes.empresa.index');
     });
- 
-     
+    Route::get('/operaciones/clientes/empresa/crear',function () {
+        return view('admin.operaciones.clientes.empresa.crear');
+    });
+    /* rutas-cotizacion*/
     Route::get('/operaciones/cotizar', function () {
         return view('/admin/operaciones/cotizar.index');
     });
     Route::get('/operaciones/cotizar/add', function () {
         return view('/admin/operaciones/cotizar.createCotizacion');
-    });
-         
-    Route::get('/ogi', function () {
-        return view('/admin/operaciones/cotizar.index');
-    });
-    
+    });      
 
 }); 
 
