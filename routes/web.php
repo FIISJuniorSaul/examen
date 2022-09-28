@@ -67,6 +67,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/operaciones/clientes/contacto', function () {
         return view('admin.operaciones.clientes.contacto.index');
     });
+    Route::get('/operaciones/clientes/contacto/crear', function () {
+        return view('admin.operaciones.clientes.contacto.crear');
+    });
 
    /* rutas-cliente-empresa*/
     Route::get('/operaciones/clientes/empresa', function () {

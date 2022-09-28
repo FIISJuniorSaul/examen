@@ -21,15 +21,15 @@
                         <div class="card-header">
                             Clientes-Empresa/Datos en la tablas
                             <div>
-                               <!-- <a href="/admin/configuracion/usuario/add" class="btn btn-primary lift"><em class='bx bxs-user-plus'></em>{{ __('Crear Usuario') }}</a> --> 
-                            <a href='/admin/' class="btn btn-primary lift" type="button"><i class='bx bx-directions'></i>Nuevo Cliente-Empresa</a>
+                               <!-- <a href="/admin/configuracion/usuario/add" class="btn btn-primary lift"><em class='bx bxs-user-plus'></em>{{ __('Crear Usuario') }}</a> -->
+                            <a href='/admin/operaciones/clientes/contacto/crear' class="btn btn-primary lift" type="button"><i class='bx bx-directions'></i>Nuevo Cliente-Empresa</a>
                             </div>
                         </div>
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end py-2 px-4">
                             <form class="input-group">
                                 <button class="btn btn-outline-primary btn-sm me-md-2" type="submit"> <em class='bx bx-search-alt'></em>Buscar</button>
                                 <input name="busqueda" class="form-control " type="search" placeholder="Ingrese nombre de empresa" aria-label="Search" autocomplete="off">
-                               
+
                             </form>
                         </div>
                         <div class="card-body py-2">
@@ -39,14 +39,14 @@
                                         <th>Nº de RUC</th>
                                         <th>Razón Social</th>
                                         <th>E-.mail</th>
-                                        <th>Actions</th>                                        
+                                        <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>202203045</td>
                                         <td>GRATING PERU SAC</td>
-                                        <td>grupo@grating-prodac.pe</td>                            
+                                        <td>grupo@grating-prodac.pe</td>
                                         <td>
                                             <button class="btn btn-datatable btn-icon btn-transparent-table me-2"><i class='bx bx-dots-vertical-rounded'></i></button>
                                             <button class="btn btn-datatable btn-icon btn-transparent-table"><i class='bx bx-trash' ></i></button>
