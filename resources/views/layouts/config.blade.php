@@ -99,5 +99,58 @@
             })
         })()
         </script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+
+        var dni;
+
+        consultarDni = function () {
+            dni = document.getElementById("dni").value;
+            consulta = {
+                "dni": String(dni)
+            };
+            //console.log("consulta", consulta)
+            $.ajax({
+                method: "POST",
+                contentType: "application/json",
+                url: "https://www.web.onpe.gob.pe/mpve_backend/personas/getCiudadano",
+                context: document.body,
+                data: JSON.stringify(consulta),
+                statusCode: {
+                    400: function() {
+                    //button.disabled = false;
+                        alert("Hubo un error.");
+                    }
+            }
+            }).done(function(response) {
+                if (response.result == true) {
+
+                    document.getElementById("dni_ciudadano").value = dni;
+                    document.getElementById("nombres").value = response.ciudadano.nombres;
+                    document.getElementById("apellido_paterno").value = response.ciudadano.apellidoPaterno;
+                    document.getElementById("apellido_materno").value = response.ciudadano.apellidoMaterno;
+                    console.log("respuesta :", response)
+                } else {
+                    alert('Escriba el DNI.!');
+                    $('#dni').focus();
+                }
+
+
+            });
+
+
+        }
+        $("#dni").keypress(function(event) {
+                if (event.keyCode === 13) {
+                    $("#buscardni").click();
+                }
+            });
+
+            //$("#buscardni").click(function() {
+            //    alert("Button clicked");
+            //});
+    </script>
     </body>
 </html>

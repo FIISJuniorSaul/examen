@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VehiculoController;
 use App\Http\Controllers\PersonaController;
+use App\Http\Controllers\UsersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,11 +32,13 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
     Route::get('/main', function () {
         return view('admin.desktop');
-    });
+    })->name('main');
     /*Route::get('/configuracion/usuario', function () {
         return view('admin.configuracion.usuario.index');
     });*/
-    Route::resource('user', PersonaController::class);
+    //Route::resource('user', PersonaController::class);
+
+    Route::resource('usuario', UsersController::class);
 
 
     Route::get('/configuracion/usuario/add', function () {
@@ -69,20 +72,20 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/operaciones/clientes/empresa', function () {
         return view('admin.operaciones.clientes.empresa.index');
     });
- 
-     
+
+
     Route::get('/operaciones/cotizar', function () {
         return view('/admin/operaciones/cotizar.index');
     });
     Route::get('/operaciones/cotizar/add', function () {
         return view('/admin/operaciones/cotizar.createCotizacion');
     });
-         
+
     Route::get('/ogi', function () {
         return view('/admin/operaciones/cotizar.index');
     });
-    
 
-}); 
+
+});
 
 Route::resource('vehiculos', VehiculoController::class);

@@ -20,9 +20,9 @@ class CreateVehiculoTable extends Migration
             $table->string('modelo');
             $table->string('capacidad_carga');
             $table->string('consumo_gasolina');
-            $table->unsignedBigInteger('users_id');
+            $table->unsignedBigInteger('user_id');
 
-    $table->foreign('users_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

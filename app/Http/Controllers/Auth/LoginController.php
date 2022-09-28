@@ -5,7 +5,8 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-use Auth;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -20,29 +21,39 @@ class LoginController extends Controller
     |
     */
 
-    use AuthenticatesUsers;
-
-    /**
-     * Where to redirect users after login.
-     *
-     * @var string
-     */
-    protected $redirectTo = RouteServiceProvider::LOGIN;
-
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
+    public function showLoginForm()
     {
-        $this->middleware('guest')->except('logout');
+        return view('auth.login');
     }
-    public function redirectPath()
+
+    public function login(Request $request)
     {
-        if (Auth::user()->tipo_usuario) {
-            return '/admin/main';
+        $this->validateLogin($request);
+
+        if (Auth::attempt(['usuario' => $request->usuario, 'password' => $request->password, 'condicion' => 1])) {
+            return redirect()->route('main');
         }
-        return '/login';
+
+        return back()
+            ->withErrors(['usuario' => trans('auth.failed')])
+            ->withErrors(['password' => trans('auth.failed')])
+            ->withInput(request(['usuario', 'password']));
+
+    }
+
+    protected function validateLogin(Request $request)
+    {
+        $this->validate($request, [
+            'usuario' => 'required|string',
+            'password' => 'required|string',
+        ]);
+
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+        $request->session()->invalidate();
+        return redirect('/');
     }
 }

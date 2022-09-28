@@ -34,7 +34,7 @@
                 <div class="collapse" id="collapseConfiguration" data-bs-parent="#accordionSidenav">
                     <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
                         <li class="nav-item">
-                            <a class="nav-link separado" href="{{route('user.index')}}"><em
+                            <a class="nav-link separado" href="{{route('usuario.index')}}"><em
                                     class='bx bxs-user'></em> Usuario</a>
                             <a class="nav-link" href="/admin/configuracion/roles"><em
                                     class='bx bxs-key'></em>Roles/Permiso</a>
@@ -68,14 +68,14 @@
                             <div class="collapse" id="collapseCliente">
                                 <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
                                     <a class="nav-link" href="/admin/operaciones/clientes/empresa"> <em class='bx bxs-truck'></em>Clientes-Empresa</a>
-                                   
+
                                 </nav>
                             </div>
 
                             <a class="nav-link" href="/admin/operaciones/cotizar"><em class='bx bx-dollar-circle'></em>Cotizar</a>
-                           
-                                
-                           
+
+
+
                         </li>
                     </nav>
                 </div>

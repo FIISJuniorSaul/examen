@@ -23,7 +23,13 @@ class User extends Authenticatable
         'password',
         'tipo_usuario'
     ];
+    public function rol(){
+        return $this->belongsTo('App\Models\Role');
+    }
 
+    public function persona(){
+        return $this->belongsTo('App\Models\Persona');
+    }
     /**
      * The attributes that should be hidden for serialization.
      *

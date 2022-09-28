@@ -18,12 +18,6 @@ class PersonaController extends Controller
      }
 
     public function store(Request $request){
-        /*$persona = new Persona();
-        $persona->dni = Input::get('dni');
-        $persona->nombre = Input::get('nombre');
-        $persona->apellido_paterno = Input::get('apellido_paterno');
-        $persona->apellido_materno = Input::get('apellido_materno');
-        $persona->save();*/
         $persona = new Persona($request->all());
         $persona->save();
 
