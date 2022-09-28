@@ -19,10 +19,10 @@
                 <div class="page-body page-body-light pt-3 px-2">
                     <div class="card card-header-actions">
                         <div class="card-header">
-                            Clientes-Empresa/Datos en la tabla
+                            Clientes-Empresa/Datos en la tablas
                             <div>
                                <!-- <a href="/admin/configuracion/usuario/add" class="btn btn-primary lift"><em class='bx bxs-user-plus'></em>{{ __('Crear Usuario') }}</a> --> 
-                            <a href='/admin/operaciones/clientes/empresa/crear' class="btn btn-primary lift" type="button"><i class='bx bx-directions'></i>Nuevo Cliente-Empresa</a>
+                            <a href='/admin/' class="btn btn-primary lift" type="button"><i class='bx bx-directions'></i>Nuevo Cliente-Empresa</a>
                             </div>
                         </div>
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end py-2 px-4">
