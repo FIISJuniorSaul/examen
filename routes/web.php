@@ -44,13 +44,6 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/configuracion/usuario/add', function () {
         return view('admin.configuracion.usuario.add');
     });
-    Route::get('/configuracion/roles', function () {
-        return view('admin.configuracion.roles.index');
-    });
-    /* rutas-roles*/
-    Route::get('/configuracion/roles/addroles', function () {
-        return view('admin.configuracion.roles.addroles');
-    });
     Route::get('/configuracion/infoempresa', function () {
         return view('admin.configuracion.infoempresa.modifi');
     });

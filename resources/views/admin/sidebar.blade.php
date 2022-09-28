@@ -36,8 +36,7 @@
                         <li class="nav-item">
                             <a class="nav-link separado" href="{{route('usuario.index')}}"><em
                                     class='bx bxs-user'></em> Usuario</a>
-                            <a class="nav-link" href="/admin/configuracion/roles"><em
-                                    class='bx bxs-key'></em>Roles/Permiso</a>
+
                             <a class="nav-link" href="/admin/configuracion/infoempresa"><em
                                     class='bx bxs-info-circle'></em>Informacion de la empresa</a>
                         </li>
@@ -67,14 +66,9 @@
 
                             <div class="collapse" id="collapseCliente">
                                 <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
-<<<<<<< HEAD
-                                    <a class="nav-link" href="/admin/operaciones/clientes/empresa"> <em class='bx bxs-truck'></em>Clientes-Empresa</a>
-
-=======
                                     <a class="nav-link" href="/admin/operaciones/clientes/empresa"> <i class='bx bx-directions'></i>Empresa</a>
                                     <a class="nav-link" href="/admin/operaciones/clientes/contacto"> <i class='bx bxs-user-check'></i>Contacto</a>
-                                   
->>>>>>> b854f98c3422e76995304692f7f45fddd6b66401
+
                                 </nav>
                             </div>
 
