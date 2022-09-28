@@ -74,35 +74,11 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/operaciones/clientes/contacto', function () {
         return view('admin.operaciones.clientes.contacto.index');
     });
-   
+
    /* rutas-cliente-empresa*/
     Route::get('/operaciones/clientes/empresa', function () {
         return view('admin.operaciones.clientes.empresa.index');
     });
-<<<<<<< HEAD
-
-
-=======
-    Route::get('/operaciones/clientes/empresa/crear',function () {
-        return view('admin.operaciones.clientes.empresa.crear');
-    });
-    /* rutas-cotizacion*/
->>>>>>> b854f98c3422e76995304692f7f45fddd6b66401
-    Route::get('/operaciones/cotizar', function () {
-        return view('/admin/operaciones/cotizar.index');
-    });
-    Route::get('/operaciones/cotizar/add', function () {
-        return view('/admin/operaciones/cotizar.createCotizacion');
-<<<<<<< HEAD
-    });
-
-    Route::get('/ogi', function () {
-        return view('/admin/operaciones/cotizar.index');
-    });
-=======
-    });      
->>>>>>> b854f98c3422e76995304692f7f45fddd6b66401
-
 
 });
 
