@@ -83,8 +83,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     });
     Route::get('/operaciones/cotizar/add', function () {
         return view('/admin/operaciones/cotizar.createCotizacion');
-    });    
-    /* rutas facturación*/ 
+    });
+    /* rutas facturación*/
     Route::get('/operaciones/factura', function () {
         return view('admin.operaciones.factura.index');
     });
@@ -101,10 +101,6 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     });
     Route::get('/operaciones/clientes/crearPersonaNatural', function () {
         return view('admin.operaciones.clientes.crearPersonaNatural');
-    });
-
-    Route::get('/operaciones/clientes/index', function () {
-        return view('admin.operaciones.clientes.index');
     });
 });
 

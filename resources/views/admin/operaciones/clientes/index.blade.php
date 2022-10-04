@@ -21,13 +21,8 @@
                         <div class="card-header">
                             Clientes/Datos en la tabla
                             <div>
-<<<<<<< HEAD:resources/views/admin/operaciones/clientes/contacto/index.blade.php
-                               <!-- <a href="/admin/configuracion/usuario/add" class="btn btn-primary lift"><em class='bx bxs-user-plus'></em>{{ __('Crear Usuario') }}</a> --> 
-                            <a href='/admin/operaciones/clientes/contactos/' class="btn btn-primary lift" type="button"><i class='bx bx-directions'></i>Nuevo Cliente-Contactos</a>
-=======
                                <!-- <a href="/admin/configuracion/usuario/add" class="btn btn-primary lift"><em class='bx bxs-user-plus'></em>{{ __('Crear Usuario') }}</a> -->
                             <a href='/admin/operaciones/clientes/crear' class="btn btn-primary lift" type="button"><i class='bx bx-directions'></i>Nuevo Cliente-Empresa</a>
->>>>>>> 894847a0e071e4513c1a1cb8fd3c60ad67e4449f:resources/views/admin/operaciones/clientes/index.blade.php
                             </div>
 
                         </div>
