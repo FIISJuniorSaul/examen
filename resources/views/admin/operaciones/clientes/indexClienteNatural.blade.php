@@ -28,10 +28,10 @@
                         </div>
                         <ul class="nav nav-tabs">
                             <li class="nav-item">
-                              <a class="nav-link active" aria-current="page" href="#">Clientes Jurídicos</a>
+                              <a class="nav-link " aria-current="page" href="/admin/operaciones/clientes/index">Clientes Jurídicos</a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link " href="/admin/operaciones/clientes/indexClienteNatural">Clientes Naturales</a>
+                              <a class="nav-link  active" href="#">Clientes Naturales</a>
                             </li>
 
                           </ul>
@@ -46,7 +46,7 @@
                             <table class="table table-sm table-bordered table-hover " id="datatablesSimple">
                                 <thead>
                                     <tr>
-                                        <th>Nº de RUC</th>
+                                        <th>Nº de DNI</th>
                                         <th>Razón Social</th>
                                         <th>E-.mail</th>
                                         <th>Actions</th>
