@@ -56,21 +56,9 @@
                             <a class="nav-link" href="/admin/operaciones/vehiculos"> <em class='bx bxs-truck'></em>Vehiculos</a>
                             <a class="nav-link" href="/admin/operaciones/rutas"><em class='bx bx-trip'></em>Rutas</a>
 
-                            <a class="nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse"
-                                data-bs-target="#collapseCliente" aria-expanded="false" aria-controls="collapseCliente">
-                                <div class="nav-link-icon"><em class='bx bx-group'></em></div>
-                                Clientes
-                                <div class="sidenav-collapse-arrow"><em class='bx bx-chevron-down'
-                                        style="color:gray; font-size:16px;"></em></div>
-                            </a>
 
-                            <div class="collapse" id="collapseCliente">
-                                <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
-                                    <a class="nav-link" href="/admin/operaciones/clientes/empresa"> <i class='bx bx-directions'></i>Empresa</a>
-                                    <a class="nav-link" href="/admin/operaciones/clientes/contacto"> <i class='bx bxs-user-check'></i>Contacto</a>
+                            <a class="nav-link" href="/admin/operaciones/clientes"> <i class='bx bx-directions'></i>clientes</a>
 
-                                </nav>
-                            </div>
 
                             <a class="nav-link" href="/admin/operaciones/cotizar"><em class='bx bx-dollar-circle'></em>Cotizar</a>
 

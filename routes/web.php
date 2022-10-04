@@ -63,20 +63,13 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
         return view('admin.operaciones.rutas.createRutas');
 
     });
-    /* rutas-cliente-contactos*/
-    Route::get('/operaciones/clientes/contacto', function () {
-        return view('admin.operaciones.clientes.contacto.index');
-    });
-    Route::get('/operaciones/clientes/contacto/crear', function () {
-        return view('admin.operaciones.clientes.contacto.crear');
-    });
 
    /* rutas-cliente-empresa*/
-    Route::get('/operaciones/clientes/empresa', function () {
-        return view('admin.operaciones.clientes.empresa.index');
+    Route::get('/operaciones/clientes', function () {
+        return view('admin.operaciones.clientes.index');
     });
-    Route::get('/operaciones/clientes/empresa/crear', function () {
-        return view('admin.operaciones.clientes.empresa.crear');
+    Route::get('/operaciones/clientes/crear', function () {
+        return view('admin.operaciones.clientes.crear');
     });
 
 });
