@@ -31,7 +31,12 @@
                                         <div class="card mb-4">
                                             <div class="card-header">Detalles de la Cuenta</div>
                                             <div class="card-body">
-                                                <form action="{{route('user.store')}}" method="post" enctype="multipart/form-data">
+                                                <label for="dni">Ingrese DNI</label>
+                                                <div class="input-group">
+                                                    <input type="number" min="1" max="99999999" id="dni" class="form-control" placeholder="Documento" />&nbsp;
+                                                    <button class="btn btn-primary" id="buscardni" align="right" onClick="consultarDni()">Buscar</button>
+                                                </div>
+                                                <form action="{{route('usuario.store')}}" method="post" enctype="multipart/form-data">
                                                     @csrf
                                                     <!--search-->
                                                     <div class="d-grid gap-2 d-md-flex justify-content-md-end py-2 px-4">
@@ -46,36 +51,75 @@
                                                     </div>
                                                     <!-- Form Group (username)-->
                                                     <div class="row gx-3 mb-3">
-                                                        <!-- Form Group (first name)-->
+                                                        <!-- Form Group (DNI)-->
                                                         <div class="col-md-6">
                                                             <label class="small mb-1" for="inputDNI">DNI</label>
-                                                            <input class="form-control" name="dni" id="inputDNI"
-                                                                type="text" placeholder="DNI" />
+                                                            <input class="form-control" name="dni" id="dni_ciudadano"
+                                                                type="text" placeholder="DNI" readonly />
                                                         </div>
-                                                        <!-- Form Group (last name)-->
+                                                        <!-- Form Group (name)-->
                                                         <div class="col-md-6">
                                                             <label class="small mb-1" for="inputName">Nombres</label>
-                                                            <input class="form-control" name="nombre" id="inputName"
-                                                                type="text" placeholder="Nombres" />
+                                                            <input class="form-control" name="nombre" id="nombres"
+                                                                type="text" placeholder="Nombres" readonly/>
                                                         </div>
                                                     </div>
                                                     <!-- Form Row-->
                                                     <div class="row gx-3 mb-3">
-                                                        <!-- Form Group (first name)-->
+                                                        <!-- Form Group (last name)-->
                                                         <div class="col-md-6">
                                                             <label class="small mb-1" for="inputFirstName">Apellido
                                                                 Paterno</label>
                                                             <input class="form-control" name="apellido_paterno"
-                                                                id="inputFirstName" type="text"
-                                                                placeholder="Apellido Paterno" />
+                                                            id="apellido_paterno" type="text"
+                                                                placeholder="Apellido Paterno" readonly />
                                                         </div>
                                                         <!-- Form Group (last name)-->
                                                         <div class="col-md-6">
                                                             <label class="small mb-1" for="inputLastName">Apellido
                                                                 Materno</label>
                                                             <input class="form-control" name="apellido_materno"
-                                                                id="inputLastName" type="text"
-                                                                placeholder="Apellido Materno" />
+                                                            id="apellido_materno" type="text"
+                                                                placeholder="Apellido Materno" readonly />
+                                                        </div>
+                                                    </div>
+                                                    <div class="row gx-3 mb-3">
+                                                        <div class="col-md-6">
+                                                            <label class="small mb-1" for="inputEmail">correo electronico</label>
+                                                            <input class="form-control" name="correo"
+                                                                id="inputEmail" type="text"
+                                                                placeholder="example@rayosac.com" />
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label class="small mb-1" for="inputTelephone">telefono</label>
+                                                            <input class="form-control" name="telefono"
+                                                                id="inputTelephone" type="text"
+                                                                placeholder="9208033951" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="row gx-3 mb-3">
+                                                        <div class="col-md-6">
+                                                            <label class="small mb-1" for="inputRol">Rol</label>
+                                                            <select id="id_role" name="idrol" class="form-control">
+                                                                <option>------Seleccionar------</option>
+                                                                @foreach($roles as $role)
+                                                                <option value="{{ $role->id }}">{{ $role->nombre }}</option>
+                                                                @endforeach
+                                                         </select>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label class="small mb-1" for="inputPassword">Contraseña</label>
+                                                            <input class="form-control" name="password"
+                                                                id="inputPassword" type="password"
+                                                                placeholder="***********" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="row gx-3 mb-3">
+                                                        <div class="col-md-6">
+                                                            <label class="small mb-1" for="inputUser">Usuario</label>
+                                                            <input class="form-control" name="usuario"
+                                                                id="inputUser" type="text"
+                                                                placeholder="user" />
                                                         </div>
                                                     </div>
                                             </div>

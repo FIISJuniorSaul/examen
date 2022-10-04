@@ -10,7 +10,7 @@
                         <div class="row justify-content-center">
                             <div class="col-12 col-xl-auto">
                                 <h1 class="page-title">
-                                    AGREGAR NUEVO CLIENTE->EMPRESA
+                                    AGREGAR NUEVO CLIENTE
                                 </h1>
                             </div>
                         </div>
@@ -19,72 +19,97 @@
                 <div class="page-body page-body-light pt-3 px-2">
                     <div class="card card-header-actions">
                         <div class="card-header">
-                            Datos de la empresa
+                            Datos del cliente
                         </div>
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                              <a class="nav-link" aria-current="page" href="/admin/operaciones/clientes/crear">Cliente Natural</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link active" href="/admin/operaciones/clientes/crearPersonaNatural">Cliente Juridico</a>
+                            </li>
+                          </ul>
                         <main>
                             <!-- Main page content-->
                             <div class="container-xl px-4 mt-4">
                                 <hr class="mt-0 mb-4" />
                                 <div class="row">
-                                    <div class="col-xl-4">
-                                        <!-- Profile picture card-->
-                                        <div class="card mb-4 mb-xl-0">
-                                            <div class="card-header">Foto de perfil</div>
-                                            <div class="card-body text-center">
-                                                <!-- Profile picture image-->
-                                                <img src="../image/profileuser.png" class="rounded mx-auto d-block" alt="" width="200" height="200">
-                                                <!-- Profile picture help block-->
-                                                <div class="small font-italic text-muted mb-4">JPG o PNG de no más de 5 MB
-                                                </div>
-                                                <!-- Profile picture upload button-->
-                                                <button class="btn btn-primary" type="button">Subir fotografia</button>
-
-                                            </div>
-                                        </div>
-                                    </div>
                                     <div class="col-xl-8">
                                         <!-- Account details card-->
                                         <div class="card mb-4">
-                                            <div class="card-header">Detalles del cliente</div>
+                                            <div class="card-header">Detalles del cliente Natural</div>
                                             <div class="card-body">
-                                                <form>
-                                                    
+                                                <label for="dni">Ingrese DNI</label>
+                                                <div class="input-group">
+                                                    <input type="number" min="1" max="99999999" id="dni" class="form-control" placeholder="Documento" />&nbsp;
+                                                    <button class="btn btn-primary" id="buscardni" align="right" onClick="consultarDni()">Buscar</button>
+                                                </div>
+                                                <form action="{{route('usuario.store')}}" method="post" enctype="multipart/form-data">
+                                                    @csrf
+                                                    <!--search-->
+                                                    <div class="d-grid gap-2 d-md-flex justify-content-md-end py-2 px-4">
+
+                                                        <!--<form class="input-group">
+                                                                <input name="busqueda" class="form-control me-md-2"
+                                                                    type="search" placeholder="Ingrese DNI" aria-label="Search"
+                                                                    autocomplete="off">
+                                                                <button class="btn btn-outline-primary btn-sm" type="submit">
+                                                                    <em class='bx bx-search-alt'></em>Buscar</button>
+                                                            </form>-->
+                                                    </div>
                                                     <!-- Form Group (username)-->
                                                     <div class="row gx-3 mb-3">
-                                                        <!-- Form Group (first name)-->
+                                                        <!-- Form Group (DNI)-->
                                                         <div class="col-md-6">
-                                                            <label class="small mb-1" for="inputNºDERUC">Nº DE RUC</label>
-                                                            <input class="form-control" id="inputNºDERUC" type="text"
-                                                                placeholder="NºDERUC" value=""  />
+                                                            <label class="small mb-1" for="inputDNI">DNI</label>
+                                                            <input class="form-control" name="dni" id="dni_ciudadano"
+                                                                type="text" placeholder="DNI" readonly />
                                                         </div>
-                                                        <!-- Form Group (last name)-->
+                                                        <!-- Form Group (name)-->
                                                         <div class="col-md-6">
-                                                            <label class="small mb-1" for="inputTelefóno">Teléfono</label>
-                                                            <input class="form-control" id="inputTeléfono" type="text"
-                                                                placeholder="Teléfono" value="" />
+                                                            <label class="small mb-1" for="inputName">Nombres</label>
+                                                            <input class="form-control" name="nombre" id="nombres"
+                                                                type="text" placeholder="Nombres" readonly/>
                                                         </div>
                                                     </div>
                                                     <!-- Form Row-->
                                                     <div class="row gx-3 mb-3">
-                                                        <!-- Form Group (first name)-->
+                                                        <!-- Form Group (last name)-->
                                                         <div class="col-md-6">
-                                                            <label class="small mb-1" for="inputRazónSocial">Razón Social</label>
-                                                            <input class="form-control" id="inputRazónSocial" type="text"
-                                                                placeholder="Razón Social" value=""  />
+                                                            <label class="small mb-1" for="inputFirstName">Apellido
+                                                                Paterno</label>
+                                                            <input class="form-control" name="apellido_paterno"
+                                                            id="apellido_paterno" type="text"
+                                                                placeholder="Apellido Paterno" readonly />
                                                         </div>
                                                         <!-- Form Group (last name)-->
                                                         <div class="col-md-6">
-                                                            <label class="small mb-1" for="inputDirección">Dirección</label>
-                                                              
-                                                            <input class="form-control" id="inputDirección" type="text"
-                                                                placeholder="Dirección" value="" />
+                                                            <label class="small mb-1" for="inputLastName">Apellido
+                                                                Materno</label>
+                                                            <input class="form-control" name="apellido_materno"
+                                                            id="apellido_materno" type="text"
+                                                                placeholder="Apellido Materno" readonly />
+                                                        </div>
+                                                    </div>
+                                                    <div class="row gx-3 mb-3">
+                                                        <div class="col-md-6">
+                                                            <label class="small mb-1" for="inputEmail">correo electronico</label>
+                                                            <input class="form-control" name="correo"
+                                                                id="inputEmail" type="text"
+                                                                placeholder="example@rayosac.com" />
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label class="small mb-1" for="inputTelephone">telefono</label>
+                                                            <input class="form-control" name="telefono"
+                                                                id="inputTelephone" type="text"
+                                                                placeholder="9208033951" />
                                                         </div>
                                                     </div>
                                                     <!-- Form Row        -->
                                                     <div class="row gx-3 mb-3">
                                                         <!-- Form Group (organization name)-->
                                                         <div class="col-md-6">
-                                                            
+
                                                         </div>
                                                         <!-- Form Group (location)-->
                                                         <div class="col-md-6">
@@ -99,7 +124,7 @@
                                                             placeholder="example@rayosac.com" value="" />
                                                     </div>
                                                     <!-- Form Row-->
-                                                    
+
                                                     <!--estado roles y permisos-->
                                                     <div class="row gx-2 mb-2">
                                                         <!-- select Estate-->
@@ -108,29 +133,29 @@
                                                             <select class="form-select"
                                                                 aria-label="Default select example">
                                                                 <option selected>Seleccionar</option>
-                                                                
+
                                                             </select>
                                                         </div>
                                                         <!-- select roles and permissions-->
                                                         <div class="col-md-4">
-                                                            <label class="small mb-1" for="inputProvincia">Provincia</label>                                                                
+                                                            <label class="small mb-1" for="inputProvincia">Provincia</label>
                                                             <select class="form-select"
                                                                 aria-label="Default select example">
                                                                 <option selected>Seleccionar</option>
-                                      
+
                                                             </select>
-                                                           
+
                                                         </div>
                                                         <div class="col-md-4">
-                                                            <label class="small mb-1" for="inputDistrito">Distrito</label>                                                                
+                                                            <label class="small mb-1" for="inputDistrito">Distrito</label>
                                                             <select class="form-select"
                                                                 aria-label="Default select example">
                                                                 <option selected>Seleccionar</option>
-                                      
+
                                                             </select>
-                                                           
+
                                                         </div>
-                         
+
                                                     </div>
 
                                                     <div class="text-center">

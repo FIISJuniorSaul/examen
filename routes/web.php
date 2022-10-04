@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VehiculoController;
 use App\Http\Controllers\PersonaController;
+use App\Http\Controllers\UsersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,22 +32,17 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
     Route::get('/main', function () {
         return view('admin.desktop');
-    });
+    })->name('main');
     /*Route::get('/configuracion/usuario', function () {
         return view('admin.configuracion.usuario.index');
     });*/
-    Route::resource('user', PersonaController::class);
+    //Route::resource('user', PersonaController::class);
+
+    Route::resource('usuario', UsersController::class);
 
 /* rutas-usuario*/
     Route::get('/configuracion/usuario/add', function () {
         return view('admin.configuracion.usuario.add');
-    });
-    Route::get('/configuracion/roles', function () {
-        return view('admin.configuracion.roles.index');
-    });
-    /* rutas-roles*/
-    Route::get('/configuracion/roles/addroles', function () {
-        return view('admin.configuracion.roles.addroles');
     });
     Route::get('/configuracion/infoempresa', function () {
         return view('admin.configuracion.infoempresa.modifi');
@@ -92,6 +88,24 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/operaciones/factura', function () {
         return view('admin.operaciones.factura.index');
     });
-}); 
+
+   /* rutas-cliente-empresa*/
+    Route::get('/operaciones/clientes', function () {
+        return view('admin.operaciones.clientes.index');
+    });
+    Route::get('/operaciones/clientes/crear', function () {
+        return view('admin.operaciones.clientes.crear');
+    });
+    Route::get('/operaciones/clientes/indexClienteNatural', function () {
+        return view('admin.operaciones.clientes.indexClienteNatural');
+    });
+    Route::get('/operaciones/clientes/crearPersonaNatural', function () {
+        return view('admin.operaciones.clientes.crearPersonaNatural');
+    });
+
+    Route::get('/operaciones/clientes/index', function () {
+        return view('admin.operaciones.clientes.index');
+    });
+});
 
 Route::resource('vehiculos', VehiculoController::class);

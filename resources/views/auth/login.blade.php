@@ -20,10 +20,12 @@
                             @csrf
                             <!-- Form Group (email address)-->
                             <div class="mb-3">
-                                <label class="small mb-1" for="inputEmailAddress">Email</label>
-                                <input id="email" type="email"
-                                    class="form-control @error('email') is-invalid @enderror" name="email" placeholder="example@rayosac.com"
-                                    value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                <label class="small mb-1" for="inputEmailAddress">Usuario</label>
+                                <input id="usuario" type="text"
+                                    class="form-control @error('usuario') is-invalid @enderror" name="usuario" placeholder="example@rayosac.com"
+                                    value="{{ old('usuario') }}" required autocomplete="usuario" autofocus>
+
+
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
