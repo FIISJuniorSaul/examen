@@ -74,6 +74,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/operaciones/clientes/indexClienteNatural', function () {
         return view('admin.operaciones.clientes.indexClienteNatural');
     });
+    Route::get('/operaciones/clientes/crearPersonaNatural', function () {
+        return view('admin.operaciones.clientes.crearPersonaNatural');
+    });
 
     Route::get('/operaciones/clientes/index', function () {
         return view('admin.operaciones.clientes.index');
