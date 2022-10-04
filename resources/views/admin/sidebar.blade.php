@@ -8,7 +8,7 @@
                         <img class="avatar-img img-fluid" src="../image/avatar.png" alt="">
                     </div>
                     <div class="sidenav-footer-subtitle text-center">Conectado como:</div>
-                    <div class="sidenav-footer-title text-center">{{ Auth::user()->name }}</div>
+                    <div class="sidenav-footer-title text-center">{{ Auth::user()->usuario }}</div>
                 </div>
             </div>
         </div>
