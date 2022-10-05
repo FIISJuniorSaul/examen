@@ -84,10 +84,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/operaciones/cotizar/add', function () {
         return view('/admin/operaciones/cotizar.createCotizacion');
     });
-    /* rutas facturación*/
-    Route::get('/operaciones/factura', function () {
-        return view('admin.operaciones.factura.index');
-    });
+
 
    /* rutas-cliente-empresa*/
     Route::get('/operaciones/clientes', function () {
@@ -102,6 +99,15 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/operaciones/clientes/crearPersonaNatural', function () {
         return view('admin.operaciones.clientes.crearPersonaNatural');
     });
+        /* rutas facturación*/
+        Route::get('/operaciones/factura', function () {
+            return view('admin.operaciones.factura.index');
+        });
+            /* rutas reporte-cliente*/
+            Route::get('/reportes/clienteReport', function () {
+                return view('admin.reportes.clienteReport.index');
+            });
 });
 
 Route::resource('vehiculos', VehiculoController::class);
+
