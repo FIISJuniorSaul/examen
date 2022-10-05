@@ -90,6 +90,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/operaciones/clientes', function () {
         return view('admin.operaciones.clientes.index');
     });
+    Route::get('/operaciones/clientes/index', function () {
+        return view('admin.operaciones.clientes.index');
+    });
     Route::get('/operaciones/clientes/crear', function () {
         return view('admin.operaciones.clientes.crear');
     });
