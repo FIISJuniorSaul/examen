@@ -103,16 +103,29 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
         return view('admin.operaciones.clientes.crearPersonaNatural');
     });
         /* rutas facturación*/
-        Route::get('/operaciones/factura', function () {
-            return view('admin.operaciones.factura.index');
-        });
-            /* rutas reporte-cliente*/
-            Route::get('/reportes/clienteReport', function () {
-                return view('admin.reportes.clienteReport.index');
-            });
+    Route::get('/facturacion/factura', function () {
+        return view('admin.facturacion.factura.index');
+    });
 
-            //Consulta Sunat
-            Route::get(
+        /* rutas reporte-cliente*/
+    Route::get('/reportes/clienteReport', function () {
+        return view('admin.reportes.clienteReport.index');
+    });
+        /* rutas reporte-rutas*/
+    Route::get('/reportes/rutaReport', function () {
+        return view('admin.reportes.rutaReport.index');
+    });
+        /* rutas reporte-usuario*/
+    Route::get('/reportes/usuarioReport', function () {
+        return view('admin.reportes.usuarioReport.index');
+    });
+        /* rutas reporte-vehiculo*/
+    Route::get('/reportes/vehiculoReport', function () {
+        return view('admin.reportes.vehiculoReport.index');
+    });
+
+        //Consulta Sunat
+    Route::get(
                 '/consultarruc',
                 'App\Http\Controllers\CosultaSunatController@buscarRuc'
             )->name('buscarsunat');
