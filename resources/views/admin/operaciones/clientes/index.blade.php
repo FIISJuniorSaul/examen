@@ -28,7 +28,7 @@
                         </div>
                         <ul class="nav nav-tabs">
                             <li class="nav-item">
-                              <a class="nav-link active" aria-current="page" href="#">Clientes Jurídicos</a>
+                              <a class="nav-link active" aria-current="page" href="/admin/operaciones/clientes/index">Clientes Jurídicos</a>
                             </li>
                             <li class="nav-item">
                               <a class="nav-link " href="/admin/operaciones/clientes/indexClienteNatural">Clientes Naturales</a>
@@ -49,6 +49,8 @@
                                         <th>Nº de RUC</th>
                                         <th>Razón Social</th>
                                         <th>E-.mail</th>
+                                        <th>Estado</th>
+                                        <th>Dirección</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
@@ -57,6 +59,8 @@
                                         <td>202203045</td>
                                         <td>GRATING PERU SAC</td>
                                         <td>grupo@grating-prodac.pe</td>
+                                        <td>activo</td>
+                                        <td>-</td>
                                         <td>
                                             <button class="btn btn-datatable btn-icon btn-transparent-table me-2"><i class='bx bx-dots-vertical-rounded'></i></button>
                                             <button class="btn btn-datatable btn-icon btn-transparent-table"><i class='bx bx-trash' ></i></button>
