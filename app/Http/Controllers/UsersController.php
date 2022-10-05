@@ -13,8 +13,6 @@ class UsersController extends Controller
 {
     public function index(Request $request)
     {
-
-
         $buscar = $request->buscar;
         $criterio = $request->criterio;
 
@@ -31,13 +29,13 @@ class UsersController extends Controller
                 ->orderBy('id', 'desc')->paginate(10);
         }
 
-        return view('admin.Configuracion.usuario.index', compact('personas'));
+        return view('admin.configuracion.usuario.index', compact('personas'));
 
 
     }
     public function create() {
         $roles = Role::all();
-        return view('admin.Configuracion.usuario.crear', compact('roles'));
+        return view('admin.configuracion.usuario.crear', compact('roles'));
      }
     public function store(Request $request)
     {
@@ -72,13 +70,11 @@ class UsersController extends Controller
         $persona = Persona::find($id);
         $user = User::find($id);
 
-        return view('admin.Configuracion.usuario.editar', compact('persona','user'));
+        return view('admin.configuracion.usuario.editar', compact('persona','user'));
     }
 
     public function update(Request $request)
     {
-
-
         try {
             DB::beginTransaction();
 
@@ -107,8 +103,6 @@ class UsersController extends Controller
 
     public function desactivar(Request $request)
     {
-
-
         $user = User::findOrFail($request->id);
         $user->condicion = '0';
         $user->save();
@@ -116,13 +110,8 @@ class UsersController extends Controller
 
     public function activar(Request $request)
     {
-
-
         $user = User::findOrFail($request->id);
         $user->condicion = '1';
         $user->save();
     }
-
-
-
 }

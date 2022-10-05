@@ -60,7 +60,8 @@
                                         <td>{{$item->rol}}</td>
                                         <td>{{$item->condicion}}</td>
                                         <td>
-
+                                                <button class="btn btn-datatable btn-icon btn-transparent-table me-2"><em class='bx bxs-edit-alt'></em></button>
+                                                <button class="btn btn-datatable btn-icon btn-transparent-table"><i class='bx bx-trash' ></i></button>
                                         </td>
                                     </tr>
 

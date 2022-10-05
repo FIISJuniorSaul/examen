@@ -20161,6 +20161,7 @@ body {
   /*color: #a7aeb8;*/
   color:#fff;
 }
+/*color del cursor cuando  se pasa sobre las opciones*/
 .sidenav-light .sidenav-menu .nav-link:hover {
   /*color: #0061f2;*/
   border-radius: 4px;
@@ -20176,6 +20177,7 @@ body {
   margin-left: 0.2rem;
   margin-right: 0.5rem;
 }
+/*editar icono*/
 .sidenav-light .sidenav-menu .nav-link.active .nav-link-icon {
   color: #ffff;
 }

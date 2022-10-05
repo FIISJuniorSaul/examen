@@ -126,7 +126,7 @@
 
                                             <div class="text-center">
                                                 <!-- Save changes button-->
-                                                <button class="btn btn-primary" type="submit"><em
+                                                <button href= "/admin/configuracion/usuario/index"class="btn btn-primary" type="submit"><em
                                                         class='bx bxs-memory-card'></em>Guardar </button>
                                                 <!-- cancel changes button-->
                                                 <button class="btn btn-primary" type="button"><em

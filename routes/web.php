@@ -40,6 +40,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
     Route::resource('usuario', UsersController::class);
 
+
 /* rutas-usuario*/
     Route::get('/configuracion/usuario/add', function () {
         return view('admin.configuracion.usuario.add');
