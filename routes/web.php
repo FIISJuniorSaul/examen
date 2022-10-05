@@ -103,8 +103,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
         return view('admin.operaciones.clientes.crearPersonaNatural');
     });
         /* rutas facturación*/
-    Route::get('/operaciones/factura', function () {
-        return view('admin.operaciones.factura.index');
+    Route::get('/facturacion/factura', function () {
+        return view('admin.facturacion.factura.index');
     });
 
         /* rutas reporte-cliente*/
