@@ -107,6 +107,12 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
             Route::get('/reportes/clienteReport', function () {
                 return view('admin.reportes.clienteReport.index');
             });
+
+            //Consulta Sunat
+            Route::get(
+                '/consultarruc',
+                'App\Http\Controllers\CosultaSunatController@buscarRuc'
+            )->name('buscarsunat');
 });
 
 Route::resource('vehiculos', VehiculoController::class);

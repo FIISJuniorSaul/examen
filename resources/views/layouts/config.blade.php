@@ -41,6 +41,8 @@
         <script src="https://assets.startbootstrap.com/js/sb-customizer.js"></script>
         <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"70c6d5733dff56b8","token":"6e2c2575ac8f44ed824cef7899ba8463","version":"2021.12.0","si":100}' crossorigin="anonymous"></script>
         @stack('scripts')
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
             let html = document.getElementById("current_date");
 
@@ -101,7 +103,7 @@
         </script>
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <script>
 
         var dni;
@@ -152,5 +154,54 @@
             //    alert("Button clicked");
             //});
     </script>
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+            $('#btnbuscar').click(function(){
+                var numruc=$('#ruc').val();
+                if (numruc!='') {
+                    $.ajax({
+                        url:"{{ route('buscarsunat') }}",
+                        method:'GET',
+                        data:{ruc:numruc},
+                        dataType:'json',
+                        success:function(data){
+                            var resultados=data.entidad['success'];
+                            if (resultados==true) {
+								var razon=data.entidad['entity']['nombre_o_razon_social'];
+								var direccion=data.entidad['entity']['direccion'];
+								var distrito=data.entidad['entity']['distrito'];
+								var provincia=data.entidad['entity']['provincia'];
+								var departamento=data.entidad['entity']['departamento'];
+								var estado=data.entidad['entity']['estado_del_contribuyente'];
+
+                                $('#txtruc').val(numruc);
+                                $('#txtrazon').val(razon);
+                                $('#txtgrupo').val(estado);
+                                $('#txtdireccion').val(direccion);
+                                $('#txtdistrito').val(distrito);
+                                $('#txtprovincia').val(provincia);
+                                $('#txtdepartamento').val(departamento);
+                            }else{
+                                $('#txtruc').val('');
+                                $('#txtrazon').val('');
+                                $('#txtgrupo').val('');
+                                $('#txtdireccion').val('');
+                                $('#txtdistrito').val('');
+                                $('#txtprovincia').val('');
+                                $('#txtdepartamento').val('');
+                                $('#mensaje').show();
+                                $('#mensaje').delay(1000).hide(2500);
+                            }
+                        }
+                    });
+                }else{
+                    alert('Escriba el RUC.!');
+                    $('#ruc').focus();
+                }
+            });
+        });
+    </script>
+
     </body>
 </html>

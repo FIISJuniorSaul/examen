@@ -41,23 +41,30 @@
                                             <div class="card-body">
                                                 <label for="dni">Ingrese RUC</label>
                                                 <div class="input-group">
-                                                    <input type="number" min="1" max="99999999999" id="ruc" class="form-control" placeholder="N° DE RUC" />&nbsp;
-                                                    <button class="btn btn-primary" id="buscarruc" align="right" onClick="consultarRuc()">Buscar</button>
+                                                    <input type="number" min="1" max="99999999999" id="ruc" name="ruc" value="" class="form-control" placeholder="N° DE RUC" />&nbsp;
+                                                    <button class="btn btn-primary" id="btnbuscar" align="right" >Buscar</button>
+
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <small id="mensaje" style="color: red;display: none;font-size: 12pt;">
+                                                        <i class="fa fa-remove"></i> El numero de RUC no es valido.
+                                                    </small>
                                                 </div>
                                                 <form>
+
                                                     <!-- Form Group (username)-->
                                                     <div class="row gx-3 mb-3">
                                                         <!-- Form Group (first name)-->
                                                         <div class="col-md-6">
                                                             <label class="small mb-1" for="inputNºDERUC">Nº DE RUC</label>
-                                                            <input class="form-control" id="inputNºDERUC" type="text"
+                                                            <input class="form-control" id="txtruc" type="text"
                                                                 placeholder="NºDERUC" value=""  readonly/>
                                                         </div>
                                                         <!-- Form Group (last name)-->
 
                                                         <div class="col-md-6">
                                                             <label class="small mb-1" for="inputRazónSocial">Razón Social</label>
-                                                            <input class="form-control" id="inputRazónSocial" type="text"
+                                                            <input class="form-control" id="txtrazon" type="text"
                                                                 placeholder="Razón Social" value=""  readonly/>
                                                         </div>
 
@@ -66,18 +73,46 @@
                                                     <div class="row gx-3 mb-3">
                                                         <!-- Form Group (first name)-->
                                                         <div class="col-md-6">
-                                                            <label class="small mb-1" for="inputNameEmpresa">Nombre de la empresa</label>
-                                                            <input class="form-control" id="inputNameEmpresa" type="text"
-                                                                placeholder="nombre comercial de la empresa" value="" readonly />
+                                                            <label class="small mb-1" for="inputNameEmpresa">Estado</label>
+                                                            <input class="form-control" id="txtgrupo" type="text"
+                                                                placeholder="Estadoa" value="" readonly />
                                                         </div>
                                                         <!-- Form Group (last name)-->
                                                         <div class="col-md-6">
                                                             <label class="small mb-1" for="inputDirección">Dirección</label>
 
-                                                            <input class="form-control" id="inputDirección" type="text"
+                                                            <input class="form-control" id="txtdireccion" type="text"
                                                                 placeholder="Dirección" value="" readonly />
                                                         </div>
                                                     </div>
+                                                    <!-- Form Row-->
+                                                    <div class="row gx-3 mb-3">
+                                                        <!-- Form Group (first name)-->
+                                                        <div class="col-md-6">
+                                                            <label class="small mb-1" for="inputNameEmpresa">Distrito</label>
+                                                            <input class="form-control" id="txtdistrito" type="text"
+                                                                placeholder="Estadoa" value="" readonly />
+                                                        </div>
+                                                        <!-- Form Group (last name)-->
+                                                        <div class="col-md-6">
+                                                            <label class="small mb-1" for="inputDirección">Provincia</label>
+
+                                                            <input class="form-control" id="txtprovincia" type="text"
+                                                                placeholder="Dirección" value="" readonly />
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Form Row-->
+                                                    <div class="row gx-3 mb-3">
+                                                        <!-- Form Group (first name)-->
+                                                        <div class="col-md-6">
+                                                            <label class="small mb-1" for="inputNameEmpresa">Departamento</label>
+                                                            <input class="form-control" id="txtdepartamento" type="text"
+                                                                placeholder="Estadoa" value="" readonly />
+                                                        </div>
+                                                    </div>
+
+
                                                     <!-- Form Row        -->
                                                     <div class="row gx-3 mb-3">
                                                         <!-- Form Group (organization name)-->
