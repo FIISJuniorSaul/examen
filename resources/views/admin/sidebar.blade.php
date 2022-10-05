@@ -5,7 +5,7 @@
             <div class="sidenav-footer">
                 <div class="sidenav-footer-content">
                     <div class="avatar avatar-xxl">
-                        <img class="avatar-img img-fluid" src="../image/avatar.png" alt="">
+                        <img class="avatar-img img-fluid" src="{{asset('image/avatar.png')}}" alt="">
                     </div>
                     <div class="sidenav-footer-subtitle text-center">Conectado como:</div>
                     <div class="sidenav-footer-title text-center">{{ Auth::user()->usuario }}</div>

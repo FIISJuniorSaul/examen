@@ -96,8 +96,8 @@
                 <h6 class="dropdown-header d-flex align-items-center dropdown-notifications-header">
                     <em class='bx bxs-user'></em>
                     <div class="dropdown-user-details">
-                        <div class="dropdown-user-details-name"><div class="sidenav-footer-title">{{Auth::user()->name}}</div></div>
-                        <div class="sidenav-footer-title">{{Auth::user()->email}}</div>
+                        <div class="dropdown-user-details-name"><div class="sidenav-footer-title">{{Auth::user()->usuario}}</div></div>
+
                     </div>
                 </h6>
                 <!--<div class="dropdown-divider"></div>-->
