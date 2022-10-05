@@ -31,7 +31,7 @@
                               <a class="nav-link " aria-current="page" href="/admin/operaciones/clientes/index">Clientes Jurídicos</a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link  active" href="#">Clientes Naturales</a>
+                              <a class="nav-link  active" href="/admin/operaciones/clientes/indexClienteNatural">Clientes Naturales</a>
                             </li>
 
                           </ul>
@@ -47,16 +47,22 @@
                                 <thead>
                                     <tr>
                                         <th>Nº de DNI</th>
-                                        <th>Razón Social</th>
-                                        <th>E-.mail</th>
+                                        <th>Nombre</th>
+                                        <th>Apellido Paterno</th>
+                                        <th>Apellido Materno</th>
+                                        <th>E-mail</th>
+                                        <th>Teléfono</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>202203045</td>
-                                        <td>GRATING PERU SAC</td>
-                                        <td>grupo@grating-prodac.pe</td>
+                                        <td>Fiorela</td>
+                                        <td>Zambrano</td>
+                                        <td>Nazario</td>
+                                        <td>fiorela@gmail.com</td>
+                                        <td>930959507</td>
                                         <td>
                                             <button class="btn btn-datatable btn-icon btn-transparent-table me-2"><i class='bx bx-dots-vertical-rounded'></i></button>
                                             <button class="btn btn-datatable btn-icon btn-transparent-table"><i class='bx bx-trash' ></i></button>
