@@ -105,9 +105,8 @@
 
 
     <script>
-
+        //INTEGRACION DE APPI RENIEC
         var dni;
-
         consultarDni = function () {
             dni = document.getElementById("dni").value;
             consulta = {
@@ -153,6 +152,9 @@
             //$("#buscardni").click(function() {
             //    alert("Button clicked");
             //});
+
+
+            //APPI INTEGRACION DE RUC
     </script>
     <script type="text/javascript">
 

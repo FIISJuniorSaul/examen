@@ -34,7 +34,7 @@
                             <div class="container-xl px-4 mt-4">
                                 <hr class="mt-0 mb-4" />
                                 <div class="row">
-                                    <div class="col-xl-8">
+                                    <div class="#">
                                         <!-- Account details card-->
                                         <div class="card mb-4">
                                             <div class="card-header">Detalles del cliente Juridico</div>
@@ -58,7 +58,7 @@
                                                         <div class="col-md-6">
                                                             <label class="small mb-1" for="inputNºDERUC">Nº DE RUC</label>
                                                             <input class="form-control" id="txtruc" type="text"
-                                                                placeholder="NºDERUC" value=""  readonly/>
+                                                                placeholder="Nº DE RUC" value=""  readonly/>
                                                         </div>
                                                         <!-- Form Group (last name)-->
 
@@ -75,7 +75,7 @@
                                                         <div class="col-md-6">
                                                             <label class="small mb-1" for="inputNameEmpresa">Estado</label>
                                                             <input class="form-control" id="txtgrupo" type="text"
-                                                                placeholder="Estadoa" value="" readonly />
+                                                                placeholder="Estado" value="" readonly />
                                                         </div>
                                                         <!-- Form Group (last name)-->
                                                         <div class="col-md-6">
@@ -89,52 +89,39 @@
                                                     <div class="row gx-3 mb-3">
                                                         <!-- Form Group (first name)-->
                                                         <div class="col-md-6">
-                                                            <label class="small mb-1" for="inputNameEmpresa">Distrito</label>
-                                                            <input class="form-control" id="txtdistrito" type="text"
-                                                                placeholder="Estadoa" value="" readonly />
+                                                            <label class="small mb-1" for="inputNameEmpresa">Departamento</label>
+                                                            <input class="form-control" id="txtdepartamento" type="text"
+                                                                placeholder="departamento" value="" readonly />
                                                         </div>
-                                                        <!-- Form Group (last name)-->
+
                                                         <div class="col-md-6">
                                                             <label class="small mb-1" for="inputDirección">Provincia</label>
 
                                                             <input class="form-control" id="txtprovincia" type="text"
-                                                                placeholder="Dirección" value="" readonly />
+                                                                placeholder="provincia" value="" readonly />
                                                         </div>
+
                                                     </div>
 
                                                     <!-- Form Row-->
                                                     <div class="row gx-3 mb-3">
                                                         <!-- Form Group (first name)-->
                                                         <div class="col-md-6">
-                                                            <label class="small mb-1" for="inputNameEmpresa">Departamento</label>
-                                                            <input class="form-control" id="txtdepartamento" type="text"
-                                                                placeholder="Estadoa" value="" readonly />
+                                                            <label class="small mb-1" for="inputNameEmpresa">Distrito</label>
+                                                            <input class="form-control" id="txtdistrito" type="text"
+                                                                placeholder="distrito" value="" readonly />
                                                         </div>
-                                                    </div>
-
-
-                                                    <!-- Form Row        -->
-                                                    <div class="row gx-3 mb-3">
-                                                        <!-- Form Group (organization name)-->
                                                         <div class="col-md-6">
-
+                                                            <label class="small mb-1" for="inputEmailAddress">Correo
+                                                                Electronico</label>
+                                                            <input class="form-control" id="inputEmailAddress" type="email"
+                                                                placeholder="example@rayosac.com" value="" />
                                                         </div>
-                                                        <!-- Form Group (location)-->
-                                                        <div class="col-md-6">
-
-                                                        </div>
-                                                    </div>
-                                                    <!-- Form Group (email address)-->
-                                                    <div class="mb-3">
-                                                        <label class="small mb-1" for="inputEmailAddress">Correo
-                                                            Electronico</label>
-                                                        <input class="form-control" id="inputEmailAddress" type="email"
-                                                            placeholder="example@rayosac.com" value="" />
                                                     </div>
                                                     <!-- Form Row-->
                                                     <div>
-                                                        <h6>DETALLES DE LA RUTA</h6>
-                                                        <a>Punto de origen</a>
+                                                        <h5>DETALLES DE LA CARGA</h5>
+                                                        <h6>Punto de origen</h6>
                                                         <!--estado roles y permisos-->
                                                         <div class="row gx-2 mb-2">
                                                             <!-- select Estate-->
@@ -169,7 +156,7 @@
                                                         </div>
                                                     </div>
                                                     <div>
-                                                        <a>Punto de destino</a>
+                                                        <h6>Punto de Destino</h6>
                                                         <!--estado roles y permisos-->
                                                         <div class="row gx-2 mb-2">
                                                             <!-- select Estate-->
@@ -203,13 +190,13 @@
 
                                                         </div>
                                                     </div>
-                                                    <h6>DETALLES DE LA CARGA</h6>
-                                                    <div class="col-md-4">
+                                                    <div class="#">
                                                         <label class="small mb-1" for="inputDistrito">Descripcion de la carga</label>
                                                         <input class="form-control" id="inputDetailsBurden" type="text"
                                                             placeholder="detalles de la carga" value="" />
                                                     </div>
                                                     <div class="text-center">
+                                                        <br>
                                                         <!-- Save changes button-->
                                                         <button class="btn btn-primary" type="button"><em
                                                                 class='bx bxs-memory-card'></em>Guardar </button>

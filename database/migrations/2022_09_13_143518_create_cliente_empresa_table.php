@@ -17,6 +17,7 @@ class CreateClienteEmpresaTable extends Migration
             $table->id();
             $table->string('ruc');
             $table->string('razon_social');
+            $table->string('estado');
             $table->string('direccion');
             $table->string('departamento');
             $table->string('provincia');
