@@ -40,14 +40,6 @@
                                                     @csrf
                                                     <!--search-->
                                                     <div class="d-grid gap-2 d-md-flex justify-content-md-end py-2 px-4">
-
-                                                        <!--<form class="input-group">
-                                                                <input name="busqueda" class="form-control me-md-2"
-                                                                    type="search" placeholder="Ingrese DNI" aria-label="Search"
-                                                                    autocomplete="off">
-                                                                <button class="btn btn-outline-primary btn-sm" type="submit">
-                                                                    <em class='bx bx-search-alt'></em>Buscar</button>
-                                                            </form>-->
                                                     </div>
                                                     <!-- Form Group (username)-->
                                                     <div class="row gx-3 mb-3">
@@ -126,7 +118,7 @@
 
                                             <div class="text-center">
                                                 <!-- Save changes button-->
-                                                <button href= "/admin/configuracion/usuario/index"class="btn btn-primary" type="submit"><em
+                                                <button class="btn btn-primary" type="submit"><em
                                                         class='bx bxs-memory-card'></em>Guardar </button>
                                                 <!-- cancel changes button-->
                                                 <button class="btn btn-primary" type="button"><em
