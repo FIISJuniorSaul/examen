@@ -22,7 +22,7 @@
                             Listado
                             <div>
                                <!-- <a href="/admin/configuracion/usuario/add" class="btn btn-primary lift"><em class='bx bxs-user-plus'></em>{{ __('Crear Usuario') }}</a> --> 
-                            <a href='/admin/operaciones/vehiculos/add' class="btn btn-primary lift" type="button"><em class='bx bxs-report'></em>Reportar</a>
+                            <!--<a href='/admin/operaciones/vehiculos/add' class="btn btn-primary lift" type="button"><em class='bx bxs-report'></em>Reportar</a>-->
                             </div>
                         </div>
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end py-2 px-4">
@@ -44,6 +44,7 @@
                                         <th>Ruta</th>
                                         <th>Vehículo</th>
                                         <th>Total</th>
+                                        <th>actions</th>
                                 
                                         
                                     </tr>
@@ -59,6 +60,10 @@
                                         <td>Lima-Chiclayo</td>
                                         <td>tracto plataforma</td>
                                         <td>3188 s/.</td>
+                                        <td>
+                                           <!-- <button class="btn btn-datatable btn-icon btn-transparent-table me-2"><i class='bx bx-dots-vertical-rounded'></i></button>-->
+                                            <button class="btn btn-datatable btn-icon btn-transparent-table"><em class='bx bxs-report'></em></button>
+                                        </td>
                                        
 
                                     </tr>
