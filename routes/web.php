@@ -2,20 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VehiculoController;
-use App\Http\Controllers\PersonaController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\RutaController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+
 Route::get('/', function () {
     return view('auth.login');
 });
@@ -34,14 +24,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/main', function () {
         return view('admin.desktop');
     })->name('main');
-    /*Route::get('/configuracion/usuario', function () {
-        return view('admin.configuracion.usuario.index');
-    });*/
-    //Route::resource('user', PersonaController::class);
 
     Route::resource('usuario', UsersController::class);
-
-    Route::resource('rutas', RutaController::class);
+    Route::resource('rutasdestino', RutaController::class);
 
 /* rutas-usuario*/
 

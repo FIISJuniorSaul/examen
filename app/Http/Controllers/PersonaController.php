@@ -11,10 +11,10 @@ class PersonaController extends Controller
     public function index(){
         $personas=Persona::get();
 
-        return view('admin.Configuracion.usuario.index', compact('personas'));
+        return view('admin.configuracion.usuario.index', compact('personas'));
     }
     public function create() {
-        return view('admin.Configuracion.usuario.crear');
+        return view('admin.configuracion.usuario.crear');
      }
 
     public function store(Request $request){

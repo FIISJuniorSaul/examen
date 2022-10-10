@@ -54,7 +54,7 @@
                     <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
                         <li class="nav-item">
                             <a class="nav-link" href="/admin/operaciones/vehiculos"> <em class='bx bxs-truck'></em>Vehiculos</a>
-                            <a class="nav-link" href="/admin/operaciones/rutas"><em class='bx bx-trip'></em>Rutas</a>
+                            <a class="nav-link" href="/admin/rutasdestino"><em class='bx bx-trip'></em>Rutas</a>
 
 
                             <a class="nav-link" href="/admin/operaciones/clientes"> <i class='bx bx-directions'></i>clientes</a>

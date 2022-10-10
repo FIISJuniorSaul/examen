@@ -20,7 +20,7 @@
                     <div class="card card-header-actions">
                         <div class="card-header">
                             Listado de las Rutas
-                            <a href="/admin/operaciones/rutas/add" class="btn btn-primary lift"><em class='bx bx-trip'></em>{{ __('Nueva Ruta') }}</a>
+                            <a href="{{route('rutasdestino.create')}}" class="btn btn-primary lift"><em class='bx bx-trip'></em>{{ __('Nueva Ruta') }}</a>
                         </div>
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end py-2 px-4">
                             <form class="input-group">
@@ -33,24 +33,26 @@
                             <table class="table table-sm table-bordered table-hover " id="datatablesSimple">
                                 <thead>
                                     <tr>
-                                        <th>Punto de Inicio</th>
-                                        <th>Punto Final</th>
-                                        <th>Distancia KM</th>
+                                        <th>DEPARTAMENTO</th>
+                                        <th>PROVINCIA</th>
+                                        <th>DISTRITO</th>
                                         <th>Acciones</th>
                                     </tr>
                                 </thead>
 
                                 <tbody>
+                                    @foreach ($ruta_i as $rut)
                                     <tr>
-                                        <td>Lima</td>
-                                        <td>Chiclayo</td>
-                                        <td>800</td>
+                                        <td>{{$rut->departamento}}</td>
+                                        <td>{{$rut->provincia}}</td>
+                                        <td>{{$rut->distrito}}</td>
                                         <td>
                                             <button class="btn btn-datatable btn-icon btn-transparent-table me-2"><i class='bx bx-dots-vertical-rounded'></i></button>
                                             <button class="btn btn-datatable btn-icon btn-transparent-table"><i class='bx bx-trash' ></i></button>
                                         </td>
 
                                     </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
 
