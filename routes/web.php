@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VehiculoController;
 use App\Http\Controllers\PersonaController;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\RutaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,11 +41,10 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
     Route::resource('usuario', UsersController::class);
 
+    Route::resource('rutas', RutaController::class);
 
 /* rutas-usuario*/
-    Route::get('/configuracion/usuario/add', function () {
-        return view('admin.configuracion.usuario.add');
-    });
+
     Route::get('/configuracion/infoempresa', function () {
         return view('admin.configuracion.infoempresa.modifi');
     });
@@ -57,13 +57,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     });
 
    /* rutas-rutas*/
-    Route::get('/operaciones/rutas', function () {
-        return view('admin.operaciones.rutas.index');
-    });
-    Route::get('/operaciones/rutas/add', function () {
-        return view('admin.operaciones.rutas.createRutas');
 
-    });
     /* rutas-cliente-contactos*/
     Route::get('/operaciones/clientes/contacto', function () {
         return view('admin.operaciones.clientes.contacto.index');
@@ -71,13 +65,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/operaciones/clientes/contacto/add',function () {
         return view('admin.operaciones.clientes.contacto.create');
     });
-   /* rutas-cliente-empresa*/
-    Route::get('/operaciones/clientes/empresa', function () {
-        return view('admin.operaciones.clientes.empresa.index');
-    });
-    Route::get('/operaciones/clientes/empresa/crear',function () {
-        return view('admin.operaciones.clientes.empresa.crear');
-    });
+
     /* rutas-cotizacion*/
     Route::get('/operaciones/cotizar', function () {
         return view('/admin/operaciones/cotizar.index');
