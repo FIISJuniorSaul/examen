@@ -30,6 +30,7 @@
                                         <label class="small mb-1" for="inputDepartament">Departamento</label>
                                         <input class="form-control" name="departamento" id="inputDepartament" type="text"
                                             placeholder="departamento" />
+
                                     </div>
                                     <div class="col-md-6">
                                         <label class="small mb-1" for="inputProvince">Provincia</label>

@@ -39,7 +39,7 @@
                                     <div class="#">
                                         <!-- Account details card-->
                                         <div class="card mb-4">
-                                            <div class="card-header">Detalles del cliente Juridico</div>
+                                            <div class="card-header">Detalles del cliente Jurídico</div>
                                             <div class="card-body">
                                                 <label for="dni">Ingrese RUC</label>
                                                 <div class="input-group">
@@ -47,15 +47,17 @@
                                                         name="ruc" value="" class="form-control"
                                                         placeholder="N° DE RUC" />&nbsp;
                                                     <button class="btn btn-primary" id="btnbuscar"
-                                                        align="right">Buscar</button>
+                                                        align="right"><em class='bx bx-search-alt-2'></em>Buscar</button>
 
                                                 </div>
                                                 <div class="col-md-5">
                                                     <small id="mensaje" style="color: red;display: none;font-size: 12pt;">
-                                                        <i class="fa fa-remove"></i> El numero de RUC no es valido.
+                                                        <i class="fa fa-remove"></i> El número de RUC no es valido.
                                                     </small>
                                                 </div>
-                                                <form>
+                                                <form action="{{ route('clientes.store') }}" method="post"
+                                                    enctype="multipart/form-data">
+                                                    @csrf
 
                                                     <!-- Form Group (username)-->
                                                     <div class="row gx-3 mb-3">
@@ -94,39 +96,46 @@
                                                     <!-- Form Row-->
                                                     <div class="row gx-3 mb-3">
                                                         <!-- Form Group (first name)-->
-                                                        <div class="col-md-6">
+                                                        <div class="col-md-4">
                                                             <label class="small mb-1"
                                                                 for="inputNameEmpresa">Departamento</label>
                                                             <input class="form-control" id="txtdepartamento" type="text"
                                                                 placeholder="departamento" value="" readonly />
                                                         </div>
 
-                                                        <div class="col-md-6">
+                                                        <div class="col-md-4">
                                                             <label class="small mb-1" for="inputDirección">Provincia</label>
 
                                                             <input class="form-control" id="txtprovincia" type="text"
                                                                 placeholder="provincia" value="" readonly />
                                                         </div>
-
-                                                    </div>
-
-                                                    <!-- Form Row-->
-                                                    <div class="row gx-3 mb-3">
-                                                        <!-- Form Group (first name)-->
-                                                        <div class="col-md-6">
+                                                        <div class="col-md-4">
                                                             <label class="small mb-1"
                                                                 for="inputNameEmpresa">Distrito</label>
                                                             <input class="form-control" id="txtdistrito" type="text"
                                                                 placeholder="distrito" value="" readonly />
                                                         </div>
+                                                    </div>
+
+                                                    <!-- Form Row-->
+                                                    <div class="row gx-3 mb-3">
+                                                        <!-- Form Group (first name)-->
+
                                                         <div class="col-md-6">
                                                             <label class="small mb-1" for="inputEmailAddress">Correo
-                                                                Electronico</label>
+                                                                Electrónico</label>
                                                             <input class="form-control" id="inputEmailAddress"
                                                                 type="email" placeholder="example@rayosac.com"
                                                                 value="" />
                                                         </div>
+                                                        <div class="col-md-6">
+                                                            <label class="small mb-1" for="inputTelephone">Número de teléfono</label>
+                                                            <input class="form-control" id="inputTelephone"
+                                                                type="number" placeholder="928033951"
+                                                                value="" />
+                                                        </div>
                                                     </div>
+
                                                     <!-- Form Row-->
                                                     <div>
                                                         <h5>DETALLES DE LA CARGA</h5>
@@ -159,8 +168,8 @@
                                                                 <label class="small mb-1"
                                                                     for="inputDistrit">Distrito</label>
                                                                 <select aria-label="Default select example"
-                                                                    class="form-select" id="id_Distrit"
-                                                                    name="idDistrit" class="form-control">
+                                                                    class="form-select" id="id_Distrit" name="idDistrit"
+                                                                    class="form-control">
                                                                     <option>------Seleccionar------</option>
 
                                                                 </select>
@@ -198,8 +207,8 @@
                                                                 <label class="small mb-1"
                                                                     for="inputDistrit">Distrito</label>
                                                                 <select aria-label="Default select example"
-                                                                    class="form-select" id="id_Distrit"
-                                                                    name="idDistrit" class="form-control">
+                                                                    class="form-select" id="id_Distrit" name="idDistrit"
+                                                                    class="form-control">
                                                                     <option>------Seleccionar------</option>
 
                                                                 </select>
@@ -207,13 +216,23 @@
 
                                                         </div>
                                                     </div>
-                                                    <div class="#">
-                                                        <label class="small mb-1" for="inputDistrito">Descripcion de la
-                                                            carga</label>
-                                                        <input class="form-control" id="inputDetailsBurden"
-                                                            type="text" placeholder="detalles de la carga"
-                                                            value="" />
+                                                    <h6>Detalles Adicionales de la Carga</h6>
+                                                    <div class="row gx-3 mb-3">
+                                                        <div class="col-md-6">
+                                                            <label class="small mb-1" for="inputDetailsBurden">Descripcion de la
+                                                                carga</label>
+                                                            <input class="form-control" id="inputDetailsBurden"
+                                                                type="text" placeholder="Detalles de la carga"
+                                                                value="" />
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label class="small mb-1" for="inputCostBurden">costo de la carga</label>
+                                                            <input class="form-control" id="inputCostBurden"
+                                                                type="number" placeholder="Costo de la carga"
+                                                                value="" />
+                                                        </div>
                                                     </div>
+
                                                     <div class="text-center">
                                                         <br>
                                                         <!-- Save changes button-->

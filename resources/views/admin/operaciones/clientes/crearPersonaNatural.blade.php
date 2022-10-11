@@ -46,7 +46,7 @@
                                                     <input type="number" min="1" max="99999999" id="dni"
                                                         class="form-control" placeholder="Documento" />&nbsp;
                                                     <button class="btn btn-primary" id="buscardni" align="right"
-                                                        onClick="consultarDni()">Buscar</button>
+                                                        onClick="consultarDni()"><em class='bx bx-search-alt-2'></em>Buscar</button>
                                                 </div>
                                                 <div class="col-md-5">
                                                     <small id="mensaje" style="color: red;display: none;font-size: 12pt;">
@@ -103,7 +103,7 @@
                                                         <div class="col-md-6">
                                                             <label class="small mb-1" for="inputTelephone">telefono</label>
                                                             <input class="form-control" name="telefono" id="inputTelephone"
-                                                                type="text" placeholder="9208033951" />
+                                                                type="number" placeholder="9208033951" />
                                                         </div>
                                                     </div>
                                                     <!--estado roles y permisos-->
@@ -166,6 +166,22 @@
                                                                 aria-label="Default select example">
                                                                 <option selected>Seleccionar</option>
                                                             </select>
+                                                        </div>
+                                                    </div>
+                                                    <h6>Detalles Adicionales de la Carga</h6>
+                                                    <div class="row gx-3 mb-3">
+                                                        <div class="col-md-6">
+                                                            <label class="small mb-1" for="inputDetailsBurden">Descripcion de la
+                                                                carga</label>
+                                                            <input class="form-control" id="inputDetailsBurden"
+                                                                type="text" placeholder="Detalles de la carga"
+                                                                value="" />
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label class="small mb-1" for="inputCostBurden">costo de la carga</label>
+                                                            <input class="form-control" id="inputCostBurden"
+                                                                type="number" placeholder="Costo de la carga"
+                                                                value="" />
                                                         </div>
                                                     </div>
                                                     <div class="text-center">

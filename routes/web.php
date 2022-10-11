@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClientePersonaJuridica;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VehiculoController;
 use App\Http\Controllers\UsersController;
@@ -27,6 +28,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
     Route::resource('usuario', UsersController::class);
     Route::resource('rutasdestino', RutaController::class);
+    Route::resource('clientes', ClientePersonaJuridica::class);
 
 /* rutas-usuario*/
 
