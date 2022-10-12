@@ -23,12 +23,14 @@
                         </div>
                         <ul class="nav nav-tabs">
                             <li class="nav-item">
-                              <a class="nav-link active" aria-current="page" href="/admin/operaciones/clientes/crear">Cliente Juridico</a>
+                                <a class="nav-link active" aria-current="page"
+                                    href="/admin/operaciones/clientes/crear">Cliente Juridico</a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link" href="/admin/operaciones/clientes/crearPersonaNatural">Cliente Natural</a>
+                                <a class="nav-link" href="/admin/operaciones/clientes/crearPersonaNatural">Cliente
+                                    Natural</a>
                             </li>
-                          </ul>
+                        </ul>
                         <main>
                             <!-- Main page content-->
                             <div class="container-xl px-4 mt-4">
@@ -37,20 +39,25 @@
                                     <div class="#">
                                         <!-- Account details card-->
                                         <div class="card mb-4">
-                                            <div class="card-header">Detalles del cliente Juridico</div>
+                                            <div class="card-header">Detalles del cliente Jurídico</div>
                                             <div class="card-body">
                                                 <label for="dni">Ingrese RUC</label>
                                                 <div class="input-group">
-                                                    <input type="number" min="1" max="99999999999" id="ruc" name="ruc" value="" class="form-control" placeholder="N° DE RUC" />&nbsp;
-                                                    <button class="btn btn-primary" id="btnbuscar" align="right" >Buscar</button>
+                                                    <input type="number" min="1" max="99999999999" id="ruc"
+                                                        name="ruc" value="" class="form-control"
+                                                        placeholder="N° DE RUC" />&nbsp;
+                                                    <button class="btn btn-primary" id="btnbuscar"
+                                                        align="right"><em class='bx bx-search-alt-2'></em>Buscar</button>
 
                                                 </div>
                                                 <div class="col-md-5">
                                                     <small id="mensaje" style="color: red;display: none;font-size: 12pt;">
-                                                        <i class="fa fa-remove"></i> El numero de RUC no es valido.
+                                                        <i class="fa fa-remove"></i> El número de RUC no es valido.
                                                     </small>
                                                 </div>
-                                                <form>
+                                                <form action="{{ route('clientes.store') }}" method="post"
+                                                    enctype="multipart/form-data">
+                                                    @csrf
 
                                                     <!-- Form Group (username)-->
                                                     <div class="row gx-3 mb-3">
@@ -58,14 +65,15 @@
                                                         <div class="col-md-6">
                                                             <label class="small mb-1" for="inputNºDERUC">Nº DE RUC</label>
                                                             <input class="form-control" id="txtruc" type="text"
-                                                                placeholder="Nº DE RUC" value=""  readonly/>
+                                                                placeholder="Nº DE RUC" value="" readonly />
                                                         </div>
                                                         <!-- Form Group (last name)-->
 
                                                         <div class="col-md-6">
-                                                            <label class="small mb-1" for="inputRazónSocial">Razón Social</label>
+                                                            <label class="small mb-1" for="inputRazónSocial">Razón
+                                                                Social</label>
                                                             <input class="form-control" id="txtrazon" type="text"
-                                                                placeholder="Razón Social" value=""  readonly/>
+                                                                placeholder="Razón Social" value="" readonly />
                                                         </div>
 
                                                     </div>
@@ -88,36 +96,46 @@
                                                     <!-- Form Row-->
                                                     <div class="row gx-3 mb-3">
                                                         <!-- Form Group (first name)-->
-                                                        <div class="col-md-6">
-                                                            <label class="small mb-1" for="inputNameEmpresa">Departamento</label>
+                                                        <div class="col-md-4">
+                                                            <label class="small mb-1"
+                                                                for="inputNameEmpresa">Departamento</label>
                                                             <input class="form-control" id="txtdepartamento" type="text"
                                                                 placeholder="departamento" value="" readonly />
                                                         </div>
 
-                                                        <div class="col-md-6">
+                                                        <div class="col-md-4">
                                                             <label class="small mb-1" for="inputDirección">Provincia</label>
 
                                                             <input class="form-control" id="txtprovincia" type="text"
                                                                 placeholder="provincia" value="" readonly />
                                                         </div>
-
+                                                        <div class="col-md-4">
+                                                            <label class="small mb-1"
+                                                                for="inputNameEmpresa">Distrito</label>
+                                                            <input class="form-control" id="txtdistrito" type="text"
+                                                                placeholder="distrito" value="" readonly />
+                                                        </div>
                                                     </div>
 
                                                     <!-- Form Row-->
                                                     <div class="row gx-3 mb-3">
                                                         <!-- Form Group (first name)-->
-                                                        <div class="col-md-6">
-                                                            <label class="small mb-1" for="inputNameEmpresa">Distrito</label>
-                                                            <input class="form-control" id="txtdistrito" type="text"
-                                                                placeholder="distrito" value="" readonly />
-                                                        </div>
+
                                                         <div class="col-md-6">
                                                             <label class="small mb-1" for="inputEmailAddress">Correo
-                                                                Electronico</label>
-                                                            <input class="form-control" id="inputEmailAddress" type="email"
-                                                                placeholder="example@rayosac.com" value="" />
+                                                                Electrónico</label>
+                                                            <input class="form-control" id="inputEmailAddress"
+                                                                type="email" placeholder="example@rayosac.com"
+                                                                value="" />
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label class="small mb-1" for="inputTelephone">Número de teléfono</label>
+                                                            <input class="form-control" id="inputTelephone"
+                                                                type="number" placeholder="928033951"
+                                                                value="" />
                                                         </div>
                                                     </div>
+
                                                     <!-- Form Row-->
                                                     <div>
                                                         <h5>DETALLES DE LA CARGA</h5>
@@ -126,31 +144,35 @@
                                                         <div class="row gx-2 mb-2">
                                                             <!-- select Estate-->
                                                             <div class="col-md-4">
-                                                                <label class="small mb-1" for="inputDepartamento">Departamento</label>
-                                                                <select class="form-select"
-                                                                    aria-label="Default select example">
-                                                                    <option selected>Seleccionar</option>
+                                                                <label class="small mb-1"
+                                                                    for="inputDepartament">Departamento</label>
+                                                                <select aria-label="Default select example"
+                                                                    class="form-select" id="id_Departament"
+                                                                    name="idDepartament" class="form-control">
+                                                                    <option>------Seleccionar------</option>
 
                                                                 </select>
                                                             </div>
                                                             <!-- select roles and permissions-->
                                                             <div class="col-md-4">
-                                                                <label class="small mb-1" for="inputProvincia">Provincia</label>
-                                                                <select class="form-select"
-                                                                    aria-label="Default select example">
-                                                                    <option selected>Seleccionar</option>
+                                                                <label class="small mb-1"
+                                                                    for="inputProvince">Provincia</label>
+                                                                <select aria-label="Default select example"
+                                                                    class="form-select" id="id_Province"
+                                                                    name="idProvince" class="form-control">
+                                                                    <option>------Seleccionar------</option>
 
                                                                 </select>
-
                                                             </div>
                                                             <div class="col-md-4">
-                                                                <label class="small mb-1" for="inputDistrito">Distrito</label>
-                                                                <select class="form-select"
-                                                                    aria-label="Default select example">
-                                                                    <option selected>Seleccionar</option>
+                                                                <label class="small mb-1"
+                                                                    for="inputDistrit">Distrito</label>
+                                                                <select aria-label="Default select example"
+                                                                    class="form-select" id="id_Distrit" name="idDistrit"
+                                                                    class="form-control">
+                                                                    <option>------Seleccionar------</option>
 
                                                                 </select>
-
                                                             </div>
 
                                                         </div>
@@ -161,40 +183,56 @@
                                                         <div class="row gx-2 mb-2">
                                                             <!-- select Estate-->
                                                             <div class="col-md-4">
-                                                                <label class="small mb-1" for="inputDepartamento">Departamento</label>
-                                                                <select class="form-select"
-                                                                    aria-label="Default select example">
-                                                                    <option selected>Seleccionar</option>
+                                                                <label class="small mb-1"
+                                                                    for="inputDepartament">Departamento</label>
+                                                                <select aria-label="Default select example"
+                                                                    class="form-select" id="id_Departament"
+                                                                    name="idDepartament" class="form-control">
+                                                                    <option>------Seleccionar------</option>
 
                                                                 </select>
                                                             </div>
                                                             <!-- select roles and permissions-->
                                                             <div class="col-md-4">
-                                                                <label class="small mb-1" for="inputProvincia">Provincia</label>
-                                                                <select class="form-select"
-                                                                    aria-label="Default select example">
-                                                                    <option selected>Seleccionar</option>
+                                                                <label class="small mb-1"
+                                                                    for="inputProvince">Provincia</label>
+                                                                <select aria-label="Default select example"
+                                                                    class="form-select" id="id_Province"
+                                                                    name="idProvince" class="form-control">
+                                                                    <option>------Seleccionar------</option>
 
                                                                 </select>
-
                                                             </div>
                                                             <div class="col-md-4">
-                                                                <label class="small mb-1" for="inputDistrito">Distrito</label>
-                                                                <select class="form-select"
-                                                                    aria-label="Default select example">
-                                                                    <option selected>Seleccionar</option>
+                                                                <label class="small mb-1"
+                                                                    for="inputDistrit">Distrito</label>
+                                                                <select aria-label="Default select example"
+                                                                    class="form-select" id="id_Distrit" name="idDistrit"
+                                                                    class="form-control">
+                                                                    <option>------Seleccionar------</option>
 
                                                                 </select>
-
                                                             </div>
 
                                                         </div>
                                                     </div>
-                                                    <div class="#">
-                                                        <label class="small mb-1" for="inputDistrito">Descripcion de la carga</label>
-                                                        <input class="form-control" id="inputDetailsBurden" type="text"
-                                                            placeholder="detalles de la carga" value="" />
+                                                    <h6>Detalles Adicionales de la Carga</h6>
+                                                    <div class="row gx-3 mb-3">
+                                                        <div class="col-md-6">
+                                                            <label class="small mb-1" for="inputDetailsBurden">Descripcion de la
+                                                                carga</label>
+                                                            <input class="form-control" id="inputDetailsBurden"
+                                                                type="text" placeholder="Detalles de la carga"
+                                                                value="" />
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label class="small mb-1" for="inputCostBurden">costo de la carga</label>
+                                                            <input class="form-control" id="inputCostBurden"
+                                                                type="number" placeholder="Costo de la carga"
+                                                                value="" />
+                                                        </div>
                                                     </div>
+
                                                     <div class="text-center">
                                                         <br>
                                                         <!-- Save changes button-->

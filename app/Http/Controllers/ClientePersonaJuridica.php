@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\ClienteJuridico;
 use Illuminate\Http\Request;
+use App\Models\Ruta;
 
 
 class ClientePersonaJuridica extends Controller
@@ -14,7 +15,8 @@ class ClientePersonaJuridica extends Controller
         return view('admin.operaciones.clientes.index', compact('clientesj'));
     }
     public function create() {
-        return view('admin.operaciones.clientes.crear');
+        $rutas = Ruta::get();
+        return view('admin.operaciones.clientes.crear', compact('rutas'));
      }
 
     public function store(Request $request){
