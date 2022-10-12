@@ -21,7 +21,7 @@
                         <div class="card-header">
                             Vehículos/Datos en la tabla
                             <div>
-                               <!-- <a href="/admin/configuracion/usuario/add" class="btn btn-primary lift"><em class='bx bxs-user-plus'></em>{{ __('Crear Usuario') }}</a> --> 
+                               <!-- <a href="/admin/configuracion/usuario/add" class="btn btn-primary lift"><em class='bx bxs-user-plus'></em>{{ __('Crear Usuario') }}</a> -->
                             <a href='/admin/operaciones/vehiculos/add' class="btn btn-primary lift" type="button"><em class='bx bxs-truck'></em>Nuevo Vehículo</a>
                             </div>
                         </div>
@@ -29,7 +29,7 @@
                             <form class="input-group">
                                 <button class="btn btn-outline-primary btn-sm me-md-2" type="submit"> <em class='bx bx-search-alt'></em>Buscar</button>
                                 <input name="busqueda" class="form-control " type="search" placeholder="Ingrese nombre del vehiculo" aria-label="Search" autocomplete="off">
-                               
+
                             </form>
                         </div>
                         <div class="card-body py-2">
@@ -43,7 +43,7 @@
                                         <th>Capacidad de Carga</th>
                                         <th>Conductor</th>
                                         <th>actions</th>
-                                        
+
                                     </tr>
                                 </thead>
 
@@ -56,8 +56,10 @@
                                         <td>15T</td>
                                         <td>ALVARO SAMANIEGO</td>
                                         <td>
-                                            <button class="btn btn-datatable btn-icon btn-transparent-table me-2"><i class='bx bx-dots-vertical-rounded'></i></button>
-                                            <button class="btn btn-datatable btn-icon btn-transparent-table"><i class='bx bx-trash' ></i></button>
+                                            <button class="btn btn-datatable btn-icon btn-transparent-table me-2"><em class='bx bxs-edit-alt'></em></button>
+                                            <button class="btn btn-datatable btn-icon btn-transparent-table"><em class='bx bx-trash' ></em></button>
+                                            <button class="btn btn-datatable btn-icon btn-transparent-table"><i class='bx bxs-file-pdf'></i></button>
+
                                         </td>
 
                                     </tr>

@@ -69,40 +69,7 @@
                 </div>
 
 
-                <!-- Sidenav Link (Fcturación-->
-                <a class="nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse"
-                    data-bs-target="#collapseFacturation" aria-expanded="false" aria-controls="collapseFacturation">
-                    <div class="nav-link-icon"><em class='bx bxs-file'></em></div>
-                    Facturación
-                    <div class="sidenav-collapse-arrow"><em class='bx bx-chevron-down'
-                            style="color:gray; font-size:16px;"></em></div>
-                </a>
-                <div class="collapse" id="collapseFacturation" data-bs-parent="#accordionSidenav">
-                    <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/admin/facturacion/factura"><em class='bx bx-receipt'></em>ver
-                                factura </a>
-                        </li>
-                    </nav>
-                </div>
-                <a class="nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse"
-                    data-bs-target="#collapseReport" aria-expanded="false" aria-controls="collapseReport">
-                    <div class="nav-link-icon"><em class='bx bxs-report'></em></div>
-                    Reportes
-                    <div class="sidenav-collapse-arrow"><em class='bx bx-chevron-down'
-                            style="color:gray; font-size:16px;"></em></div>
-                </a>
-                <div class="collapse" id="collapseReport" data-bs-parent="#accordionSidenav">
-                    <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/admin/reportes/vehiculoReport"><em class='bx bxs-truck'></em>Vehiculo</a>
-                            <a class="nav-link" href="/admin/reportes/rutaReport"><em class='bx bx-trip'></em>Rutas</a>
-                            <a class="nav-link" href="/admin/reportes/clienteReport"><em class='bx bx-group'></em>Clientes</a>
-                            <a class="nav-link" href="/admin/reportes/usuarioReport"><em class='bx bxs-user'></em>Usuarios</a>
 
-                        </li>
-                    </nav>
-                </div>
                 <a class="nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse"
                     data-bs-target="#collapseHelp" aria-expanded="false" aria-controls="collapseHelp">
                     <div class="nav-link-icon"><em class='bx bxs-help-circle'></em></div>
