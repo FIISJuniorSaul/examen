@@ -48,10 +48,10 @@
                                     <tr>
                                         <th>Nº de RUC</th>
                                         <th>Razón Social</th>
-                                        <th>E-.mail</th>
+                                        <th>E-mail</th>
                                         <th>Estado</th>
                                         <th>Dirección</th>
-                                        <th>Actions</th>
+                                        <th>Acciones</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -62,10 +62,10 @@
                                         <td>activo</td>
                                         <td>-</td>
                                         <td>
-                                            <button class="btn btn-datatable btn-icon btn-transparent-table me-2"><em class='bx bxs-edit-alt'></em></button>
+                                            <button class="btn btn-datatable btn-icon btn-transparent-table me-2"><i class='bx bx-dots-vertical-rounded'></i></button>
                                             <button class="btn btn-datatable btn-icon btn-transparent-table"><i class='bx bx-trash' ></i></button>
+                                            <button class="btn btn-datatable btn-icon btn-transparent-table"><i class='bx bxs-file-pdf'></i></button>
                                         </td>
-
                                     </tr>
                                 </tbody>
                             </table>
