@@ -42,7 +42,7 @@
                                         <th>Consumo Galones</th>
                                         <th>Capacidad de Carga</th>
                                         <th>Conductor</th>
-                                        <th>actions</th>
+                                        <th>Acciones</th>
 
                                     </tr>
                                 </thead>

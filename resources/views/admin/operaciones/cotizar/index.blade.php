@@ -21,7 +21,7 @@
                         <div class="card-header">
                             COTIZACIONES/Datos en la tabla
                             <div>
-                               <!-- <a href="/admin/configuracion/usuario/add" class="btn btn-primary lift"><em class='bx bxs-user-plus'></em>{{ __('Crear Usuario') }}</a> --> 
+                               <!-- <a href="/admin/configuracion/usuario/add" class="btn btn-primary lift"><em class='bx bxs-user-plus'></em>{{ __('Crear Usuario') }}</a> -->
                             <a href='/admin/operaciones/cotizar/add' class="btn btn-primary lift" type="button"><em class='bx bxs-truck'></em>Nueva Cotización</a>
                             </div>
                         </div>
@@ -29,23 +29,22 @@
                             <form class="input-group">
                                 <button class="btn btn-outline-primary btn-sm me-md-2" type="submit"> <em class='bx bx-search-alt'></em>Buscar</button>
                                 <input name="busqueda" class="form-control " type="search" placeholder="Ingrese nombre del vehiculo" aria-label="Search" autocomplete="off">
-                               
+
                             </form>
                         </div>
                         <div class="card-body py-2">
                             <table class="table table-sm table-bordered table-hover " id="datatablesSimple">
                                 <thead>
                                     <tr>
-                                        <th>USUARIO</th>
-                                        <th>RAZON SOCIAL</th>
-                                        <th>E-MAIL</th>
-                                        <th>TIPO DE COMPROBANTE</th>
-                                        <th>Nº COTIZACIÓN</th>
-                                        <th>RUTA</th>
-                                        <th>VEHÍCULO</th>
-                                        <th>TOTAL(S/.)</th>
-                                        <th>ACTIONS</th>
-                                        
+                                        <th>Usuario</th>
+                                        <th>Razón social</th>
+                                        <th>E-mail</th>
+                                        <th>Tipo de comprobante</th>
+                                        <th>Ruta</th>
+                                        <th>Vehículo</th>
+                                        <th>Total(S/.)</th>
+                                        <th>Acciones</th>
+
                                     </tr>
                                 </thead>
 
@@ -55,13 +54,15 @@
                                         <td>Hermanos cuellar S.A.C</td>
                                         <td>cuellar12_2022@hotmail.com</td>
                                         <td>comprobante01</td>
-                                        <td>45-239-2022</td>
+
                                         <td>Lima-Callao</td>
                                         <th>Fuso_AAA</th>
-                                        <th>25mil</th>
+                                        <th>25</th>
                                         <td>
                                             <button class="btn btn-datatable btn-icon btn-transparent-table me-2"><i class='bx bx-dots-vertical-rounded'></i></button>
                                             <button class="btn btn-datatable btn-icon btn-transparent-table"><i class='bx bx-trash' ></i></button>
+                                            <button class="btn btn-datatable btn-icon btn-transparent-table"><i class='bx bxs-file-pdf'></i></button>
+
                                         </td>
 
                                     </tr>
