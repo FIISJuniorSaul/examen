@@ -99,6 +99,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/reportes/vehiculoReport', function () {
         return view('admin.reportes.vehiculoReport.index');
     });
+    Route::get('/principal/main', function () {
+        return view('admin.principal.main');
+    });
 
         //Consulta Sunat
     Route::get(
