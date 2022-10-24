@@ -84,21 +84,21 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     });
 
         /* rutas reporte-cliente*/
-    Route::get('/reportes/clienteReport', function () {
+   /* Route::get('/reportes/clienteReport', function () {
         return view('admin.reportes.clienteReport.index');
-    });
+    });*/
         /* rutas reporte-rutas*/
-    Route::get('/reportes/rutaReport', function () {
+   /* Route::get('/reportes/rutaReport', function () {
         return view('admin.reportes.rutaReport.index');
-    });
+    });*/
         /* rutas reporte-usuario*/
-    Route::get('/reportes/usuarioReport', function () {
+    /*Route::get('/reportes/usuarioReport', function () {
         return view('admin.reportes.usuarioReport.index');
-    });
+    });*/
         /* rutas reporte-vehiculo*/
-    Route::get('/reportes/vehiculoReport', function () {
+   /* Route::get('/reportes/vehiculoReport', function () {
         return view('admin.reportes.vehiculoReport.index');
-    });
+    });*/
     Route::get('/principal/main', function () {
         return view('admin.principal.main');
     });
