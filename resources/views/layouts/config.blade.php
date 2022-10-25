@@ -106,58 +106,63 @@
 
     <script>
         //INTEGRACION DE APPI RENIEC
-        var dni;
+
+        var Conruc;
+
         consultarDni = function () {
-            dni = document.getElementById("dni").value;
+            Conruc = document.getElementById("dni").value;
             consulta = {
-                "dni": String(dni)
+                "Conruc": String(Conruc)
             };
-            //console.log("consulta", consulta)
-            $.ajax({
-                method: "POST",
-                contentType: "application/json",
-                url: "https://www.web.onpe.gob.pe/mpve_backend/personas/getCiudadano",
-                context: document.body,
-                data: JSON.stringify(consulta),
-                statusCode: {
-                    400: function() {
-                    //button.disabled = false;
-                        alert("Hubo un error.");
-                    }
+            if (Conruc.length == 8) {
+                fetch("https://dniruc.apisperu.com/api/v1/dni/" + Conruc + "?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImpvbmVsLnNhY3JhbWVudG9Ab3V0bG9vay5jb20ifQ.aMnk3frNo8ai1cSsBuQzHQjZfFP2B0BPHGXQ26zMEHA",
+                    {
+                        method: "GET",
+                        data: JSON.stringify(consulta),
+                        headers: { "Content-type": "application/json;charset=UTF-8" }
+                    }).then(response => response.json())
+                    .then(json => {
+                        document.getElementById("dni_ciudadano").value = json.dni;
+                        document.getElementById("nombres").value = json.nombres;
+                        document.getElementById("apellido_paterno").value = json.apellidoPaterno;
+                        document.getElementById("apellido_materno").value =json.apellidoMaterno;
+                    })
+
+                    .catch(err => console.log(err));
+//ruc falta implementacion
+            } else if (Conruc.length == 11) {
+                fetch("https://dniruc.apisperu.com/api/v1/ruc/" + Conruc + "?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImpvbmVsLnNhY3JhbWVudG9Ab3V0bG9vay5jb20ifQ.aMnk3frNo8ai1cSsBuQzHQjZfFP2B0BPHGXQ26zMEHA",
+                    {
+                        method: "GET",
+                        data: JSON.stringify(consulta),
+                        headers: { "Content-type": "application/json;charset=UTF-8" }
+                    }).then(response => response.json())
+                    .then(json => {
+                        document.getElementById("dni_ciudadano").value = json.ruc;
+                        document.getElementById("nombres").value = json.razonSocial;
+                        document.getElementById("apellidos").value = json.direccion;
+                    })
+
+                    .catch(err => console.log(err));
+
             }
-            }).done(function(response) {
-                if (response.result == true) {
-
-                    document.getElementById("dni_ciudadano").value = dni;
-                    document.getElementById("nombres").value = response.ciudadano.nombres;
-                    document.getElementById("apellido_paterno").value = response.ciudadano.apellidoPaterno;
-                    document.getElementById("apellido_materno").value = response.ciudadano.apellidoMaterno;
-                    console.log("respuesta :", response)
-                } else {
-                    alert('Escriba el DNI.!');
-                    $('#dni').focus();
-                }
-
-
-            });
+            else {
+                alert("Erros");
+            }
 
 
         }
-        $("#dni").keypress(function(event) {
-                if (event.keyCode === 13) {
-                    $("#buscardni").click();
-                }
-            });
 
-            //$("#buscardni").click(function() {
-            //    alert("Button clicked");
-            //});
-
-
-            //APPI INTEGRACION DE RUC
+        $("#dni").keypress(function (event) {
+            if (event.keyCode === 13) {
+                $("#buscardni").click();
+            }
+        });
     </script>
-    <script type="text/javascript">
 
+
+    <script type="text/javascript">
+//ruc
         $(document).ready(function(){
             $('#btnbuscar').click(function(){
                 var numruc=$('#ruc').val();

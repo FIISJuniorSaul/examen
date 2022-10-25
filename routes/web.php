@@ -8,7 +8,7 @@ use App\Http\Controllers\RutaController;
 
 
 Route::get('/', function () {
-    return view('auth.login');
+    return view('welcome');
 });
 
 Auth::routes();

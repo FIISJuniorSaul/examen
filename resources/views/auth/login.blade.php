@@ -24,9 +24,6 @@
                                 <input id="usuario" type="text"
                                     class="form-control @error('usuario') is-invalid @enderror" name="usuario" placeholder="example@rayosac.com"
                                     value="{{ old('usuario') }}" required autocomplete="usuario" autofocus>
-
-
-
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -71,12 +68,6 @@
                             </div>
                         </form>
                     </div>
-
-                <!--
-                    <div class="card-footer text-center">
-                        <div class="small"><a href="auth-register-basic.html">Need an account? Sign up!</a></div>
-                    </div>
-                -->
                 </div>
             </div>
             <div id="layoutAuthentication_footer">
@@ -95,4 +86,6 @@
             </div>
         </div>
     </div>
+</p>
+
 @endsection
