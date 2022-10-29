@@ -9,7 +9,7 @@ class ClienteJuridico extends Model
 {
     use HasFactory;
     protected $table = 'cliente_empresa';
-    protected $fillable = ['txtruc', 'txtrazon_social', 'txtestado', 'txtdireccion','txtdepartamento','txtprovincia','txtdistrito'];
+    protected $fillable = ['ruc', 'razon_social', 'estado', 'direccion','departamento','provincia','distrito'];
 
     # por modificar
     public function user()
