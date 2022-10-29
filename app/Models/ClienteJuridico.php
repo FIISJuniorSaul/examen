@@ -9,12 +9,12 @@ class ClienteJuridico extends Model
 {
     use HasFactory;
     protected $table = 'cliente_empresa';
-    protected $fillable = ['ruc', 'razon_social', 'estado', 'direccion','departamento','provincia','distrito'];
+    protected $fillable = ['txtruc', 'txtrazon_social', 'txtestado', 'txtdireccion','txtdepartamento','txtprovincia','txtdistrito'];
 
     # por modificar
     public function user()
     {
-        return $this->hasOne('App\Models\User');
+        return $this->hasMany('App\Models\Ruta');
     }
 
 }

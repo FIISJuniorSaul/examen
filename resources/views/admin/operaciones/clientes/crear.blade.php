@@ -55,16 +55,14 @@
                                                         <i class="fa fa-remove"></i> El número de RUC no es valido.
                                                     </small>
                                                 </div>
-                                                <form action="{{ route('clientes.store') }}" method="post"
-                                                    enctype="multipart/form-data">
+                                                <form action="{{route('clientes.store')}}" method="post" enctype="multipart/form-data">
                                                     @csrf
-
                                                     <!-- Form Group (username)-->
                                                     <div class="row gx-3 mb-3">
                                                         <!-- Form Group (first name)-->
                                                         <div class="col-md-6">
                                                             <label class="small mb-1" for="inputNºDERUC">Nº DE RUC</label>
-                                                            <input class="form-control" id="txtruc" type="text"
+                                                            <input class="form-control" id="txtruc" type="text" name="ruc"
                                                                 placeholder="Nº DE RUC" value="" readonly />
                                                         </div>
                                                         <!-- Form Group (last name)-->
@@ -72,7 +70,7 @@
                                                         <div class="col-md-6">
                                                             <label class="small mb-1" for="inputRazónSocial">Razón
                                                                 Social</label>
-                                                            <input class="form-control" id="txtrazon" type="text"
+                                                            <input class="form-control" id="txtrazon" type="text" name="razon_social"
                                                                 placeholder="Razón Social" value="" readonly />
                                                         </div>
 
@@ -82,14 +80,14 @@
                                                         <!-- Form Group (first name)-->
                                                         <div class="col-md-6">
                                                             <label class="small mb-1" for="inputNameEmpresa">Estado</label>
-                                                            <input class="form-control" id="txtgrupo" type="text"
+                                                            <input class="form-control" id="txtgrupo" type="text" name="estado"
                                                                 placeholder="Estado" value="" readonly />
                                                         </div>
                                                         <!-- Form Group (last name)-->
                                                         <div class="col-md-6">
                                                             <label class="small mb-1" for="inputDirección">Dirección</label>
 
-                                                            <input class="form-control" id="txtdireccion" type="text"
+                                                            <input class="form-control" id="txtdireccion" type="text" name="direccion"
                                                                 placeholder="Dirección" value="" readonly />
                                                         </div>
                                                     </div>
@@ -99,20 +97,20 @@
                                                         <div class="col-md-4">
                                                             <label class="small mb-1"
                                                                 for="inputNameEmpresa">Departamento</label>
-                                                            <input class="form-control" id="txtdepartamento" type="text"
+                                                            <input class="form-control" id="txtdepartamento" type="text" name="departamento"
                                                                 placeholder="departamento" value="" readonly />
                                                         </div>
 
                                                         <div class="col-md-4">
                                                             <label class="small mb-1" for="inputDirección">Provincia</label>
 
-                                                            <input class="form-control" id="txtprovincia" type="text"
+                                                            <input class="form-control" id="txtprovincia" type="text" name="provincia"
                                                                 placeholder="provincia" value="" readonly />
                                                         </div>
                                                         <div class="col-md-4">
                                                             <label class="small mb-1"
                                                                 for="inputNameEmpresa">Distrito</label>
-                                                            <input class="form-control" id="txtdistrito" type="text"
+                                                            <input class="form-control" id="txtdistrito" type="text" name="distrito"
                                                                 placeholder="distrito" value="" readonly />
                                                         </div>
                                                     </div>
@@ -124,122 +122,24 @@
                                                         <div class="col-md-6">
                                                             <label class="small mb-1" for="inputEmailAddress">Correo
                                                                 Electrónico</label>
-                                                            <input class="form-control" id="inputEmailAddress"
+                                                            <input class="form-control" id="inputEmailAddress" name="correo"
                                                                 type="email" placeholder="example@rayosac.com"
                                                                 value="" />
                                                         </div>
                                                         <div class="col-md-6">
                                                             <label class="small mb-1" for="inputTelephone">Número de teléfono</label>
-                                                            <input class="form-control" id="inputTelephone"
+                                                            <input class="form-control" id="inputTelephone" name="telefono"
                                                                 type="number" placeholder="928033951"
                                                                 value="" />
                                                         </div>
                                                     </div>
-
-                                                    <!-- Form Row-->
-                                                    <div>
-                                                        <h5>DETALLES DE LA CARGA</h5>
-                                                        <h6>Punto de origen</h6>
-                                                        <!--estado roles y permisos-->
-                                                        <div class="row gx-2 mb-2">
-                                                            <!-- select Estate-->
-                                                            <div class="col-md-4">
-                                                                <label class="small mb-1"
-                                                                    for="inputDepartament">Departamento</label>
-                                                                <select aria-label="Default select example"
-                                                                    class="form-select" id="id_Departament"
-                                                                    name="idDepartament" class="form-control">
-                                                                    <option>------Seleccionar------</option>
-
-                                                                </select>
-                                                            </div>
-                                                            <!-- select roles and permissions-->
-                                                            <div class="col-md-4">
-                                                                <label class="small mb-1"
-                                                                    for="inputProvince">Provincia</label>
-                                                                <select aria-label="Default select example"
-                                                                    class="form-select" id="id_Province"
-                                                                    name="idProvince" class="form-control">
-                                                                    <option>------Seleccionar------</option>
-
-                                                                </select>
-                                                            </div>
-                                                            <div class="col-md-4">
-                                                                <label class="small mb-1"
-                                                                    for="inputDistrit">Distrito</label>
-                                                                <select aria-label="Default select example"
-                                                                    class="form-select" id="id_Distrit" name="idDistrit"
-                                                                    class="form-control">
-                                                                    <option>------Seleccionar------</option>
-
-                                                                </select>
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-                                                    <div>
-                                                        <h6>Punto de Destino</h6>
-                                                        <!--estado roles y permisos-->
-                                                        <div class="row gx-2 mb-2">
-                                                            <!-- select Estate-->
-                                                            <div class="col-md-4">
-                                                                <label class="small mb-1"
-                                                                    for="inputDepartament">Departamento</label>
-                                                                <select aria-label="Default select example"
-                                                                    class="form-select" id="id_Departament"
-                                                                    name="idDepartament" class="form-control">
-                                                                    <option>------Seleccionar------</option>
-
-                                                                </select>
-                                                            </div>
-                                                            <!-- select roles and permissions-->
-                                                            <div class="col-md-4">
-                                                                <label class="small mb-1"
-                                                                    for="inputProvince">Provincia</label>
-                                                                <select aria-label="Default select example"
-                                                                    class="form-select" id="id_Province"
-                                                                    name="idProvince" class="form-control">
-                                                                    <option>------Seleccionar------</option>
-
-                                                                </select>
-                                                            </div>
-                                                            <div class="col-md-4">
-                                                                <label class="small mb-1"
-                                                                    for="inputDistrit">Distrito</label>
-                                                                <select aria-label="Default select example"
-                                                                    class="form-select" id="id_Distrit" name="idDistrit"
-                                                                    class="form-control">
-                                                                    <option>------Seleccionar------</option>
-
-                                                                </select>
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-                                                    <h6>Detalles Adicionales de la Carga</h6>
-                                                    <div class="row gx-3 mb-3">
-                                                        <div class="col-md-6">
-                                                            <label class="small mb-1" for="inputDetailsBurden">Descripcion de la
-                                                                carga</label>
-                                                            <input class="form-control" id="inputDetailsBurden"
-                                                                type="text" placeholder="Detalles de la carga"
-                                                                value="" />
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <label class="small mb-1" for="inputCostBurden">costo de la carga</label>
-                                                            <input class="form-control" id="inputCostBurden"
-                                                                type="number" placeholder="Costo de la carga"
-                                                                value="" />
-                                                        </div>
-                                                    </div>
-
                                                     <div class="text-center">
                                                         <br>
                                                         <!-- Save changes button-->
-                                                        <button class="btn btn-primary" type="button"><em
+                                                        <button class="btn btn-primary" type="submit"><em
                                                                 class='bx bxs-memory-card'></em>Guardar </button>
                                                         <!-- cancel changes button-->
-                                                        <button class="btn btn-primary" type="button"><em
+                                                        <button class="btn btn-primary" type="submit"><em
                                                                 class='bx bxs-x-circle'></em>Cancelar </button>
                                                     </div>
 

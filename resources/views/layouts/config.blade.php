@@ -210,5 +210,79 @@
         });
     </script>
 
+     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+     <script>
+
+       //CARGAMOS LOS DEPARTAMENTOS
+       $(document).ready(function(){
+         $.ajax({
+           type: 'POST',
+           url: '/data.php',
+           data: {action:'get-states'},
+           dataType: 'JSON',
+           success: function(response){
+             var options = '<option value="">Seleccione</option>';
+             $.each(response, function(index, value){
+               options += '<option value="'+value.id+'">'+value.nombre+'</option>';
+             });
+             $('.state').html(options);
+             $('.city').html('<option value="">Seleccione</option>');
+             $('.district').html('<option value="">Seleccione</option>');
+             $('.ubigeo').val(null);
+           }
+         }).fail(function(jqXHR, textStatus, errorThrown){
+           console.log(jqXHR);
+         });
+       });
+
+       //OBTENEMOS LAS CIUDADES POR DEPARTAMENTO
+       $('.state').on('change', function(){
+         var id = $(this).val();
+         $.ajax({
+           type: 'POST',
+           url: '/data.php',
+           data: {action:'get-cities', id:id},
+           dataType: 'JSON',
+           success: function(response){
+             var options = '<option value="">Seleccione</option>';
+             $.each(response, function(index, value){
+               options += '<option value="'+value.id+'">'+value.nombre+'</option>';
+             });
+             $('.city').html(options);
+             $('.district').html('<option value="">Seleccione</option>');
+             $('.ubigeo').val(null);
+           }
+         }).fail(function(jqXHR, textStatus, errorThrown){
+           console.log(jqXHR);
+         });
+       });
+
+       //OBTENEMOS LOS DISTRITOS POR CIUDAD
+       $('.city').on('change', function(){
+         var id = $(this).val();
+         $.ajax({
+           type: 'POST',
+           url: '/data.php',
+           data: {action:'get-districts', id:id},
+           dataType: 'JSON',
+           success: function(response){
+             var options = '<option value="">Seleccione</option>';
+             $.each(response, function(index, value){
+               options += '<option value="'+value.id+'" ubigeo="'+value.ubigeo+'">'+value.nombre+'</option>';
+             });
+             $('.district').html(options);
+             $('.ubigeo').val(null);
+           }
+         }).fail(function(jqXHR, textStatus, errorThrown){
+           console.log(jqXHR);
+         });
+       });
+
+       $('.district').on('change', function(){
+         var ubigeo = $(this).find('option:selected').attr('ubigeo');
+         $('.ubigeo').val(ubigeo);
+       });
+     </script>
+
     </body>
 </html>

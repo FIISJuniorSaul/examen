@@ -15,14 +15,12 @@ class ClientePersonaJuridica extends Controller
         return view('admin.operaciones.clientes.index', compact('clientesj'));
     }
     public function create() {
-        $rutas = Ruta::get();
-        return view('admin.operaciones.clientes.crear', compact('rutas'));
+        return view('admin.operaciones.clientes.crear');
      }
 
     public function store(Request $request){
         $clientesj = new ClienteJuridico($request->all());
         $clientesj->save();
-
         return redirect()->route('clientes.index')->with('success', 'El usuario ha sido creado correctamente.');
     }
     public function destroy($id){

@@ -26,22 +26,79 @@
                             <form action="{{route('rutasdestino.store')}}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="row g-3 px-6">
-                                    <div class="col-md-6">
-                                        <label class="small mb-1" for="inputDepartament">Departamento</label>
-                                        <input class="form-control" name="departamento" id="inputDepartament" type="text"
-                                            placeholder="departamento" />
+                                    <div>
+                                        <h5>DETALLES DE LA CARGA</h5>
+                                        <h6>Punto de origen</h6>
+                                        <!--estado roles y permisos-->
+                                        <div class="row gx-2 mb-2">
+                                            <!-- select Estate-->
+                                            <div class="col-md-4">
+                                                <label class="small mb-1"
+                                                    for="inputDepartament">Departamento</label>
+                                                <!--
+                                                    <select aria-label="Default select example"
+                                                    class="form-select" id="id_Departament"
+                                                    name="idDepartament" class="form-control">
+                                                    <option>------Seleccionar------</option>
 
+                                                </select> -->
+                                                <select class="form-control state"></select>
+                                            </div>
+                                            <!-- select roles and permissions-->
+                                            <div class="col-md-4">
+                                                <label class="small mb-1"
+                                                    for="inputProvince">Provincia</label>
+                                                    <select class="form-control city"></select>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="small mb-1"
+                                                    for="inputDistrit">Distrito</label>
+                                                    <select class="form-control district"></select>
+                                            </div>
+
+                                        </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <label class="small mb-1" for="inputProvince">Provincia</label>
-                                        <input class="form-control" name="provincia" id="inputProvince" type="text"
-                                            placeholder="provincia" />
+                                    <div>
+                                        <h6>Punto de Destino</h6>
+                                        <!--estado roles y permisos-->
+                                        <div class="row gx-2 mb-2">
+                                            <!-- select Estate-->
+                                            <div class="col-md-4">
+                                                <label class="small mb-1"
+                                                    for="inputDepartament">Departamento</label>
+                                                    <select class="form-control state"></select>
+                                            </div>
+                                            <!-- select roles and permissions-->
+                                            <div class="col-md-4">
+                                                <label class="small mb-1"
+                                                    for="inputProvince">Provincia</label>
+                                                    <select class="form-control city"></select>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="small mb-1"
+                                                    for="inputDistrit">Distrito</label>
+                                                    <select class="form-control district"></select>
+                                            </div>
+
+                                        </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <label class="small mb-1" for="inputDistrit">Distrito</label>
-                                        <input class="form-control" name="distrito" id="inputDistrit" type="text"
-                                            placeholder="provincia" />
+                                    <h6>Detalles Adicionales de la Carga</h6>
+                                    <div class="row gx-3 mb-3">
+                                        <div class="col-md-6">
+                                            <label class="small mb-1" for="inputDetailsBurden">Descripcion de la
+                                                carga</label>
+                                            <input class="form-control" id="inputDetailsBurden"
+                                                type="text" placeholder="Detalles de la carga"
+                                                value="" />
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="small mb-1" for="inputCostBurden">costo de la carga</label>
+                                            <input class="form-control" id="inputCostBurden"
+                                                type="number" placeholder="Costo de la carga"
+                                                value="" />
+                                        </div>
                                     </div>
+
                                 </div>
                                 <br>
                                 <div class="text-center">
