@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\ClientePersonaJuridica;
+use App\Http\Controllers\ClienteJuridicoController;
+use App\Http\Controllers\ClienteNaturalController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VehiculoController;
 use App\Http\Controllers\UsersController;
@@ -28,7 +29,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
     Route::resource('usuario', UsersController::class);
     Route::resource('rutasdestino', RutaController::class);
-    Route::resource('clientes', ClientePersonaJuridica::class);
+   Route::resource('clienteJuridico', ClienteJuridicoController::class);
+   Route::resource('clienteNatural', ClienteNaturalController::class);
 
 /* rutas-usuario*/
 
@@ -42,16 +44,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/operaciones/vehiculos/add', function () {
         return view('admin.operaciones.vehiculos.create');
     });
-
+    //clientesjuridico
+    //Route::get('/clientes/lista', 'ClienteJuridicoController@index');
    /* rutas-rutas*/
-
-    /* rutas-cliente-contactos*/
-    Route::get('/operaciones/clientes/contacto', function () {
-        return view('admin.operaciones.clientes.contacto.index');
-    });
-    Route::get('/operaciones/clientes/contacto/add',function () {
-        return view('admin.operaciones.clientes.contacto.create');
-    });
 
     /* rutas-cotizacion*/
     Route::get('/operaciones/cotizar', function () {

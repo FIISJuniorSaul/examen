@@ -9,12 +9,9 @@ class ClienteNatural extends Model
 {
     use HasFactory;
     protected $table = 'cliente';
-    protected $fillable = ['dni', 'nombre', 'apellido_paterno', 'apellido_materno','telefono','correo'];
+    protected $fillable = ['codigo'];
 
-    # por modificar
-    public function user()
-    {
-        return $this->hasOne('App\Models\User');
+    public function persona(){
+        return $this->belongsTo('App\Models\Persona');
     }
-
 }

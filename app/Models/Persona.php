@@ -15,4 +15,12 @@ class Persona extends Model
     {
         return $this->hasOne('App\Models\User');
     }
+    public function clienteNatural()
+    {
+        return $this->hasOne('App\Models\ClienteNatural');
+    }
+    public function clienteJuridico()
+    {
+        return $this->hasOne('App\Models\ClienteJuridico');
+    }
 }

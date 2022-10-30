@@ -53,7 +53,7 @@
                                                         <i class="fa fa-remove"></i> El numero de DNI no es valido.
                                                     </small>
                                                 </div>
-                                                <form action="{{ route('usuario.store') }}" method="post"
+                                                <form action="{{ route('clienteNatural.store') }}" method="post"
                                                     enctype="multipart/form-data">
                                                     @csrf
                                                     <!--search-->
@@ -61,6 +61,11 @@
                                                     </div>
                                                     <!-- Form Group (username)-->
                                                     <div class="row gx-3 mb-3">
+                                                        <div class="col-md-6">
+                                                            <label class="small mb-1" for="inputCode">Codigo</label>
+                                                            <input class="form-control" name="codigo" id="codigo"
+                                                                type="text" placeholder="codigo" />
+                                                        </div>
                                                         <!-- Form Group (DNI)-->
                                                         <div class="col-md-6">
                                                             <label class="small mb-1" for="inputDNI">DNI</label>
@@ -112,10 +117,10 @@
                                                     <div class="text-center">
                                                         <br>
                                                         <!-- Save changes button-->
-                                                        <button class="btn btn-primary" type="button"><em
+                                                        <button class="btn btn-primary" type="submit"><em
                                                                 class='bx bxs-memory-card'></em>Guardar </button>
                                                         <!-- cancel changes button-->
-                                                        <button class="btn btn-primary" type="button"><em
+                                                        <button class="btn btn-primary" type="submit"><em
                                                                 class='bx bxs-x-circle'></em>Cancelar </button>
                                                     </div>
 

@@ -48,25 +48,26 @@
                                     <tr>
                                         <th>Nº de RUC</th>
                                         <th>Razón Social</th>
-                                        <th>E-mail</th>
                                         <th>Estado</th>
+                                        <th>Departamento</th>
+                                        <th>Provincia</th>
+                                        <th>Distrito</th>
                                         <th>Dirección</th>
+                                        <th>correo electronico</th>
+                                        <th>telefono</th>
                                         <th>Acciones</th>
                                     </tr>
                                 </thead>
+
                                 <tbody>
-                                    <tr>
-                                        <td>202203045</td>
-                                        <td>GRATING PERU SAC</td>
-                                        <td>grupo@grating-prodac.pe</td>
-                                        <td>activo</td>
-                                        <td>-</td>
+
                                         <td>
                                             <button class="btn btn-datatable btn-icon btn-transparent-table me-2"><em class='bx bxs-edit-alt'></em></button>
                                             <button class="btn btn-datatable btn-icon btn-transparent-table"><i class='bx bx-trash' ></i></button>
                                             <button class="btn btn-datatable btn-icon btn-transparent-table"><i class='bx bxs-file-pdf'></i></button>
                                         </td>
                                     </tr>
+
                                 </tbody>
                             </table>
 

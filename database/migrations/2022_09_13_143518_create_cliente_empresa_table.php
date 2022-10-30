@@ -14,8 +14,10 @@ class CreateClienteEmpresaTable extends Migration
     public function up()
     {
         Schema::create('cliente_empresa', function (Blueprint $table) {
-            $table->id();
-            $table->string('ruc');
+            $table->unsignedBigInteger('id');
+            $table->foreign('id')->references('id')->on('personas')->onDelete('cascade');
+            $table->string('codigo',8)->unique();
+            $table->string('ruc')->unique();
             $table->string('razon_social');
             $table->string('estado');
             $table->string('direccion');
