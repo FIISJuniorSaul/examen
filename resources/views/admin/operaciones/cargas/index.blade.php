@@ -10,7 +10,7 @@
                         <div class="row justify-content-center">
                             <div class="col-12 col-xl-auto">
                                 <h1 class="page-title">
-                                    RUTAS
+                                    CARGAS
                                 </h1>
                             </div>
                         </div>
@@ -19,8 +19,8 @@
                 <div class="page-body page-body-light pt-3 px-2">
                     <div class="card card-header-actions">
                         <div class="card-header">
-                            Listado de las Rutas
-                            <a href="{{route('rutasdestino.create')}}" class="btn btn-primary lift"><em class='bx bx-trip'></em>{{ __('Nueva Ruta') }}</a>
+                            Listado de las Cargas
+                            <a href='/admin/operaciones/cargas/create' class="btn btn-primary lift"><em class='bx bx-trip'></em>{{ __('Nueva Carga') }}</a>
                         </div>
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end py-2 px-4">
                             <form class="input-group">
@@ -33,13 +33,11 @@
                             <table class="table table-sm table-bordered table-hover " id="datatablesSimple">
                                 <thead>
                                     <tr>
-                                        <th>DPTO ORIGEN</th>
-                                        <th>PROV ORIGEN</th>
-                                        <th>DTTO ORIGEN</th>
-                                        <th>DPTO DESTINO</th>
-                                        <th>PROV DESTINO</th>
-                                        <th>DTTO DESTINO</th>
-                                        <th>Acciones</th>
+                                        <th>CÓDIGO</th>
+                                        <th>COSTO</th>
+                                        <th>PESO</th>
+                                        <th>PLACA DE VEHÍCULO</th>
+                                        <th>ACCIONES</th>
                                     </tr>
                                 </thead>
 
