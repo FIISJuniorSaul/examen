@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRutaTable extends Migration
+class CargasCrearTabla extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,17 @@ class CreateRutaTable extends Migration
      */
     public function up()
     {
-        Schema::create('ruta', function (Blueprint $table) {
+        //
+        Schema::create('cargas', function (Blueprint $table) {
             $table->id();
             $table->string('departamento');
             $table->string('provincia');
             $table->string('distrito');
             $table->timestamps();
+            $table->unsignedBigInteger('vehiculos_id');
+            $table->foreign('vehiculos_id')->references('id')->on('vehiculo')->onDelete('cascade');
         });
+
     }
 
     /**
@@ -29,6 +33,6 @@ class CreateRutaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('rutas');
+        //
     }
 }

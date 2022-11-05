@@ -15,10 +15,16 @@ class CreateRutasTable extends Migration
     {
         Schema::create('rutas', function (Blueprint $table) {
             $table->id();
-            $table->string('departamento');
-            $table->string('provincia');
-            $table->string('distrito');
+            $table->string('departamento_origen');
+            $table->string('provincia_origen');
+            $table->string('distrito_origen');
+            $table->string('departamento_destino');
+            $table->string('provincia_destino');
+            $table->string('distrito_destino');
             $table->timestamps();
+            $table->unsignedBigInteger('cargas_id');
+
+            $table->foreign('cargas_id')->references('id')->on('cargas')->onDelete('cascade');
         });
     }
 
