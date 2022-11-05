@@ -9104,7 +9104,7 @@ textarea.form-control-lg {
   --bs-aspect-ratio: 42.8571428571%;
 }
 
-.fixed-top, .nav-fixed #layoutSidenav #layoutSidenav_nasidenav, .nav-fixed .topnav {
+.fixed-top, .nav-fixed #layoutSidenav #layoutSidenav_nav, .nav-fixed .topnav {
   position: fixed;
   top: 0;
   right: 0;

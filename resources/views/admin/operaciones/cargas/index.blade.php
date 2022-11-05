@@ -20,7 +20,7 @@
                     <div class="card card-header-actions">
                         <div class="card-header">
                             Listado de las Cargas
-                            <a href='/admin/operaciones/cargas/index' class="btn btn-primary lift"><em class='bx bx-trip'></em>{{ __('Nueva Ruta') }}</a>
+                            <a href='/admin/operaciones/cargas/create' class="btn btn-primary lift"><em class='bx bx-trip'></em>{{ __('Nueva Carga') }}</a>
                         </div>
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end py-2 px-4">
                             <form class="input-group">
@@ -33,10 +33,11 @@
                             <table class="table table-sm table-bordered table-hover " id="datatablesSimple">
                                 <thead>
                                     <tr>
-                                        <th>DEPARTAMENTO</th>
-                                        <th>PROVINCIA</th>
-                                        <th>DISTRITO</th>
-                                        <th>Acciones</th>
+                                        <th>CÓDIGO</th>
+                                        <th>COSTO</th>
+                                        <th>PESO</th>
+                                        <th>PLACA DE VEHÍCULO</th>
+                                        <th>ACCIONES</th>
                                     </tr>
                                 </thead>
 

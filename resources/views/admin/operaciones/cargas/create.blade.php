@@ -31,17 +31,41 @@
                                     <h6>Detalles Adicionales de la Carga</h6>
                                     <div class="row gx-3 mb-3">
                                         <div class="col-md-6">
-                                            <label class="small mb-1" for="inputDetailsBurden">Descripcion de la
+                                            <label class="small mb-1" for="inputDetailsBurden">Código de la
                                                 carga</label>
                                             <input class="form-control" id="inputDetailsBurden"
-                                                type="text" placeholder="Detalles de la carga"
+                                                type="number" placeholder="****"
+                                                value="" />
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <label class="small mb-1" for="inputDetailsBurden">Costo de la
+                                                carga</label>
+                                            <input class="form-control" id="inputDetailsBurden"
+                                                type="number" placeholder="00.0"
                                                 value="" />
                                         </div>
                                         <div class="col-md-6">
-                                            <label class="small mb-1" for="inputCostBurden">costo de la carga</label>
+                                            <label class="small mb-1" for="inputCostBurden">Descripción de la carga</label>
                                             <input class="form-control" id="inputCostBurden"
-                                                type="number" placeholder="Costo de la carga"
+                                                type="text" placeholder="Descripción"
                                                 value="" />
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="small mb-1" for="inputDetailsBurden">Peso de la
+                                                carga</label>
+                                            <input class="form-control" id="inputDetailsBurden"
+                                                type="number" placeholder="00"
+                                                value="" />
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <br>
+                                            <h6 class="small mb-1" for="inputRol">Seleccionar vehículo</h6>
+                                            <select id="id_role" name="idrol" class="form-control">
+                                                <option>------Seleccionar------</option>
+
+                                         </select>
                                         </div>
                                     </div>
 
@@ -52,7 +76,7 @@
                                     <button class="btn btn-primary" type="submit"><em class='bx bxs-memory-card'></em>Guardar
                                     </button>
                                     <!-- cancel changes button-->
-                                    <button class="btn btn-primary" type="button"><em class='bx bxs-x-circle'></em>Cancelar
+                                    <button class="btn btn-primary" type="submit"><em class='bx bxs-x-circle'></em>Cancelar
                                     </button>
                                 </div>
                             </form>

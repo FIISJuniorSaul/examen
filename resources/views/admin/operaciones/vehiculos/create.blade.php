@@ -59,22 +59,30 @@
                                         </div>
                                     </div>
 
-                                    <div class="row g-3 px-6">
-                                        <div class="col">
-                                            <h5>Capacidad de Carga</h5>
-                                            <input type="text" class="form-control" placeholder="5T"
-                                                aria-label="telephone">
-                                        </div>
+                                </div>
+                                <div class="row g-3 px-6">
+                                    <div class="col">
+                                        <h5>Capacidad de Carga</h5>
+                                        <input type="text" class="form-control" placeholder="5T" aria-label="telephone">
                                     </div>
+                                    <div class="col">
                                     <h5>Designar Conductor</h5>
+                                        <select id="id_role" name="idrol" class="form-control">
+                                            <option>------Seleccionar------</option>
 
-
-                                    <div class="btn">
-                                        <button class="btn btn-primary me-md-2" type="button"><i
-                                                class='bx bxs-user-plus'></i>Guardar</button>
-                                        <button class="btn btn-primary" type="button"><i
-                                                class='bx bxs-left-arrow-square'></i>Cancelar</button>
+                                        </select>
                                     </div>
+                                </div>
+
+
+
+
+                                <div class="btn">
+                                    <button class="btn btn-primary me-md-2" type="button"><i
+                                            class='bx bxs-user-plus'></i>Guardar</button>
+                                    <button class="btn btn-primary" type="button"><i
+                                            class='bx bxs-left-arrow-square'></i>Cancelar</button>
+                                </div>
 
                             </form>
 

@@ -33,19 +33,18 @@
                             <table class="table table-sm table-bordered table-hover " id="datatablesSimple">
                                 <thead>
                                     <tr>
-                                        <th>DEPARTAMENTO</th>
-                                        <th>PROVINCIA</th>
-                                        <th>DISTRITO</th>
+                                        <th>DPTO ORIGEN</th>
+                                        <th>PROV ORIGEN</th>
+                                        <th>DTTO ORIGEN</th>
+                                        <th>DPTO DESTINO</th>
+                                        <th>PROV DESTINO</th>
+                                        <th>DTTO DESTINO</th>
                                         <th>Acciones</th>
                                     </tr>
                                 </thead>
 
                                 <tbody>
-                                    @foreach ($ruta_i as $rut)
-                                    <tr>
-                                        <td>{{$rut->departamento}}</td>
-                                        <td>{{$rut->provincia}}</td>
-                                        <td>{{$rut->distrito}}</td>
+
                                         <td>
                                             <button class="btn btn-datatable btn-icon btn-transparent-table me-2"><em class='bx bxs-edit-alt'></em></button>
                                             <button class="btn btn-datatable btn-icon btn-transparent-table"><i class='bx bx-trash' ></i></button>
@@ -53,8 +52,7 @@
 
                                         </td>
 
-                                    </tr>
-                                    @endforeach
+
                                 </tbody>
                             </table>
 

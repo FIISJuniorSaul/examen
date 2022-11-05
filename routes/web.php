@@ -41,6 +41,9 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 Route::get('/operaciones/cargas', function () {
     return view('admin.operaciones.cargas.index');
 });
+Route::get('/operaciones/cargas/create', function () {
+    return view('admin.operaciones.cargas.create');
+});
  /* rutas-vehiculos*/
     Route::get('/operaciones/vehiculos', function () {
         return view('admin.operaciones.vehiculos.index');

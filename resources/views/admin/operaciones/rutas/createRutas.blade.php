@@ -27,7 +27,7 @@
                                 @csrf
                                 <div class="row g-3 px-6">
                                     <div>
-                                        <h5>DETALLES DE LA CARGA</h5>
+                                        <h5>DETALLES DE LA RUTA</h5>
                                         <h6>Punto de origen</h6>
                                         <!--estado roles y permisos-->
                                         <div class="row gx-2 mb-2">
@@ -82,22 +82,7 @@
 
                                         </div>
                                     </div>
-                                    <h6>Detalles Adicionales de la Carga</h6>
-                                    <div class="row gx-3 mb-3">
-                                        <div class="col-md-6">
-                                            <label class="small mb-1" for="inputDetailsBurden">Descripcion de la
-                                                carga</label>
-                                            <input class="form-control" id="inputDetailsBurden"
-                                                type="text" placeholder="Detalles de la carga"
-                                                value="" />
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label class="small mb-1" for="inputCostBurden">costo de la carga</label>
-                                            <input class="form-control" id="inputCostBurden"
-                                                type="number" placeholder="Costo de la carga"
-                                                value="" />
-                                        </div>
-                                    </div>
+
 
                                 </div>
                                 <br>
