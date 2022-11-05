@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VehiculoController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\RutaController;
+use App\Http\Controllers\CargaController;
 
 
 Route::get('/', function () {
@@ -29,62 +30,11 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
     Route::resource('usuario', UsersController::class);
     Route::resource('rutasdestino', RutaController::class);
-   Route::resource('clienteJuridico', ClienteJuridicoController::class);
-   Route::resource('clienteNatural', ClienteNaturalController::class);
-
-/* rutas-usuario*/
-
-    Route::get('/configuracion/infoempresa', function () {
-        return view('admin.configuracion.infoempresa.modifi');
-    });
-/*rutas- carga */
-Route::get('/operaciones/cargas', function () {
-    return view('admin.operaciones.cargas.index');
-});
-Route::get('/operaciones/cargas/create', function () {
-    return view('admin.operaciones.cargas.create');
-});
- /* rutas-vehiculos*/
-    Route::get('/operaciones/vehiculos', function () {
-        return view('admin.operaciones.vehiculos.index');
-    });
-    Route::get('/operaciones/vehiculos/add', function () {
-        return view('admin.operaciones.vehiculos.create');
-    });
-    //clientesjuridico
-    //Route::get('/clientes/lista', 'ClienteJuridicoController@index');
-   /* rutas-rutas*/
-
-    /* rutas-cotizacion*/
-    Route::get('/operaciones/cotizar', function () {
-        return view('/admin/operaciones/cotizar.index');
-    });
-    Route::get('/operaciones/cotizar/add', function () {
-        return view('/admin/operaciones/cotizar.createCotizacion');
-    });
-
-
-   /* rutas-cliente-empresa*/
-    Route::get('/operaciones/clientes', function () {
-        return view('admin.operaciones.clientes.index');
-    });
-    Route::get('/operaciones/clientes/crear', function () {
-        return view('admin.operaciones.clientes.crear');
-    });
-    Route::get('/operaciones/clientes/indexClienteNatural', function () {
-        return view('admin.operaciones.clientes.indexClienteNatural');
-    });
-    Route::get('/operaciones/clientes/crearPersonaNatural', function () {
-        return view('admin.operaciones.clientes.crearPersonaNatural');
-    });
-        /* rutas facturación*/
-    Route::get('/facturacion/factura', function () {
-        return view('admin.facturacion.factura.index');
-    });
-
-    Route::get('/principal/main', function () {
-        return view('admin.principal.main');
-    });
+    Route::resource('clienteJuridico', ClienteJuridicoController::class);
+    Route::resource('clienteNatural', ClienteNaturalController::class);
+    Route::resource('vehiculo', VehiculoController::class);
+    Route::resource('ruta', RutaController::class);
+    Route::resource('carga', CargaController::class);
 
         //Consulta Sunat
     Route::get(

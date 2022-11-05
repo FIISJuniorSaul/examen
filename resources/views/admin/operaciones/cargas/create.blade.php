@@ -23,7 +23,7 @@
                         </div>
                         <div class="card-body">
                             <br>
-                            <form action="{{route('rutasdestino.store')}}" method="post" enctype="multipart/form-data">
+                            <form action="{{route('carga.store')}}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="row g-3 px-6">
 
@@ -33,7 +33,7 @@
                                         <div class="col-md-6">
                                             <label class="small mb-1" for="inputDetailsBurden">Código de la
                                                 carga</label>
-                                            <input class="form-control" id="inputDetailsBurden"
+                                            <input class="form-control" id="inputDetailsBurden" name="codigo"
                                                 type="number" placeholder="****"
                                                 value="" />
                                         </div>
@@ -42,20 +42,20 @@
                                             <label class="small mb-1" for="inputDetailsBurden">Costo de la
                                                 carga</label>
                                             <input class="form-control" id="inputDetailsBurden"
-                                                type="number" placeholder="00.0"
+                                                type="number" placeholder="00.0" name="costo"
                                                 value="" />
                                         </div>
                                         <div class="col-md-6">
                                             <label class="small mb-1" for="inputCostBurden">Descripción de la carga</label>
                                             <input class="form-control" id="inputCostBurden"
-                                                type="text" placeholder="Descripción"
+                                                type="text" placeholder="Descripción" name="descripcion"
                                                 value="" />
                                         </div>
                                         <div class="col-md-6">
                                             <label class="small mb-1" for="inputDetailsBurden">Peso de la
                                                 carga</label>
                                             <input class="form-control" id="inputDetailsBurden"
-                                                type="number" placeholder="00"
+                                                type="number" placeholder="00" name="peso"
                                                 value="" />
                                         </div>
 

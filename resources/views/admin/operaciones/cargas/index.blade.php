@@ -20,7 +20,7 @@
                     <div class="card card-header-actions">
                         <div class="card-header">
                             Listado de las Cargas
-                            <a href='/admin/operaciones/cargas/create' class="btn btn-primary lift"><em class='bx bx-trip'></em>{{ __('Nueva Carga') }}</a>
+                            <a href='{{route('carga.create')}}' class="btn btn-primary lift"><em class='bx bx-trip'></em>{{ __('Nueva Carga') }}</a>
                         </div>
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end py-2 px-4">
                             <form class="input-group">

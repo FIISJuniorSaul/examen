@@ -24,10 +24,10 @@
                         <ul class="nav nav-tabs">
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page"
-                                    href="/admin/operaciones/clientes/crear">Cliente Juridico</a>
+                                    href="{{route('clienteJuridico.create')}}">Cliente Juridico</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/admin/operaciones/clientes/crearPersonaNatural">Cliente
+                                <a class="nav-link" href="{{route('clienteNatural.create')}}">Cliente
                                     Natural</a>
                             </li>
                         </ul>

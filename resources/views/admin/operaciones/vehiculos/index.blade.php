@@ -21,8 +21,8 @@
                         <div class="card-header">
                             Vehículos/Datos en la tabla
                             <div>
-                               <!-- <a href="/admin/configuracion/usuario/add" class="btn btn-primary lift"><em class='bx bxs-user-plus'></em>{{ __('Crear Usuario') }}</a> -->
-                            <a href='/admin/operaciones/vehiculos/add' class="btn btn-primary lift" type="button"><em class='bx bxs-truck'></em>Nuevo Vehículo</a>
+
+                                <a href="{{route('vehiculo.create')}}" class="btn btn-primary lift"><em class='bx bx-trip'></em>{{ __('Nuevo Vehiculo') }}</a>
                             </div>
                         </div>
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end py-2 px-4">

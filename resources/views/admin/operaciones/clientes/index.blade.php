@@ -21,8 +21,7 @@
                         <div class="card-header">
                             Clientes/Datos en la tabla
                             <div>
-                               <!-- <a href="/admin/configuracion/usuario/add" class="btn btn-primary lift"><em class='bx bxs-user-plus'></em>{{ __('Crear Usuario') }}</a> -->
-                            <a href='/admin/operaciones/clientes/crear' class="btn btn-primary lift" type="button"><i class='bx bx-directions'></i>Nuevo Cliente-Empresa</a>
+                                <a href="{{route('clienteJuridico.create')}}" class="btn btn-primary lift"><em class='bx bx-trip'></em>{{ __('Nuevo cliente') }}</a>
                             </div>
 
                         </div>

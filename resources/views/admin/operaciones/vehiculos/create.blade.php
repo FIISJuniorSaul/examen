@@ -25,12 +25,13 @@
 
 
                             <br>
-                            <form>
+                            <form action="{{route('vehiculo.store')}}" method="post" enctype="multipart/form-data">
+                                @csrf
                                 <h2>Datos del usuario</h2>
                                 <div class="row g-3 px-6">
                                     <div class="col">
                                         <h5>Tipo de Vehículo</h5>
-                                        <select class="form-select" aria-label="Default select example">
+                                        <select class="form-select" aria-label="Default select example" name="modelo">
                                             <option selected>A1</option>
                                             <option value="1">A2</option>
                                             <option value="2">A3</option>
@@ -39,7 +40,7 @@
                                     </div>
                                     <div class="col">
                                         <h5>Placa</h5>
-                                        <input type="text" class="form-control" placeholder="N° de Placa">
+                                        <input type="text" class="form-control" placeholder="N° de Placa" name="placa">
 
                                     </div>
 
@@ -48,13 +49,13 @@
                                 <div class="row g-3 px -6">
                                     <div class="col">
                                         <h5>Marca</h5>
-                                        <input type="text" class="form-control" placeholder="marca" aria-label="Email">
+                                        <input type="text" class="form-control" placeholder="marca" aria-label="Email" name="marca">
                                     </div>
                                     <div class="col">
                                         <h5>Consumo de Galones/KM</h5>
                                         <div class="input-group mb-3">
                                             <input type="password" class="form-control" placeholder="glns"
-                                                aria-label="Recipient's username" aria-describedby="button-addon2">
+                                                aria-label="Recipient's username" aria-describedby="button-addon2" name="consumo_gasolina">
 
                                         </div>
                                     </div>
@@ -63,7 +64,7 @@
                                 <div class="row g-3 px-6">
                                     <div class="col">
                                         <h5>Capacidad de Carga</h5>
-                                        <input type="text" class="form-control" placeholder="5T" aria-label="telephone">
+                                        <input type="text" class="form-control" placeholder="5T" aria-label="telephone" name="capacidad_carga">
                                     </div>
                                     <div class="col">
                                     <h5>Designar Conductor</h5>
@@ -78,9 +79,9 @@
 
 
                                 <div class="btn">
-                                    <button class="btn btn-primary me-md-2" type="button"><i
+                                    <button class="btn btn-primary me-md-2" type="submit"><i
                                             class='bx bxs-user-plus'></i>Guardar</button>
-                                    <button class="btn btn-primary" type="button"><i
+                                    <button class="btn btn-primary" type="submit"><i
                                             class='bx bxs-left-arrow-square'></i>Cancelar</button>
                                 </div>
 

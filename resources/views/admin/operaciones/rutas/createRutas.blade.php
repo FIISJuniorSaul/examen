@@ -35,13 +35,6 @@
                                             <div class="col-md-4">
                                                 <label class="small mb-1"
                                                     for="inputDepartament">Departamento</label>
-                                                <!--
-                                                    <select aria-label="Default select example"
-                                                    class="form-select" id="id_Departament"
-                                                    name="idDepartament" class="form-control">
-                                                    <option>------Seleccionar------</option>
-
-                                                </select> -->
                                                 <select class="form-control state"></select>
                                             </div>
                                             <!-- select roles and permissions-->
