@@ -205,8 +205,7 @@
                                                         <div class="text-center">
                                                             <br>
                                                             <!-- Save changes button-->
-                                                            <button class="btn btn-primary" type="submit"><em
-                                                                    class='bx bxs-memory-card'></em>Guardar </button>
+                                                            <button class="btn btn-primary" type="submit"><em class='bx bx-check'></em>Guardar </button>
                                                             <!-- cancel changes button-->
                                                             <button class="btn btn-primary" type="submit"><em
                                                                     class='bx bxs-x-circle'></em>Cancelar </button>
