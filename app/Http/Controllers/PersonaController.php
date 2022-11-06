@@ -10,7 +10,6 @@ class PersonaController extends Controller
     //
     public function index(){
         $personas=Persona::get();
-
         return view('admin.configuracion.usuario.index', compact('personas'));
     }
     public function create() {
@@ -20,7 +19,6 @@ class PersonaController extends Controller
     public function store(Request $request){
         $persona = new Persona($request->all());
         $persona->save();
-
         return redirect()->route('user.index')->with('success', 'El usuario ha sido creado correctamente.');
     }
     public function destroy($id){
