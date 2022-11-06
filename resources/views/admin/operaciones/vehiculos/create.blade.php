@@ -54,7 +54,7 @@
                                     <div class="col">
                                         <h5>Consumo de Galones/KM</h5>
                                         <div class="input-group mb-3">
-                                            <input type="password" class="form-control" placeholder="glns"
+                                            <input type="number" class="form-control" placeholder="00"
                                                 aria-label="Recipient's username" aria-describedby="button-addon2" name="consumo_gasolina">
 
                                         </div>
@@ -64,7 +64,7 @@
                                 <div class="row g-3 px-6">
                                     <div class="col">
                                         <h5>Capacidad de Carga</h5>
-                                        <input type="text" class="form-control" placeholder="5T" aria-label="telephone" name="capacidad_carga">
+                                        <input type="number" class="form-control" placeholder="5T" aria-label="telephone" name="capacidad_carga">
                                     </div>
                                     <div class="col-md-6">
                                     <h5>Designar Conductor</h5>
@@ -82,9 +82,9 @@
 
 
 
-                                <div class="btn">
-                                    <button class="btn btn-primary me-md-2" type="submit"><i
-                                            class='bx bxs-user-plus'></i>Guardar</button>
+                                <div class="text-center">
+                                    <br>
+                                    <button class="btn btn-primary me-md-2" type="submit"><em class='bx bx-check'></em>Guardar</button>
                                     <button class="btn btn-primary" type="submit"><i
                                             class='bx bxs-left-arrow-square'></i>Cancelar</button>
                                 </div>

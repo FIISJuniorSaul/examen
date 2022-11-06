@@ -83,9 +83,9 @@
                                                                 placeholder="example@rayosac.com" />
                                                         </div>
                                                         <div class="col-md-6">
-                                                            <label class="small mb-1" for="inputTelephone">telefono</label>
+                                                            <label class="small mb-1" for="inputTelephone">teléfono</label>
                                                             <input class="form-control" name="telefono"
-                                                                id="inputTelephone" type="text"
+                                                                id="inputTelephone" type="number"
                                                                 placeholder="9208033951" />
                                                         </div>
                                                     </div>

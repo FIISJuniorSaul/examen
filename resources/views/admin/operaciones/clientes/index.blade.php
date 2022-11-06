@@ -21,7 +21,7 @@
                         <div class="card-header">
                             Clientes/Datos en la tabla
                             <div>
-                                <a href="{{route('clienteJuridico.create')}}" class="btn btn-primary lift"><em class='bx bx-trip'></em>{{ __('Nuevo cliente') }}</a>
+                                <a href="{{route('clienteJuridico.create')}}" class="btn btn-primary lift"><em class='bx bxs-user-plus'></em>{{ __('. Nuevo cliente') }}</a>
                             </div>
 
                         </div>

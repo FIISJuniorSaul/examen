@@ -72,6 +72,14 @@
                                                     for="inputDistrit">Distrito</label>
                                                     <select class="form-control district"></select>
                                             </div>
+                                            <div class="col-md-4">
+                                                <br>
+                                                <h6 class="small mb-1" for="inputRol">Seleccionar Código de Vehículo</h6>
+                                                <select id="id_role" name="idrol" class="form-control">
+                                                    <option>------Seleccionar------</option>
+
+                                             </select>
+                                            </div>
 
                                         </div>
                                     </div>
@@ -81,7 +89,7 @@
                                 <br>
                                 <div class="text-center">
                                     <!-- Save changes button-->
-                                    <button class="btn btn-primary" type="submit"><em class='bx bxs-memory-card'></em>Guardar
+                                    <button class="btn btn-primary" type="submit"><em class='bx bx-check'></em>Guardar
                                     </button>
                                     <!-- cancel changes button-->
                                     <button class="btn btn-primary" type="button"><em class='bx bxs-x-circle'></em>Cancelar

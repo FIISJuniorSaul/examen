@@ -22,7 +22,7 @@
                             Vehículos/Datos en la tabla
                             <div>
 
-                                <a href="{{route('vehiculo.create')}}" class="btn btn-primary lift"><em class='bx bx-trip'></em>{{ __('Nuevo Vehiculo') }}</a>
+                                <a href="{{route('vehiculo.create')}}" class="btn btn-primary lift"><em class='bx bxs-truck'></em>{{ __('. Nuevo Vehiculo') }}</a>
                             </div>
                         </div>
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end py-2 px-4">

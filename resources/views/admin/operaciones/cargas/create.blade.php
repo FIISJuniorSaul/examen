@@ -75,7 +75,7 @@
                                 <br>
                                 <div class="text-center">
                                     <!-- Save changes button-->
-                                    <button class="btn btn-primary" type="submit"><em class='bx bxs-memory-card'></em>Guardar
+                                    <button class="btn btn-primary" type="submit"><em class='bx bx-check'></em>Guardar
                                     </button>
                                     <!-- cancel changes button-->
                                     <button class="btn btn-primary" type="submit"><em class='bx bxs-x-circle'></em>Cancelar
