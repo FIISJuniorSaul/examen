@@ -66,11 +66,15 @@
                                         <h5>Capacidad de Carga</h5>
                                         <input type="text" class="form-control" placeholder="5T" aria-label="telephone" name="capacidad_carga">
                                     </div>
-                                    <div class="col">
+                                    <div class="col-md-6">
                                     <h5>Designar Conductor</h5>
-                                        <select id="id_role" name="idrol" class="form-control">
+                                        <select id="user_id" name="user_id" class="form-control" style="color: #000;">
                                             <option>------Seleccionar------</option>
-
+                                            @foreach($usuarios as $user)
+                                                @if ($user->idrol ==3)
+                                                <option value="{{ $user->id }}" >{{ $user->persona->nombre}}</option>
+                                                @endif
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div>

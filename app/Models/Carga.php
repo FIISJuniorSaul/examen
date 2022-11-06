@@ -9,12 +9,12 @@ class Carga extends Model
 {
     use HasFactory;
     protected $table = 'cargas';
-    protected $fillable = ['codigo','costo', 'descripcion', 'peso'];
+    protected $fillable = ['codigo','costo', 'descripcion', 'peso', 'vehiculos_id'];
 
 
     public function Vehiculo()
     {
-        return $this->hasOne('App\Models\Vehiculo');
+        return $this->hasOne('App\Models\Vehiculo', 'vehiculo_id');
     }
     public function Rutas()
     {

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Vehiculo;
 use Illuminate\Http\Request;
 
@@ -13,7 +14,8 @@ class VehiculoController extends Controller
         return view('admin.operaciones.vehiculos.index', compact('vehiculos'));
     }
     public function create() {
-        return view('admin.operaciones.vehiculos.create');
+        $usuarios= User::get();
+        return view('admin.operaciones.vehiculos.create', compact('usuarios'));
      }
 
     public function store(Request $request){
