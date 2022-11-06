@@ -42,7 +42,12 @@
                                 </thead>
 
                                 <tbody>
-
+                                    @foreach ($cargas as $car)
+                                    <tr>
+                                        <td>{{$car->codigo}}</td>
+                                        <td>{{$car->costo}}</td>
+                                        <td>{{$car->peso}}</td>
+                                        <td>-</td>
                                         <td>
                                             <button class="btn btn-datatable btn-icon btn-transparent-table me-2"><em class='bx bxs-edit-alt'></em></button>
                                             <button class="btn btn-datatable btn-icon btn-transparent-table"><i class='bx bx-trash' ></i></button>
@@ -50,7 +55,8 @@
 
                                         </td>
 
-
+                                    </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
 

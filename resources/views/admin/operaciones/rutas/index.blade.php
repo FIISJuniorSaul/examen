@@ -44,7 +44,14 @@
                                 </thead>
 
                                 <tbody>
-
+                                    @foreach ($rutas as $ru)
+                                    <tr>
+                                        <td>{{$ru->departamento_origen}}</td>
+                                        <td>{{$ru->provincia_origen}}</td>
+                                        <td>{{$ru->distrito_origen}}</td>
+                                        <td>{{$ru->departamento_destino}}</td>
+                                        <td>{{$ru->provincia_distrito}}</td>
+                                        <td>{{$ru->distrito_provincia}}</td>
                                         <td>
                                             <button class="btn btn-datatable btn-icon btn-transparent-table me-2"><em class='bx bxs-edit-alt'></em></button>
                                             <button class="btn btn-datatable btn-icon btn-transparent-table"><i class='bx bx-trash' ></i></button>
@@ -52,7 +59,8 @@
 
                                         </td>
 
-
+                                    </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
 

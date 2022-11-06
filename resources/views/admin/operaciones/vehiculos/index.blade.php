@@ -40,7 +40,7 @@
                                         <th>Placa</th>
                                         <th>Marca</th>
                                         <th>Consumo Galones</th>
-                                        <th>Capacidad de Carga</th>
+                                        <th>Capacidad de Carga/T</th>
                                         <th>Conductor</th>
                                         <th>Acciones</th>
 
@@ -48,21 +48,21 @@
                                 </thead>
 
                                 <tbody>
+                                    @foreach ($vehiculos as $vehi)
                                     <tr>
-                                        <td>M1</td>
-                                        <td>F5U-597</td>
-                                        <td>HILUX</td>
-                                        <td>50</td>
-                                        <td>15T</td>
+                                        <td>{{$vehi->modelo}}</td>
+                                        <td>{{$vehi->placa}}</td>
+                                        <td>{{$vehi->marca}}</td>
+                                        <td>{{$vehi->consumo_gasolina}}</td>
+                                        <td>{{$vehi->capacidad_carga}}</td>
                                         <td>ALVARO SAMANIEGO</td>
                                         <td>
                                             <button class="btn btn-datatable btn-icon btn-transparent-table me-2"><em class='bx bxs-edit-alt'></em></button>
                                             <button class="btn btn-datatable btn-icon btn-transparent-table"><em class='bx bx-trash' ></em></button>
                                             <button class="btn btn-datatable btn-icon btn-transparent-table"><i class='bx bxs-file-pdf'></i></button>
-
                                         </td>
-
                                     </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
 
