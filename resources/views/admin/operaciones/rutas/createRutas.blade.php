@@ -75,9 +75,11 @@
                                             <div class="col-md-4">
                                                 <br>
                                                 <h6 class="small mb-1" for="inputRol">Seleccionar Código de Vehículo</h6>
-                                                <select id="id_role" name="idrol" class="form-control">
+                                                <select id="id_carga" name="cargas_id" class="form-control">
                                                     <option>------Seleccionar------</option>
-
+                                                    @foreach($cargas as $carg)
+                                                    <option value="{{ $carg->id }}" >{{ $carg->vehiculos_id}}</option>
+                                                    @endforeach
                                              </select>
                                             </div>
 

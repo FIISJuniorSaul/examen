@@ -9,9 +9,9 @@ class Ruta extends Model
 {
     use HasFactory;
     protected $table = 'rutas';
-    protected $fillable = ['departamento_origen', 'provincia_origen', 'distrito_origen','departamento_destino', 'provincia_destino', 'distrito_destino'];
+    protected $fillable = ['departamento_origen', 'provincia_origen', 'distrito_origen','departamento_destino', 'provincia_destino', 'distrito_destino', 'cargas_id'];
     public function Carga()
     {
-        return $this->belongsTo('App\Models\Carga');
+        return $this->belongsTo('App\Models\Carga','cargas_id');
     }
 }
