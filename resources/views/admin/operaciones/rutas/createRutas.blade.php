@@ -35,18 +35,18 @@
                                             <div class="col-md-4">
                                                 <label class="small mb-1"
                                                     for="inputDepartament">Departamento</label>
-                                                <select class="form-control state"></select>
+                                                <select class="form-control state" name="departamento_origen"></select>
                                             </div>
                                             <!-- select roles and permissions-->
                                             <div class="col-md-4">
                                                 <label class="small mb-1"
                                                     for="inputProvince">Provincia</label>
-                                                    <select class="form-control city"></select>
+                                                    <select class="form-control city" name="provincia_origen"></select>
                                             </div>
                                             <div class="col-md-4">
                                                 <label class="small mb-1"
                                                     for="inputDistrit">Distrito</label>
-                                                    <select class="form-control district"></select>
+                                                    <select class="form-control district" name="distrito_origen"></select>
                                             </div>
 
                                         </div>
@@ -59,29 +59,40 @@
                                             <div class="col-md-4">
                                                 <label class="small mb-1"
                                                     for="inputDepartament">Departamento</label>
-                                                    <select class="form-control state"></select>
+                                                    <select class="form-control state_destino" name="departamento_destino"></select>
                                             </div>
                                             <!-- select roles and permissions-->
                                             <div class="col-md-4">
                                                 <label class="small mb-1"
                                                     for="inputProvince">Provincia</label>
-                                                    <select class="form-control city"></select>
+                                                    <select class="form-control city_destino" name="provincia_destino"></select>
                                             </div>
                                             <div class="col-md-4">
                                                 <label class="small mb-1"
                                                     for="inputDistrit">Distrito</label>
-                                                    <select class="form-control district"></select>
+                                                    <select class="form-control district_destino" name="distrito_destino"></select>
                                             </div>
                                             <div class="col-md-4">
                                                 <br>
-                                                <h6 class="small mb-1" for="inputRol">Seleccionar Código de Vehículo</h6>
-                                                <select id="id_carga" name="cargas_id" class="form-control">
+                                                <h6 class="small mb-1" for="inputRol">Seleccionar Vehículo</h6>
+                                                <select id="id_carga" name="vehiculos_id" class="form-control">
                                                     <option>------Seleccionar------</option>
-                                                    @foreach($cargas as $carg)
-                                                    <option value="{{ $carg->id }}" >{{ $carg->vehiculos_id}}</option>
+                                                    @foreach($vehiculos as $vehi)
+                                                    <option value="{{ $vehi->id }}" > {{ $vehi->marca}} {{$vehi->capacidad_carga}} Toneladas</option>
                                                     @endforeach
                                              </select>
                                             </div>
+                                            <div class="col-md-4">
+                                                <br>
+                                                <h6 class="small mb-1" for="inputRol">Seleccionar distrito</h6>
+                                                <select id="id_carga" name="distrito_id" class="form-control">
+                                                    <option>------Seleccionar------</option>
+                                                    @foreach($distritos as $dis)
+                                                    <option value="{{ $dis->id }}" > {{ $dis->nombre}}</option>
+                                                    @endforeach
+                                             </select>
+                                            </div>
+
 
                                         </div>
                                     </div>

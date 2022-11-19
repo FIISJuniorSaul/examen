@@ -12,7 +12,11 @@ class Vehiculo extends Model
     protected $fillable = ['placa', 'marca', 'modelo','capacidad_carga', 'consumo_gasolina', 'user_id'];
     public function Carga()
     {
-        return $this->hasOne('App\Models\Carga');
+        return $this->hasMany('App\Models\Carga');
+    }
+    public function Ruta()
+    {
+        return $this->hasMany('App\Models\Ruta');
     }
     public function User()
     {

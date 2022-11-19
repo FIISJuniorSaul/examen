@@ -55,7 +55,7 @@
                                         <td>{{$vehi->marca}}</td>
                                         <td>{{$vehi->consumo_gasolina}}</td>
                                         <td>{{$vehi->capacidad_carga}}</td>
-                                        <td>ALVARO SAMANIEGO</td>
+                                        <td>{{$vehi->user->persona->nombre}}</td>
                                         <td>
                                             <button class="btn btn-datatable btn-icon btn-transparent-table me-2"><em class='bx bxs-edit-alt'></em></button>
                                             <button class="btn btn-datatable btn-icon btn-transparent-table"><em class='bx bx-trash' ></em></button>

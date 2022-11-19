@@ -61,9 +61,11 @@ class UsersController extends Controller
             $user->save();
 
             DB::commit();
+            return redirect()->route('usuario.index');
         } catch (Exception $e) {
             DB::rollBack();
         }
+
     }
     public function edit($id)
     {

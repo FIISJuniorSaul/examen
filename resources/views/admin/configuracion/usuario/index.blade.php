@@ -61,7 +61,7 @@
                                         <td>{{$item->condicion}}</td>
                                         <td>
                                                 <button class="btn btn-datatable btn-icon btn-transparent-table me-2"><em class='bx bxs-edit-alt'></em></button>
-                                                <button class="btn btn-datatable btn-icon btn-transparent-table"><i class='bx bx-trash' ></i></button>
+                                                <a class="btn btn-datatable btn-icon btn-transparent-table"  ><i class='bx bx-trash' ></i> </a>
                                         </td>
                                     </tr>
 

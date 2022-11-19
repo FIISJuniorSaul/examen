@@ -34,7 +34,7 @@
                                             <label class="small mb-1" for="inputDetailsBurden">Código de la
                                                 carga</label>
                                             <input class="form-control" id="inputDetailsBurden" name="codigo"
-                                                type="number" placeholder="****"
+                                                type="number" placeholder="123456"
                                                 value="" />
                                         </div>
 
@@ -65,7 +65,7 @@
                                             <select id="id_vehiculo" name="vehiculos_id" class="form-control">
                                                 <option>------Seleccionar------</option>
                                                 @foreach($vehiculos as $vehi)
-                                                <option value="{{ $vehi->id }}" >{{ $vehi->marca}}</option>
+                                                <option value="{{ $vehi->id }}" >{{ $vehi->marca}} {{ $vehi->capacidad_carga}} toneladas</option>
                                             @endforeach
                                          </select>
                                         </div>

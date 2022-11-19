@@ -32,9 +32,10 @@
                                     <div class="col">
                                         <h5>Tipo de Vehículo</h5>
                                         <select class="form-select" aria-label="Default select example" name="modelo">
-                                            <option selected>A1</option>
-                                            <option value="1">A2</option>
-                                            <option value="2">A3</option>
+                                            <option disabled>---seleccionar----</option>
+                                            <option value="A1">A1</option>
+                                            <option value="A2">A2</option>
+                                            <option value="A3">A3</option>
                                         </select>
 
                                     </div>

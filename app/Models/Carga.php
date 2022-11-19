@@ -12,11 +12,11 @@ class Carga extends Model
     protected $fillable = ['codigo','costo', 'descripcion', 'peso', 'vehiculos_id'];
 
 
-    public function Vehiculo()
+    public function vehiculo()
     {
-        return $this->hasOne('App\Models\Vehiculo', 'vehiculo_id');
+        return $this->belongsTo('App\Models\Vehiculo', 'vehiculos_id');
     }
-    public function Rutas()
+    public function vutas()
     {
         return $this->hasOne('App\Models\Rutas');
     }
