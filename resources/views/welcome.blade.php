@@ -115,7 +115,7 @@
                                 <div class="carousel-caption d-none d-md-block">
                                     <h5>UNA EMPRESA QUE PIENSA EN USTED</h5>
                                     <p>Expreso Cargosur E.I.R.L, nuestra objetivo principal es la satisfacción de nuestros clientes,
-                                         siendo ésta una empresa conocida a nivel Nacional en el sector de Transporte de carga.
+                                         siendo gti ésta una empresa conocida a nivel Nacional en el sector de Transporte de carga.
                                         Nuestro equipo de profesionales en transporte, junto con el apoyo de nuestros
                                         técnicos y operadores nos brinda el soporte personalizado y simulaciones para cada
                                         servicio, gestionando de la manera más eficaz cualquier necesidad de nuestros clientes..</p>

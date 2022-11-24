@@ -43,5 +43,5 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
             )->name('buscarsunat');
 });
 
-Route::resource('vehiculos', VehiculoController::class);
+Route::get('/set_language/{lang}', [App\Http\Controllers\Controller::class, 'set_language'])->name('set_language');
 

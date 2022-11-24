@@ -20,7 +20,7 @@
                             @csrf
                             <!-- Form Group (email address)-->
                             <div class="mb-3">
-                                <label class="small mb-1" for="inputEmailAddress">Usuario</label>
+                                <label class="small mb-1" for="inputEmailAddress">{{ __( 'User') }}</label>
                                 <input id="usuario" type="text"
                                     class="form-control @error('usuario') is-invalid @enderror" name="usuario" placeholder="example@rayosac.com"
                                     value="{{ old('usuario') }}" required autocomplete="usuario" autofocus>
@@ -32,7 +32,7 @@
                             </div>
                             <!-- Form Group (password)-->
                             <div class="mb-3">
-                                <label class="small mb-1" for="inputPassword">Password</label>
+                                <label class="small mb-1" for="inputPassword">{{ __( 'Password') }}</label>
                                 <input id="password" type="password"
                                     class="form-control @error('password') is-invalid @enderror" name="password" required placeholder="**********"
                                     autocomplete="current-password">
