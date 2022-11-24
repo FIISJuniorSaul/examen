@@ -19,6 +19,7 @@
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
                             <!-- Form Group (email address)-->
+                            <hr class="mt-0 mb-4" />
                             <div class="mb-3">
                                 <label class="small mb-1" for="inputEmailAddress">{{ __( 'User') }}</label>
                                 <input id="usuario" type="text"
@@ -43,6 +44,7 @@
                                     </span>
                                 @enderror
                             </div>
+
                             <!-- Form Group (remember password checkbox)-->
                             <div class="mb-3">
                                 <div class="form-check">

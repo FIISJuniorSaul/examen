@@ -23,25 +23,25 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto">
                         <div class="dropdown imglogo">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false"> <img src="../image/lenguaje.png" alt="0" height="15"
+                            <button class="btn dropdown-toggle p-3 mb-2 bg-light text-dark" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false"> <img src="../image/lenguaje.png" alt="" height="15"
                                     width="15"> {{ __('Idiom') }}
                             </button>
-                            <ul class="dropdown-menu ">
+                            <ul class="dropdown-menu dropdown-menu-dark">
                                 <li><a class="dropdown-item"
                                         href="{{ route('set_language', ['es']) }}">{{ __('Spanish') }}</a></li>
                                 <li><a class="dropdown-item"
                                         href="{{ route('set_language', ['en']) }}">{{ __('English') }}</a></li>
                             </ul>
                         </div>
-                        <li class="dropdown imglogo">
+                        <li class="dropdown imglogo  ">
                             @if (Route::has('login'))
-                                <div class="dropdown">
+                                <div class="dropdown " >
                                     @auth
                                     @else
                                         <a href="{{ route('login') }}"
-                                            class="btn btn-login-top bg-gray-100 dark:bg-gray-100"
-                                            href="{{ route('login') }}">{{ __('Login') }}</a>
+                                            class="btn  p-3 mb-2 bg-light text-dark "
+                                            href="{{ route('login') }}">{{ __('Login') }} </a>
                                     @endauth
                                 </div>
                             @endif
@@ -65,7 +65,7 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="https://www.esan.edu.pe/images/blog/2018/08/29/1500x844-factores-vehiculo-carga.jpg"
-                        class="d-block w-100" alt="...">
+                        class="d-block w-100" alt="..." height="600" width="900">
                     <div class="carousel-caption d-none d-md-block">
                         <h5 style="color:#FFFFFF;" >UNA EMPRESA QUE PIENSA EN USTED</h5>
                         <p>Transporte RAYO S.A.C, nuestro objetivo principal es la satisfacción de nuestros
@@ -80,7 +80,7 @@
                 </div>
                 <div class="carousel-item">
                     <img src="https://static.retail.autofact.cl/blog/c_url_original.4kmjx7kgtkmztx.jpg"
-                        class="d-block w-100" alt="...">
+                        class="d-block w-100" alt="..." height="600" width="900">
                     <div class="carousel-caption d-none d-md-block">
                         <h5 style="color:#FFFFFF;">UNA EMPRESA QUE PIENSA EN USTED</h5>
                         <p>Expreso Cargosur E.I.R.L, nuestra objetivo principal es la satisfacción de nuestros
@@ -95,7 +95,7 @@
                 </div>
                 <div class="carousel-item">
                     <img src="https://www.movertis.com/wp-content/uploads/2020/08/Que-tipos-de-camiones-puedes-encontrar-en-el-mercado.jpg"
-                        class="d-block w-100" alt="...">
+                        class="d-block w-100" alt="..." height="600" width="900">
                     <div class="carousel-caption d-none d-md-block">
                         <h5 style="color:#FFFFFF;">UNA EMPRESA QUE PIENSA EN USTED</h5>
                         <p>Expreso Cargosur E.I.R.L, nuestra objetivo principal es la satisfacción de nuestros
@@ -123,40 +123,44 @@
         </div>
         <br>
         <div class=" text-center vstack gap-3">
-            <div style="color:#FFFFFF;" class="bg-dark border">NUESTROS SERVICIOS</div>
+            <h2 style="color:#FFFFFF;" class="bg-light text-dark">NUESTROS SERVICIOS</h2>
+        </div>
+        <br>
+        <div class="card-group">
+
+            <div  class="card bg-dark text-light border-light" >
+                <div class="card-header text-center">CARGA PESADA</div>
+                <div class="card-body">
+                    <img src="https://elbuho.pe/wp-content/uploads/2022/03/transportistas-carga-pesada.jpg" alt="0"
+                    height="200" width="405">
+                    <p> <br></p>
+                    <hr class="mt-0 mb-4" />
+                    <p  style="text-align: justify" class="card-text ">Transporte de carga completa a nivel nacional en vehículos desde
+                        4-10-15 TN..</p>
+                </div>
+              </div>
+            <div  class="card bg-dark text-light border-light" >
+                <div class="card-header text-center">A NIVEL NACIONAL</div>
+                <div class="card-body">
+                    <img src="image/nacional.jpg" alt="0" height="200" width="405">
+                    <p> <br></p>
+                    <hr class="mt-0 mb-4" />
+                    <p  style="text-align: justify" class="card-text ">Expresos a nivel nacional.
+                        Transporte de paquetería y mercancía en general..</p>
+                </div>
+              </div>
+            <div class="card bg-dark text-light border-light" >
+                <div class="card-header text-center">MUDANZAS</div>
+                <div class="card-body">
+                    <img src="https://gilmovers.com.pe/wp-content/uploads/1.png" alt="0" height="200"
+                    width="405">
+                    <p> <br></p>
+                    <hr class="mt-0 mb-4" />
+                    <p  style="text-align: justify" class="card-text ">Mudanzas departamentos, casas, oficinas, locales e interprovinciales. Embalaje, reposición, montaje, desmontaje.</p>
+                </div>
+              </div>
         </div>
 
-        <div class="card-group">
-            <div class="card">
-                <img src="https://elbuho.pe/wp-content/uploads/2022/03/transportistas-carga-pesada.jpg" alt="0"
-                    height="100" width="200">
-                <div class="card-body">
-                    <h5 class="card-title">CARGA PESADA </h5>
-                    <p class="card-text">Transporte de carga completa a nivel nacional en vehículos desde
-                        4-10-15 TN..</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="image/nacional.jpg" alt="0" height="100" width="100">
-                <div class="card-body">
-                    <h5 class="card-title"> A NIVEL NACIONAL</h5>
-                    <p class="card-text">Expresos a nivel nacional.
-                        Transporte de paquetería y mercancía en general..</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://gilmovers.com.pe/wp-content/uploads/1.png" alt="0" height="100"
-                    width="200">
-                <div class="card-body">
-                    <h5 class="card-title">MUDANZAS</h5>
-                    <p class="card-text">Mudanzas departamentos, casas, oficinas, locales e interprovinciales.
-                        Embalaje, reposición, montaje, desmontaje.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
-            </div>
-        </div>
 
 
         <!-- paginacion final -->

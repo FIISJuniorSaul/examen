@@ -69,6 +69,7 @@
   --bs-danger-rgb: 232, 21, 0;
   --bs-light-rgb: 242, 246, 252;
   --bs-dark-rgb: 33, 40, 50;
+  --bs-teal-rgb:#20c997;
   --bs-black-rgb: 0, 0, 0;
   --bs-white-rgb: 255, 255, 255;
   --bs-red-rgb: 232, 21, 0;
@@ -11003,7 +11004,10 @@ textarea.form-control-lg {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
 }
-
+.bg-teal{
+    --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-teal-rgb), var(--bs-bg-opacity)) !important;
+}
 .bg-dark {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
