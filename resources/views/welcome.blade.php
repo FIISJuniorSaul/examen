@@ -139,7 +139,7 @@
 
                 <div class="card-group">
                     <div class="card">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="https://elbuho.pe/wp-content/uploads/2022/03/transportistas-carga-pesada.jpg" alt="0" height="100" width="200">
                         <div class="card-body">
                             <h5 class="card-title">CARGA PESADA </h5>
                             <p class="card-text">Transporte de carga completa a nivel nacional en vehículos desde 4-10-15 TN..</p>
