@@ -10,179 +10,172 @@
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
-<body >
+<body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <div class="">
                     <li class="imglogo">
-                        <img src="../image/logo.png" alt="" height="30" width="30" >
+                        <img src="../image/logo.png" alt="" height="30" width="30">
                         <a style="color:#FFFFFF;">RAYO SAC</a>
                     </li>
                 </div>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto">
                         <div class="dropdown imglogo">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"> <img src="../image/lenguaje.png" alt="0" height="15" width="15"> {{ __('Idiom') }}
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false"> <img src="../image/lenguaje.png" alt="0" height="15"
+                                    width="15"> {{ __('Idiom') }}
                             </button>
-                            <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="{{ route('set_language', ['es']) }}">{{ __('Spanish') }}</a></li>
-                              <li><a class="dropdown-item" href="{{ route('set_language', ['en']) }}">{{ __('English') }}</a></li>
+                            <ul class="dropdown-menu ">
+                                <li><a class="dropdown-item"
+                                        href="{{ route('set_language', ['es']) }}">{{ __('Spanish') }}</a></li>
+                                <li><a class="dropdown-item"
+                                        href="{{ route('set_language', ['en']) }}">{{ __('English') }}</a></li>
                             </ul>
                         </div>
                         <li class="dropdown imglogo">
-                            <div class="sm:items-center ">
-                                @if (Route::has('login'))
-                                    <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                                        @auth
-                                        @else
-                                        <li class="dropdown imglogo">
-                                            <div class="sm:items-center ">
-                                                @if (Route::has('login'))
-                                                    <div class="dropdown">
-                                                        @auth
-                                                        @else
-                                                            <a href="{{ route('login') }}" class="btn btn-login-top bg-gray-100 dark:bg-gray-100"  href="{{ route('login') }}">{{ __('Login') }}</a>
-                                                        @endauth
-                                                    </div>
-                                                @endif
-                                            </div>
-                                        </li>
-                                        @endauth
-                                    </div>
-                                @endif
-                            </div>
+                            @if (Route::has('login'))
+                                <div class="dropdown">
+                                    @auth
+                                    @else
+                                        <a href="{{ route('login') }}"
+                                            class="btn btn-login-top bg-gray-100 dark:bg-gray-100"
+                                            href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    @endauth
+                                </div>
+                            @endif
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
+    </div>
 
-        <main class="py-4">
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                        class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="https://www.esan.edu.pe/images/blog/2018/08/29/1500x844-factores-vehiculo-carga.jpg"
-                            class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>UNA EMPRESA QUE PIENSA EN USTED</h5>
-                            <p>Transporte RAYO S.A.C, nuestro objetivo principal es la satisfacción de nuestros
-                                clientes,
-                                siendo ésta una empresa conocida a nivel Nacional en el sector de Transporte de
-                                carga.
-                                Nuestro equipo de profesionales en transporte, junto con el apoyo de nuestros
-                                técnicos y operadores nos brinda el soporte personalizado y simulaciones para cada
-                                servicio, gestionando de la manera más eficaz cualquier necesidad de nuestros
-                                clientes..</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://static.retail.autofact.cl/blog/c_url_original.4kmjx7kgtkmztx.jpg"
-                            class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>UNA EMPRESA QUE PIENSA EN USTED</h5>
-                            <p>Expreso Cargosur E.I.R.L, nuestra objetivo principal es la satisfacción de nuestros
-                                clientes,
-                                siendo ésta una empresa conocida a nivel Nacional en el sector de Transporte de
-                                carga.
-                                Nuestro equipo de profesionales en transporte, junto con el apoyo de nuestros
-                                técnicos y operadores nos brinda el soporte personalizado y simulaciones para cada
-                                servicio, gestionando de la manera más eficaz cualquier necesidad de nuestros
-                                clientes..</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://www.movertis.com/wp-content/uploads/2020/08/Que-tipos-de-camiones-puedes-encontrar-en-el-mercado.jpg"
-                            class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>UNA EMPRESA QUE PIENSA EN USTED</h5>
-                            <p>Expreso Cargosur E.I.R.L, nuestra objetivo principal es la satisfacción de nuestros
-                                clientes,
-                                siendo gti ésta una empresa conocida a nivel Nacional en el sector de Transporte de
-                                carga.
-                                Nuestro equipo de profesionales en transporte, junto con el apoyo de nuestros
-                                técnicos y operadores nos brinda el soporte personalizado y simulaciones para cada
-                                servicio, gestionando de la manera más eficaz cualquier necesidad de nuestros
-                                clientes..</p>
-                        </div>
-                    </div>
-                </div>
-
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+    <main class="py-4">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
             </div>
-            <br>
-            <div class=" text-center vstack gap-3">
-                <div class="bg-dark border">NUESTROS SERVICIOS</div>
-            </div>
-            <br>
-            <div class="card-group">
-                <div class="card">
-                    <img src="https://elbuho.pe/wp-content/uploads/2022/03/transportistas-carga-pesada.jpg"
-                        alt="0" height="100" width="200">
-                    <div class="card-body">
-                        <h5 class="card-title">CARGA PESADA </h5>
-                        <p class="card-text">Transporte de carga completa a nivel nacional en vehículos desde
-                            4-10-15 TN..</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://www.esan.edu.pe/images/blog/2018/08/29/1500x844-factores-vehiculo-carga.jpg"
+                        class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 style="color:#FFFFFF;" >UNA EMPRESA QUE PIENSA EN USTED</h5>
+                        <p>Transporte RAYO S.A.C, nuestro objetivo principal es la satisfacción de nuestros
+                            clientes,
+                            siendo ésta una empresa conocida a nivel Nacional en el sector de Transporte de
+                            carga.
+                            Nuestro equipo de profesionales en transporte, junto con el apoyo de nuestros
+                            técnicos y operadores nos brinda el soporte personalizado y simulaciones para cada
+                            servicio, gestionando de la manera más eficaz cualquier necesidad de nuestros
+                            clientes..</p>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="image/nacional.jpg" alt="0" height="100" width="100">
-                    <div class="card-body">
-                        <h5 class="card-title"> A NIVEL NACIONAL</h5>
-                        <p class="card-text">Expresos a nivel nacional.
-                            Transporte de paquetería y mercancía en general..</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <div class="carousel-item">
+                    <img src="https://static.retail.autofact.cl/blog/c_url_original.4kmjx7kgtkmztx.jpg"
+                        class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 style="color:#FFFFFF;">UNA EMPRESA QUE PIENSA EN USTED</h5>
+                        <p>Expreso Cargosur E.I.R.L, nuestra objetivo principal es la satisfacción de nuestros
+                            clientes,
+                            siendo ésta una empresa conocida a nivel Nacional en el sector de Transporte de
+                            carga.
+                            Nuestro equipo de profesionales en transporte, junto con el apoyo de nuestros
+                            técnicos y operadores nos brinda el soporte personalizado y simulaciones para cada
+                            servicio, gestionando de la manera más eficaz cualquier necesidad de nuestros
+                            clientes..</p>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="https://gilmovers.com.pe/wp-content/uploads/1.png" alt="0" height="100"
-                        width="200">
-                    <div class="card-body">
-                        <h5 class="card-title">MUDANZAS</h5>
-                        <p class="card-text">Mudanzas departamentos, casas, oficinas, locales e interprovinciales.
-                            Embalaje, reposición, montaje, desmontaje.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <div class="carousel-item">
+                    <img src="https://www.movertis.com/wp-content/uploads/2020/08/Que-tipos-de-camiones-puedes-encontrar-en-el-mercado.jpg"
+                        class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 style="color:#FFFFFF;">UNA EMPRESA QUE PIENSA EN USTED</h5>
+                        <p>Expreso Cargosur E.I.R.L, nuestra objetivo principal es la satisfacción de nuestros
+                            clientes,
+                            siendo gti ésta una empresa conocida a nivel Nacional en el sector de Transporte de
+                            carga.
+                            Nuestro equipo de profesionales en transporte, junto con el apoyo de nuestros
+                            técnicos y operadores nos brinda el soporte personalizado y simulaciones para cada
+                            servicio, gestionando de la manera más eficaz cualquier necesidad de nuestros
+                            clientes..</p>
                     </div>
                 </div>
             </div>
 
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <br>
+        <div class=" text-center vstack gap-3">
+            <div style="color:#FFFFFF;" class="bg-dark border">NUESTROS SERVICIOS</div>
+        </div>
 
-            <!-- paginacion final -->
-
+        <div class="card-group">
+            <div class="card">
+                <img src="https://elbuho.pe/wp-content/uploads/2022/03/transportistas-carga-pesada.jpg" alt="0"
+                    height="100" width="200">
+                <div class="card-body">
+                    <h5 class="card-title">CARGA PESADA </h5>
+                    <p class="card-text">Transporte de carga completa a nivel nacional en vehículos desde
+                        4-10-15 TN..</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
             </div>
-        </main>
-        <div class="p-3 mb-2 bg-dark text-white">
-            <h1 class="text-white"> Acerca de nosotros</h1>
-
-            <h4 class="text-white">Siguenos en <em type="button" class='bx bxl-facebook-square'></em>
-                <em type="button" class='bx bxl-instagram-alt'></em> <em type="button"
-                    class='bx bxl-youtube'></em>
-            </h4>
-            <h4 class="text-white"> Contactenos <em type="button" class='bx bxl-messenger'></em> <em
-                    type="button" class='bx bxl-whatsapp'></em></h4>
-            <div>
-                <h4 class="text-white"><em class='bx bxs-phone-call'></em> Llamanos al (928033951) </h4>
-                <h5 class="text-white"> De lunes a domingo de 8:00 am a 6:00 pm </h5>
+            <div class="card">
+                <img src="image/nacional.jpg" alt="0" height="100" width="100">
+                <div class="card-body">
+                    <h5 class="card-title"> A NIVEL NACIONAL</h5>
+                    <p class="card-text">Expresos a nivel nacional.
+                        Transporte de paquetería y mercancía en general..</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://gilmovers.com.pe/wp-content/uploads/1.png" alt="0" height="100"
+                    width="200">
+                <div class="card-body">
+                    <h5 class="card-title">MUDANZAS</h5>
+                    <p class="card-text">Mudanzas departamentos, casas, oficinas, locales e interprovinciales.
+                        Embalaje, reposición, montaje, desmontaje.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
             </div>
         </div>
+
+
+        <!-- paginacion final -->
+
+        </div>
+    </main>
+    <div class="p-3 mb-2 bg-dark text-white">
+        <h1 class="text-white"> Acerca de nosotros</h1>
+
+        <h4 class="text-white">Siguenos en <em type="button" class='bx bxl-facebook-square'></em>
+            <em type="button" class='bx bxl-instagram-alt'></em> <em type="button" class='bx bxl-youtube'></em>
+        </h4>
+        <h4 class="text-white"> Contactenos <em type="button" class='bx bxl-messenger'></em> <em type="button"
+                class='bx bxl-whatsapp'></em></h4>
+        <div>
+            <h4 class="text-white"><em class='bx bxs-phone-call'></em> Llamanos al (928033951) </h4>
+            <h5 class="text-white"> De lunes a domingo de 8:00 am a 6:00 pm </h5>
+        </div>
+    </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
