@@ -5765,7 +5765,7 @@ textarea.form-control-lg {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 30px;
+  padding: 10px;
   padding-bottom: 0.5rem;
   justify-content: space-between;
   list-style: none;
@@ -19755,7 +19755,7 @@ body {
 }
 .dropdown-notifications .dropdown-menu .dropdown-notifications-header {
   /*background-color: #0061f2;*/
-  background-color: var(--bs-orange);
+  background-color: #69707a;
   color: #fff !important;
   padding-top: 1rem;
   padding-bottom: 1rem;

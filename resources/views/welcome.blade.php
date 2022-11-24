@@ -24,55 +24,56 @@
     <div>
         <div id="layoutSidenav_content">
             <main>
-                <nav class=" fixed-top navbar navbar-dark bg-dark" id="sidenavAccordion">
+                <nav class=" fixed-top topnav navbar navbar-expand  justify-content-between justify-content-sm-start navbar-light bg-white"
+                    id="sidenavAccordion">
                     <li class="imglogo">
                         <img src="../image/logo.png" alt="" height="50" width="50">
                         <a class="navbar-brand pe-3 ps-4 ps-lg-4" href="/admin/main">Rayo SAC</a>
                     </li>
-                    <li  class="imglogo">
-                    <li class="imglogo dropdown-notifications">
-                        <a class="imglogo" href="javascript:void(0);" role="button" data-bs-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false" title="Lenguaje"><i class='imglogo'></i>
-                            <img src="../image/lenguaje.png" alt="0" height="40" width="40">
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end border-100 shadow animated--fade-in-up"
-                            aria-labelledby="navbarDropdownAlerts">
-                            <h6 class="dropdown-header dropdown-notifications-header">
-                                <i class='bx bx-world'></i>
-                                Lenguaje
-                            </h6>
-                            <!-- Example Alert 1-->
-                            <a class="dropdown-item dropdown-notifications-item" href="#!">
-                                <div class="dropdown-notifications-item-icon bg-warning"><i class='bx bx-world'></i>
-                                </div>
-                                <div class="dropdown-notifications-item-content">
-                                    <div class="dropdown-notifications-item-content-details">Español</div>
-                                </div>
+                    <ul class="navbar-nav align-items-center ms-auto">
+                        <li class=" dropdown-notifications">
+                            <a class="imglogo" href="javascript:void(0);" role="button" data-bs-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false" title="Lenguaje"><i class='imglogo'></i>
+                                <img src="../image/lenguaje.png" alt="0" height="40" width="40">
                             </a>
-                            <a class="dropdown-item dropdown-notifications-item" href="#!">
-                                <div class="dropdown-notifications-item-icon bg-warning"><i class='bx bx-world'></i>
-                                </div>
-                                <div class="dropdown-notifications-item-content">
-                                    <div class="dropdown-notifications-item-content-details">inglés</div>
-                                </div>
-                            </a>
-                        </div>
-                    </li>
-                    <li class=" nav navbar-nav ml-auto align-items-center">
-                        <div class="sm:items-center ">
-                            @if (Route::has('login'))
-                                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                                    @auth
-                                    @else
-                                        <a href="{{ route('login') }}"
-                                            class="btn btn-login-top bg-gray-100 dark:bg-gray-100 ">Iniciar
-                                            sesion</a>
-                                    @endauth
-                                </div>
-                            @endif
-                        </div>
-                    </li>
-                </li>
+                            <div class="dropdown-menu dropdown-menu-end border-100 shadow animated--fade-in-up"
+                                aria-labelledby="navbarDropdownAlerts">
+                                <h6 class="dropdown-header dropdown-notifications-header">
+                                    <i class='bx bx-world'></i>
+                                    Lenguaje
+                                </h6>
+                                <!-- Example Alert 1-->
+                                <a class="dropdown-item dropdown-notifications-item" href="#!">
+                                    <div class=" "><i class='bx bx-world'></i>
+                                    </div>
+                                    <div class="dropdown-notifications-item-content">
+                                        <div class="dropdown-notifications-item-content-details">Español</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item dropdown-notifications-item" href="#!">
+                                    <div class=" "><i class='bx bx-world'></i>
+                                    </div>
+                                    <div class="dropdown-notifications-item-content">
+                                        <div class="dropdown-notifications-item-content-details">inglés</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="imglogo">
+                            <div class="sm:items-center ">
+                                @if (Route::has('login'))
+                                    <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                                        @auth
+                                        @else
+                                            <a href="{{ route('login') }}"
+                                                class="btn btn-login-top bg-gray-100 dark:bg-gray-100 ">Iniciar
+                                                sesion</a>
+                                        @endauth
+                                    </div>
+                                @endif
+                            </div>
+                        </li>
+                    </ul>
 
                 </nav>
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
@@ -88,43 +89,52 @@
                         <div class="carousel-item active">
                             <img src="https://www.esan.edu.pe/images/blog/2018/08/29/1500x844-factores-vehiculo-carga.jpg"
                                 class="d-block w-100" alt="...">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5>UNA EMPRESA QUE PIENSA EN USTED</h5>
-                                    <p>Expreso Cargosur E.I.R.L, nuestra objetivo principal es la satisfacción de nuestros clientes,
-                                         siendo ésta una empresa conocida a nivel Nacional en el sector de Transporte de carga.
-                                        Nuestro equipo de profesionales en transporte, junto con el apoyo de nuestros
-                                        técnicos y operadores nos brinda el soporte personalizado y simulaciones para cada
-                                        servicio, gestionando de la manera más eficaz cualquier necesidad de nuestros clientes..</p>
-                                  </div>
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>UNA EMPRESA QUE PIENSA EN USTED</h5>
+                                <p>Transporte RAYO S.A.C, nuestro objetivo principal es la satisfacción de nuestros
+                                    clientes,
+                                    siendo ésta una empresa conocida a nivel Nacional en el sector de Transporte de
+                                    carga.
+                                    Nuestro equipo de profesionales en transporte, junto con el apoyo de nuestros
+                                    técnicos y operadores nos brinda el soporte personalizado y simulaciones para cada
+                                    servicio, gestionando de la manera más eficaz cualquier necesidad de nuestros
+                                    clientes..</p>
+                            </div>
                         </div>
                         <div class="carousel-item">
                             <img src="https://static.retail.autofact.cl/blog/c_url_original.4kmjx7kgtkmztx.jpg"
                                 class="d-block w-100" alt="...">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5>UNA EMPRESA QUE PIENSA EN USTED</h5>
-                                    <p>Expreso Cargosur E.I.R.L, nuestra objetivo principal es la satisfacción de nuestros clientes,
-                                         siendo ésta una empresa conocida a nivel Nacional en el sector de Transporte de carga.
-                                        Nuestro equipo de profesionales en transporte, junto con el apoyo de nuestros
-                                        técnicos y operadores nos brinda el soporte personalizado y simulaciones para cada
-                                        servicio, gestionando de la manera más eficaz cualquier necesidad de nuestros clientes..</p>
-                                  </div>
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>UNA EMPRESA QUE PIENSA EN USTED</h5>
+                                <p>Expreso Cargosur E.I.R.L, nuestra objetivo principal es la satisfacción de nuestros
+                                    clientes,
+                                    siendo ésta una empresa conocida a nivel Nacional en el sector de Transporte de
+                                    carga.
+                                    Nuestro equipo de profesionales en transporte, junto con el apoyo de nuestros
+                                    técnicos y operadores nos brinda el soporte personalizado y simulaciones para cada
+                                    servicio, gestionando de la manera más eficaz cualquier necesidad de nuestros
+                                    clientes..</p>
+                            </div>
                         </div>
                         <div class="carousel-item">
                             <img src="https://www.movertis.com/wp-content/uploads/2020/08/Que-tipos-de-camiones-puedes-encontrar-en-el-mercado.jpg"
                                 class="d-block w-100" alt="...">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h5>UNA EMPRESA QUE PIENSA EN USTED</h5>
-                                    <p>Expreso Cargosur E.I.R.L, nuestra objetivo principal es la satisfacción de nuestros clientes,
-                                         siendo gti ésta una empresa conocida a nivel Nacional en el sector de Transporte de carga.
-                                        Nuestro equipo de profesionales en transporte, junto con el apoyo de nuestros
-                                        técnicos y operadores nos brinda el soporte personalizado y simulaciones para cada
-                                        servicio, gestionando de la manera más eficaz cualquier necesidad de nuestros clientes..</p>
-                                  </div>
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>UNA EMPRESA QUE PIENSA EN USTED</h5>
+                                <p>Expreso Cargosur E.I.R.L, nuestra objetivo principal es la satisfacción de nuestros
+                                    clientes,
+                                    siendo gti ésta una empresa conocida a nivel Nacional en el sector de Transporte de
+                                    carga.
+                                    Nuestro equipo de profesionales en transporte, junto con el apoyo de nuestros
+                                    técnicos y operadores nos brinda el soporte personalizado y simulaciones para cada
+                                    servicio, gestionando de la manera más eficaz cualquier necesidad de nuestros
+                                    clientes..</p>
+                            </div>
                         </div>
                     </div>
                     <div class=" text-center vstack gap-3">
                         <div class="bg-dark border">NUESTROS SERVICIOS</div>
-                      </div>
+                    </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
                         data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -139,10 +149,12 @@
 
                 <div class="card-group">
                     <div class="card">
-                        <img src="https://elbuho.pe/wp-content/uploads/2022/03/transportistas-carga-pesada.jpg" alt="0" height="100" width="200">
+                        <img src="https://elbuho.pe/wp-content/uploads/2022/03/transportistas-carga-pesada.jpg"
+                            alt="0" height="100" width="200">
                         <div class="card-body">
                             <h5 class="card-title">CARGA PESADA </h5>
-                            <p class="card-text">Transporte de carga completa a nivel nacional en vehículos desde 4-10-15 TN..</p>
+                            <p class="card-text">Transporte de carga completa a nivel nacional en vehículos desde
+                                4-10-15 TN..</p>
                             <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                         </div>
                     </div>
@@ -156,7 +168,8 @@
                         </div>
                     </div>
                     <div class="card">
-                        <img src="https://gilmovers.com.pe/wp-content/uploads/1.png" alt="0" height="100" width="200">
+                        <img src="https://gilmovers.com.pe/wp-content/uploads/1.png" alt="0" height="100"
+                            width="200">
                         <div class="card-body">
                             <h5 class="card-title">MUDANZAS</h5>
                             <p class="card-text">Mudanzas departamentos, casas, oficinas, locales e interprovinciales.
