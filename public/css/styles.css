@@ -5764,9 +5764,11 @@ textarea.form-control-lg {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  padding-top: 0.5rem;
+  justify-content: center;
+  padding: 30px;
   padding-bottom: 0.5rem;
+  justify-content: space-between;
+  list-style: none;
 }
 .navbar > .container,
 .navbar > .container-fluid,
@@ -21165,6 +21167,10 @@ pre[class*=language-] {
 }
 .imglogo{
     border-radius: 50px;
+    padding: 10px;
+    align-items: center;
+  justify-content: center;
+
 }
 .separado{
     line-height : 25px;

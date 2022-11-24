@@ -13,7 +13,7 @@
                     <div class="card-body">
                         <!-- Login form-->
                         <div class="text-center imglogo">
-                            <img src="../image/logo.jpg" alt="" height="200" width="200">
+                            <img src="../image/logo.png" alt="" height="200" width="200">
                         </div>
                         <h3 class = "text-center namerayo">TRANSPORTES RAYO SAC</h3>
                         <form method="POST" action="{{ route('login') }}">
