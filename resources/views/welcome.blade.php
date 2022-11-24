@@ -31,6 +31,20 @@
                         <a class="navbar-brand pe-3 ps-4 ps-lg-4" href="/admin/main">Rayo SAC</a>
                     </li>
                     <ul class="navbar-nav align-items-center ms-auto">
+                        <li class="navbar">
+                            <div class="sm:items-center ">
+                                @if (Route::has('login'))
+                                    <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                                        @auth
+                                        @else
+                                            <a href="{{ route('login') }}"
+                                                class="btn btn-login-top bg-gray-100 dark:bg-gray-100 ">Iniciar
+                                                sesion</a>
+                                        @endauth
+                                    </div>
+                                @endif
+                            </div>
+                        </li>
                         <li class=" dropdown-notifications">
                             <a class="imglogo" href="javascript:void(0);" role="button" data-bs-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false" title="Lenguaje"><i class='imglogo'></i>
@@ -59,20 +73,7 @@
                                 </a>
                             </div>
                         </li>
-                        <li class="imglogo">
-                            <div class="sm:items-center ">
-                                @if (Route::has('login'))
-                                    <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                                        @auth
-                                        @else
-                                            <a href="{{ route('login') }}"
-                                                class="btn btn-login-top bg-gray-100 dark:bg-gray-100 ">Iniciar
-                                                sesion</a>
-                                        @endauth
-                                    </div>
-                                @endif
-                            </div>
-                        </li>
+
                     </ul>
 
                 </nav>
