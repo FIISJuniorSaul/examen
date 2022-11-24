@@ -90,6 +90,19 @@
             </div>
         </li>-->
         <!-- User Dropdown-->
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                {{ __('Idiom') }}
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item"
+                href="{{ route('set_language', ['es']) }}">{{ __('Spanish') }}</a></li>
+              <li><a class="dropdown-item"
+                href="{{ route('set_language', ['en']) }}">{{ __('English') }}</a></li>
+
+            </ul>
+          </div>
+
         <li class="nav-item dropdown no-caret dropdown-user me-2 me-lg-4 dropdown-notifications">
             <a class="btn btn-icon btn-transparent-dark dropdown-toggle" id="navbarDropdownUserImage"  href="javascript:void(0);" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Cuenta"><em class='bx bxs-user-circle'></em></a>
             <div class="dropdown-menu dropdown-menu-end border-0 shadow animated--fade-in-up" aria-labelledby="navbarDropdownUserImage">
@@ -100,6 +113,7 @@
 
                     </div>
                 </h6>
+
                 <!--<div class="dropdown-divider"></div>-->
                 <a class="dropdown-item dropdown-notifications-item" href="#!">
                     <div class="dropdown-item-icon"><i data-feather="settings"></i></div>
