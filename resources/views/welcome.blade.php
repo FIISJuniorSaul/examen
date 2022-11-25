@@ -67,45 +67,26 @@
                     <img src="https://www.esan.edu.pe/images/blog/2018/08/29/1500x844-factores-vehiculo-carga.jpg"
                         class="d-block w-100" alt="..." height="600" width="900">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5 style="color:#FFFFFF;" >UNA EMPRESA QUE PIENSA EN USTED</h5>
-                        <p>Transporte RAYO S.A.C, nuestro objetivo principal es la satisfacción de nuestros
-                            clientes,
-                            siendo ésta una empresa conocida a nivel Nacional en el sector de Transporte de
-                            carga.
-                            Nuestro equipo de profesionales en transporte, junto con el apoyo de nuestros
-                            técnicos y operadores nos brinda el soporte personalizado y simulaciones para cada
-                            servicio, gestionando de la manera más eficaz cualquier necesidad de nuestros
-                            clientes..</p>
+                        <h5 style="color:#FFFFFF;" >{{ __('A COMPANY THAT THINKS ABOUT YOU') }}</h5>
+                        <p>
+                            {{ __('Transporte RAYO S.A.C, our main objective is the satisfaction of our customers,This being a company known nationally in the transport sector burden.Our team of transportation professionals, along with the support of our technicians and operators provide us with personalized support and simulations for each service, managing in the most efficient way any need of our customers..') }}
+                            </p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="https://static.retail.autofact.cl/blog/c_url_original.4kmjx7kgtkmztx.jpg"
                         class="d-block w-100" alt="..." height="600" width="900">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5 style="color:#FFFFFF;">UNA EMPRESA QUE PIENSA EN USTED</h5>
-                        <p>Expreso Cargosur E.I.R.L, nuestra objetivo principal es la satisfacción de nuestros
-                            clientes,
-                            siendo ésta una empresa conocida a nivel Nacional en el sector de Transporte de
-                            carga.
-                            Nuestro equipo de profesionales en transporte, junto con el apoyo de nuestros
-                            técnicos y operadores nos brinda el soporte personalizado y simulaciones para cada
-                            servicio, gestionando de la manera más eficaz cualquier necesidad de nuestros
-                            clientes..</p>
+                        <h5 style="color:#FFFFFF;">{{ __('A COMPANY THAT THINKS ABOUT YOU') }}</h5>
+                        <p>{{ __('Transporte RAYO S.A.C, our main objective is the satisfaction of our customers,This being a company known nationally in the transport sector burden.Our team of transportation professionals, along with the support of our technicians and operators provide us with personalized support and simulations for each service, managing in the most efficient way any need of our customers..') }}</p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="https://www.movertis.com/wp-content/uploads/2020/08/Que-tipos-de-camiones-puedes-encontrar-en-el-mercado.jpg"
                         class="d-block w-100" alt="..." height="600" width="900">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5 style="color:#FFFFFF;">UNA EMPRESA QUE PIENSA EN USTED</h5>
-                        <p>Expreso Cargosur E.I.R.L, nuestra objetivo principal es la satisfacción de nuestros
-                            clientes,
-                            siendo gti ésta una empresa conocida a nivel Nacional en el sector de Transporte de
-                            carga.
-                            Nuestro equipo de profesionales en transporte, junto con el apoyo de nuestros
-                            técnicos y operadores nos brinda el soporte personalizado y simulaciones para cada
-                            servicio, gestionando de la manera más eficaz cualquier necesidad de nuestros
-                            clientes..</p>
+                        <h5 style="color:#FFFFFF;">{{ __('A COMPANY THAT THINKS ABOUT YOU') }}</h5>
+                        <p>{{ __('Transporte RAYO S.A.C, our main objective is the satisfaction of our customers,This being a company known nationally in the transport sector burden.Our team of transportation professionals, along with the support of our technicians and operators provide us with personalized support and simulations for each service, managing in the most efficient way any need of our customers..') }}</p>
                     </div>
                 </div>
             </div>
