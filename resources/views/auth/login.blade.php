@@ -1,7 +1,6 @@
 @extends('layouts.config')
 
 @section('content')
-
     <div class="container-xl px-4">
         <div class="row justify-content-center">
             <div class="col-lg-5">
@@ -15,16 +14,17 @@
                         <div class="text-center imglogo">
                             <img src="../image/logo.png" alt="" height="200" width="200">
                         </div>
-                        <h3 class = "text-center namerayo">TRANSPORTES RAYO SAC</h3>
+                        <h3 class="text-center namerayo">TRANSPORTES RAYO SAC</h3>
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
                             <!-- Form Group (email address)-->
                             <hr class="mt-0 mb-4" />
                             <div class="mb-3">
-                                <label class="small mb-1" for="inputEmailAddress">{{ __( 'User') }}</label>
+                                <label class="small mb-1" for="inputEmailAddress">{{ __('User') }}</label>
                                 <input id="usuario" type="text"
-                                    class="form-control @error('usuario') is-invalid @enderror" name="usuario" placeholder="example@rayosac.com"
-                                    value="{{ old('usuario') }}" required autocomplete="usuario" autofocus>
+                                    class="form-control @error('usuario') is-invalid @enderror" name="usuario"
+                                    placeholder="example@rayosac.com" value="{{ old('usuario') }}" required
+                                    autocomplete="usuario" autofocus>
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -33,10 +33,10 @@
                             </div>
                             <!-- Form Group (password)-->
                             <div class="mb-3">
-                                <label class="small mb-1" for="inputPassword">{{ __( 'Password') }}</label>
+                                <label class="small mb-1" for="inputPassword">{{ __('Password') }}</label>
                                 <input id="password" type="password"
-                                    class="form-control @error('password') is-invalid @enderror" name="password" required placeholder="**********"
-                                    autocomplete="current-password">
+                                    class="form-control @error('password') is-invalid @enderror" name="password" required
+                                    placeholder="**********" autocomplete="current-password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -49,11 +49,11 @@
                             <div class="mb-3">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember"
-                                            {{ old('remember') ? 'checked' : '' }}>
+                                        {{ old('remember') ? 'checked' : '' }}>
 
-                                        <label class="form-check-label" for="rememberPasswordCheck">
-                                            {{ __('Remember Me') }}
-                                        </label>
+                                    <label class="form-check-label" for="rememberPasswordCheck">
+                                        {{ __('Remember Me') }}
+                                    </label>
                                 </div>
                             </div>
                             <!-- Form Group (login box)-->
@@ -88,6 +88,5 @@
             </div>
         </div>
     </div>
-</p>
-
+    </p>
 @endsection
