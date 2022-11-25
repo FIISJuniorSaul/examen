@@ -12,7 +12,7 @@
 
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar fixed-top navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <div class="">
                     <li class="imglogo">
@@ -23,9 +23,9 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto">
                         <div class="dropdown imglogo">
-                            <button class="btn dropdown-toggle p-3 mb-2 bg-light text-dark" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false"> <img src="../image/lenguaje.png" alt="" height="15"
-                                    width="15"> {{ __('Idiom') }}
+                            <button class="btn dropdown-toggle p-3 mb-2 bg-light text-dark" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false"> <img src="../image/lenguaje.png"
+                                    alt="" height="15" width="15"> {{ __('Idiom') }}
                             </button>
                             <ul class="dropdown-menu dropdown-menu-dark">
                                 <li><a class="dropdown-item"
@@ -36,11 +36,10 @@
                         </div>
                         <li class="dropdown imglogo  ">
                             @if (Route::has('login'))
-                                <div class="dropdown " >
+                                <div class="dropdown ">
                                     @auth
                                     @else
-                                        <a href="{{ route('login') }}"
-                                            class="btn  p-3 mb-2 bg-light text-dark "
+                                        <a href="{{ route('login') }}" class="btn  p-3 mb-2 bg-light text-dark "
                                             href="{{ route('login') }}">{{ __('Login') }} </a>
                                     @endauth
                                 </div>
@@ -53,7 +52,7 @@
     </div>
 
     <main class="py-4">
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+        <div id="carouselExampleIndicators" class="carousel slide " data-bs-ride="true">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1"></button>
@@ -62,15 +61,15 @@
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
                     aria-label="Slide 3"></button>
             </div>
-            <div class="carousel-inner">
+            <div class="carousel-inner ">
                 <div class="carousel-item active">
                     <img src="https://www.esan.edu.pe/images/blog/2018/08/29/1500x844-factores-vehiculo-carga.jpg"
                         class="d-block w-100" alt="..." height="600" width="900">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5 style="color:#FFFFFF;" >{{ __('A COMPANY THAT THINKS ABOUT YOU') }}</h5>
+                        <h5 style="color:#FFFFFF;">{{ __('A COMPANY THAT THINKS ABOUT YOU') }}</h5>
                         <p>
                             {{ __('Transporte RAYO S.A.C, our main objective is the satisfaction of our customers,This being a company known nationally in the transport sector burden.Our team of transportation professionals, along with the support of our technicians and operators provide us with personalized support and simulations for each service, managing in the most efficient way any need of our customers..') }}
-                            </p>
+                        </p>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -78,7 +77,8 @@
                         class="d-block w-100" alt="..." height="600" width="900">
                     <div class="carousel-caption d-none d-md-block">
                         <h5 style="color:#FFFFFF;">{{ __('A COMPANY THAT THINKS ABOUT YOU') }}</h5>
-                        <p>{{ __('Transporte RAYO S.A.C, our main objective is the satisfaction of our customers,This being a company known nationally in the transport sector burden.Our team of transportation professionals, along with the support of our technicians and operators provide us with personalized support and simulations for each service, managing in the most efficient way any need of our customers..') }}</p>
+                        <p>{{ __('Transporte RAYO S.A.C, our main objective is the satisfaction of our customers,This being a company known nationally in the transport sector burden.Our team of transportation professionals, along with the support of our technicians and operators provide us with personalized support and simulations for each service, managing in the most efficient way any need of our customers..') }}
+                        </p>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -86,7 +86,8 @@
                         class="d-block w-100" alt="..." height="600" width="900">
                     <div class="carousel-caption d-none d-md-block">
                         <h5 style="color:#FFFFFF;">{{ __('A COMPANY THAT THINKS ABOUT YOU') }}</h5>
-                        <p>{{ __('Transporte RAYO S.A.C, our main objective is the satisfaction of our customers,This being a company known nationally in the transport sector burden.Our team of transportation professionals, along with the support of our technicians and operators provide us with personalized support and simulations for each service, managing in the most efficient way any need of our customers..') }}</p>
+                        <p>{{ __('Transporte RAYO S.A.C, our main objective is the satisfaction of our customers,This being a company known nationally in the transport sector burden.Our team of transportation professionals, along with the support of our technicians and operators provide us with personalized support and simulations for each service, managing in the most efficient way any need of our customers..') }}
+                        </p>
                     </div>
                 </div>
             </div>
@@ -104,63 +105,62 @@
         </div>
         <br>
         <div class=" text-center vstack gap-3">
-            <h2 style="color:#FFFFFF;" class="bg-light text-dark">NUESTROS SERVICIOS</h2>
+            <h2 style="color:#FFFFFF;" class="bg-light text-dark">{{ __('OUR SERVICES') }}</h2>
         </div>
         <br>
         <div class="card-group">
 
-            <div  class="card bg-dark text-light border-light" >
-                <div class="card-header text-center">CARGA PESADA</div>
+            <div class="card bg-secondary-soft text-dark border-light">
+                <div class="card-header text-center">{{ __('HEAVY LOAD') }}</div>
                 <div class="card-body">
-                    <img src="https://elbuho.pe/wp-content/uploads/2022/03/transportistas-carga-pesada.jpg" alt="0"
-                    height="200" width="405">
+                    <img src="https://elbuho.pe/wp-content/uploads/2022/03/transportistas-carga-pesada.jpg"
+                        alt="0" height="200" width="405">
                     <p> <br></p>
                     <hr class="mt-0 mb-4" />
-                    <p  style="text-align: justify" class="card-text ">Transporte de carga completa a nivel nacional en vehículos desde
-                        4-10-15 TN..</p>
+                    <p style="text-align: justify" class="card-text ">
+                        {{ __('Full load transportation nationwide in vehicles from 4-10-15 TN.') }}</p>
                 </div>
-              </div>
-            <div  class="card bg-dark text-light border-light" >
-                <div class="card-header text-center">A NIVEL NACIONAL</div>
+            </div>
+            <div class="card bg-secondary-soft text-dark border-light">
+                <div class="card-header text-center">{{ __('AT THE NATIONAL LEVEL') }}</div>
                 <div class="card-body">
                     <img src="image/nacional.jpg" alt="0" height="200" width="405">
                     <p> <br></p>
                     <hr class="mt-0 mb-4" />
-                    <p  style="text-align: justify" class="card-text ">Expresos a nivel nacional.
-                        Transporte de paquetería y mercancía en general..</p>
+                    <p style="text-align: justify" class="card-text ">
+                        {{ __('Express nationwide. Transport of parcels and merchandise in general.') }}</p>
                 </div>
-              </div>
-            <div class="card bg-dark text-light border-light" >
-                <div class="card-header text-center">MUDANZAS</div>
+            </div>
+            <div class="card bg-secondary-soft text-dark border-light">
+                <div class="card-header text-center">{{ __('REMOVALS') }}</div>
                 <div class="card-body">
                     <img src="https://gilmovers.com.pe/wp-content/uploads/1.png" alt="0" height="200"
-                    width="405">
+                        width="405">
                     <p> <br></p>
                     <hr class="mt-0 mb-4" />
-                    <p  style="text-align: justify" class="card-text ">Mudanzas departamentos, casas, oficinas, locales e interprovinciales. Embalaje, reposición, montaje, desmontaje.</p>
+                    <p style="text-align: justify" class="card-text ">
+                        {{ __('Moving departments, houses, offices, local and interprovincial. Packaging, replacement, assembly, disassembly.') }}
+                    </p>
                 </div>
-              </div>
+            </div>
         </div>
-
-
-
-        <!-- paginacion final -->
-
         </div>
     </main>
-    <div class="p-3 mb-2 bg-dark text-white">
-        <h1 class="text-white"> Acerca de nosotros</h1>
-
-        <h4 class="text-white">Siguenos en <em type="button" class='bx bxl-facebook-square'></em>
-            <em type="button" class='bx bxl-instagram-alt'></em> <em type="button" class='bx bxl-youtube'></em>
-        </h4>
-        <h4 class="text-white"> Contactenos <em type="button" class='bx bxl-messenger'></em> <em type="button"
-                class='bx bxl-whatsapp'></em></h4>
-        <div>
-            <h4 class="text-white"><em class='bx bxs-phone-call'></em> Llamanos al (928033951) </h4>
-            <h5 class="text-white"> De lunes a domingo de 8:00 am a 6:00 pm </h5>
+    <div class="card text-bg-dark  text-center bg-img-cover overlay overlay-45">
+        <img src="../image/acerca de nosotros.jpg" class="card-img" alt="..." height="200" width="100">
+        <div class="card-img-overlay">
+            <h1 class="text-white"> {{ __('About us') }}</h1>
+            <h4 class="text-white">{{ __('follow us on') }}<em type="button" class='bx bxl-facebook-square'></em>
+                <em type="button" class='bx bxl-instagram-alt'></em> <em type="button" class='bx bxl-youtube'></em>
+            </h4>
+            <h4 class="text-white"> {{ __('Contact Us') }}<em type="button" class='bx bxl-messenger'></em> <em type="button"
+                    class='bx bxl-whatsapp'></em></h4>
+            <div>
+                <h4 class="text-white"><em class='bx bxs-phone-call'></em> {{ __('Call us at: 928033951') }}</h4>
+                <h5 class="text-white"> {{ __('Attention from Monday to Sunday from 8:00 am to 6:00 pm') }}</h5>
+            </div>
         </div>
-    </div>
+ </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"

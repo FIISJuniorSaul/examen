@@ -6368,6 +6368,8 @@ textarea.form-control-lg {
   border-bottom-left-radius: 0.35rem;
 }
 
+
+
 .card-group > .card {
   margin-bottom: 0.75rem;
 }
@@ -9500,6 +9502,7 @@ textarea.form-control-lg {
 
 .border-light {
   border-color: #f2f6fc !important;
+
 }
 
 .border-dark {
