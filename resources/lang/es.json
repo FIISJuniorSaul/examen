@@ -132,7 +132,32 @@
   "Brand":"Marca",
   "Gasoline consumption": "Consumo de gasolina",
   "Loading capacity": "Capacidad de carga",
-  "Driver":"Conductor"
+  "Driver":"Conductor",
+  "Vehicle data":"Datos del Vehículo",
+  "User data":"Datos del usuario",
+  "Vehicle Type":"Tipo de Vehículo",
+  "Select":"Seleccionar",
+  "Consumption of Gallons/KM":"Consumo de Galones/KM",
+  "Designate Driver":"Designar Conductor",
+  "VEHICLES":"VEHÍCULOS",
+  "BURDENS":"CARGAS",
+  "List of Loads":"Listado de las Cargas",
+  ". New Load":". Nueva Carga",
+  "CODE":"CÓDIGO",
+  "COST":"COSTO",
+  "WEIGHT":"PESO",
+  "VEHICLE PLATE":"PLACA DE VEHÍCULO",
+  "ACTIONS":"ACCIONES"
+
+
+
+
+
+
+
+
+
+
 
 
 

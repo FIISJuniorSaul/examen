@@ -10,7 +10,7 @@
                         <div class="row justify-content-center">
                             <div class="col-12 col-xl-auto">
                                 <h1 class="page-title">
-                                    {{ __('Vehicles') }}
+                                    {{ __('VEHICLES') }}
                                 </h1>
                             </div>
                         </div>
