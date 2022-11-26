@@ -10,7 +10,7 @@
                         <div class="row justify-content-center">
                             <div class="col-12 col-xl-auto">
                                 <h1 class="page-title">
-                                    USUARIOS
+                                    {{ __('Users') }}
                                 </h1>
                             </div>
                         </div>
@@ -18,30 +18,22 @@
                 </div>
                 <div class="page-body page-body-light pt-3 px-2">
                     <div class="card card-header-actions">
-                        <div class="card-header">
-                            Portafolio
-                            <a href="{{route('usuario.create')}}" class="btn btn-primary lift"><em class='bx bxs-user-plus'></em>{{ __('Crear Usuario') }}</a>
-                        </div>
-                        <div class="d-grid gap-2 d-md-flex justify-content-md-end py-2 px-4">
-                            <form class="input-group">
-                                <input name="busqueda" class="form-control me-md-2" type="search" placeholder="Ingrese nombre" aria-label="Search" autocomplete="off">
-                                <button class="btn btn-outline-primary btn-sm" type="submit"> <em class='bx bx-search-alt'></em>Buscar</button>
-                            </form>
+                        <div class="card-header"> {{ __('List of all users') }}
+                            <a href="{{route('usuario.create')}}" class="btn btn-primary lift"><em class='bx bxs-user-plus'></em>{{ __('Create user') }}</a>
                         </div>
                         <div class="card-body py-2">
                             <table class="table table-sm table-bordered table-hover " id="datatablesSimple">
                                 <thead>
                                     <tr>
                                         <th>DNI</th>
-                                        <th>Nombres</th>
-                                        <th>Apellido Paterno</th>
-                                        <th>Apellido Materno</th>
-                                        <th>Correo</th>
-                                        <th>Telefono</th>
-                                        <th>Usuario</th>
-                                        <th>Rol</th>
-                                        <th>Estado</th>
-                                        <th>Acciones</th>
+                                        <th>{{ __('Name') }}</th>
+                                        <th>{{ __('Last name') }}</th>
+                                        <th>{{ __('Mail') }}</th>
+                                        <th>{{ __('Telephone') }}</th>
+                                        <th>{{ __('User') }}</th>
+                                        <th>{{ __('Role') }}</th>
+                                        <th>{{ __('State') }}</th>
+                                        <th>{{ __('Actions') }}</th>
                                     </tr>
                                 </thead>
 
@@ -52,8 +44,7 @@
 
                                         <td>{{$item->dni}}</td>
                                         <td>{{$item->nombre}}</td>
-                                        <td>{{$item->apellido_paterno}}</td>
-                                        <td>{{$item->apellido_materno}}</td>
+                                        <td>{{$item->apellido_paterno}} {{$item->apellido_materno}}</td>
                                         <td>{{$item->correo}}</td>
                                         <td>{{$item->telefono}}</td>
                                         <td>{{$item->usuario}}</td>
