@@ -14,7 +14,7 @@
                             </div>
                             <div class="col-12 col-xl-auto">
                                 <h1 class="page-title">
-                                    BIENVENIDO
+                                    {{ __('Welcome') }}
                                 </h1>
                             </div>
                             <div class="col-12 col-xl-auto">
@@ -40,11 +40,11 @@
             <footer class="footer-admin mt-auto footer-light">
                 <div class="container-xl px-4">
                     <div class="row">
-                        <div class="col-md-6 small">Copyright © Your Website 2022</div>
+                        <div class="col-md-6 small">{{ __('Copyright') }} © {{ __('Your') }} {{ __('Website') }} 2022</div>
                         <div class="col-md-6 text-md-end small">
-                            <a href="#!">Privacy Policy</a>
+                            <a href="#!">{{ __('Privacy Policy') }}</a>
                             ·
-                            <a href="#!">Terms &amp; Conditions</a>
+                            <a href="#!">{{ __('Terms') }} &amp; {{ __('Conditions') }}</a>
                         </div>
                     </div>
                 </div>
