@@ -95,7 +95,7 @@
   "Company information": "Información de la empresa",
   "Operations":"Operaciones",
   "Vehicles":"Vehiculos",
-  "burdens":"Cargas",
+  "Burdens":"Cargas",
   "Routes": "Rutas",
   "Clients": "clientes",
   "Privacy Policy": "Politicas y privacidad",
@@ -122,7 +122,18 @@
   "Fathers last name": "Apellido Paterno",
   "Mothers last name": "Apellido Materno",
   "Save":"Guardar",
-  "Cancel":"Cancelar"
+  "Cancel":"Cancelar",
+  "Transport":"Transporte",
+  "List":"Lista de",
+  "New": "Nuevo",
+  "Vehicle":"Vehiculo",
+  "Type of": "Tipo de",
+  "License plate": "Placa",
+  "Brand":"Marca",
+  "Gasoline consumption": "Consumo de gasolina",
+  "Loading capacity": "Capacidad de carga",
+  "Driver":"Conductor"
+
 
 
 

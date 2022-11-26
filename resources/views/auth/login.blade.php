@@ -10,14 +10,14 @@
                     <!-- Basic login form-->
                     <div class="card shadow-lg border-0 rounded-lg mt-5">
                         <div class="card-header justify-content-center">
-                            <h3 class="fw-light my-4 text-center ">Login</h3>
+                            <h3 class="fw-light my-4 text-center ">{{ __('Login') }}</h3>
                         </div>
                         <div class="card-body">
                             <!-- Login form-->
                             <div class="text-center imglogo">
                                 <img src="../image/logo.png" alt="" height="200" width="200">
                             </div>
-                            <h3 class="text-center namerayo">TRANSPORTES RAYO SAC</h3>
+                            <h3 class="text-center namerayo">{{ __('Transport') }} RAYO SAC</h3>
                             <form method="POST" action="{{ route('login') }}">
                                 @csrf
                                 <!-- Form Group (email address)-->
@@ -79,11 +79,11 @@
                     <footer class="footer-admin mt-auto footer-dark">
                         <div class="container-xl px-4">
                             <div class="row">
-                                <div class="col-md-6 small">Copyright © Your Website 2022</div>
+                                <div class="col-md-6 small">{{ __('Copyright') }} © {{ __('Your') }} {{ __('Website') }} 2022</div>
                                 <div class="col-md-6 text-md-end small">
-                                    <a href="#!">Privacy Policy</a>
+                                    <a href="#!">{{ __('Privacy Policy') }}</a>
                                     ·
-                                    <a href="#!">Terms &amp; Conditions</a>
+                                    <a href="#!">{{ __('Terms') }} &amp; {{ __('Conditions') }}</a>
                                 </div>
                             </div>
                         </div>

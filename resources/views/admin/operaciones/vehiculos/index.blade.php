@@ -10,7 +10,7 @@
                         <div class="row justify-content-center">
                             <div class="col-12 col-xl-auto">
                                 <h1 class="page-title">
-                                    VEHÍCULOS
+                                    {{ __('Vehicles') }}
                                 </h1>
                             </div>
                         </div>
@@ -19,30 +19,24 @@
                 <div class="page-body page-body-light pt-3 px-2">
                     <div class="card card-header-actions">
                         <div class="card-header">
-                            Vehículos/Datos en la tabla
+                            {{ __('List') }} {{ __('Vehicles') }}
                             <div>
 
-                                <a href="{{route('vehiculo.create')}}" class="btn btn-primary lift"><em class='bx bxs-truck'></em>{{ __('. Nuevo Vehiculo') }}</a>
+                                <a href="{{route('vehiculo.create')}}" class="btn btn-primary lift"><em class='bx bxs-truck'></em>{{ __('New') }} {{ __('Vehicle') }}</a>
                             </div>
                         </div>
-                        <div class="d-grid gap-2 d-md-flex justify-content-md-end py-2 px-4">
-                            <form class="input-group">
-                                <button class="btn btn-outline-primary btn-sm me-md-2" type="submit"> <em class='bx bx-search-alt'></em>Buscar</button>
-                                <input name="busqueda" class="form-control " type="search" placeholder="Ingrese nombre del vehiculo" aria-label="Search" autocomplete="off">
 
-                            </form>
-                        </div>
                         <div class="card-body py-2">
                             <table class="table table-sm table-bordered table-hover " id="datatablesSimple">
                                 <thead>
                                     <tr>
-                                        <th>Tipo de Vehículo</th>
-                                        <th>Placa</th>
-                                        <th>Marca</th>
-                                        <th>Consumo Galones</th>
-                                        <th>Capacidad de Carga/T</th>
-                                        <th>Conductor</th>
-                                        <th>Acciones</th>
+                                        <th>{{ __('Type of') }} {{ __('Vehicle') }}</th>
+                                        <th>{{ __('License plate') }}</th>
+                                        <th>{{ __('Brand') }}</th>
+                                        <th>{{ __('Gasoline consumption') }} /gal</th>
+                                        <th>{{ __('Loading capacity') }}/T</th>
+                                        <th>{{ __('Driver') }}</th>
+                                        <th>{{ __('Actions') }}</th>
 
                                     </tr>
                                 </thead>
