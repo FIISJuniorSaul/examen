@@ -112,7 +112,17 @@
   "Telephone": "Teléfono",
   "State":"Estado",
   "Actions": "Acciones",
-  "Role":"Rol"
+  "Role":"Rol",
+  "Add": "Agregar",
+  "Personal information": "Datos personales",
+  "Account details": "Detalles de la cuenta",
+  "To write": "Escribir",
+  "Document":"Documento",
+  "Search": "Buscar",
+  "Fathers last name": "Apellido Paterno",
+  "Mothers last name": "Apellido Materno",
+  "Save":"Guardar",
+  "Cancel":"Cancelar"
 
 
 

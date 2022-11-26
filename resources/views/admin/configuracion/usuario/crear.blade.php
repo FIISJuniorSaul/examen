@@ -10,7 +10,7 @@
                         <div class="row justify-content-center">
                             <div class="col-12 col-xl-auto">
                                 <h1 class="page-title">
-                                    AGREGAR USUARIO
+                                    {{ __('Add') }} {{ __('User') }}
                                 </h1>
                             </div>
                         </div>
@@ -19,7 +19,7 @@
                 <div class="page-body page-body-light pt-3 px-2">
                     <div class="card card-header-actions">
                         <div class="card-header">
-                            Datos personales
+                            {{ __('Personal information') }}
                         </div>
                         <main>
                             <!-- Main page content-->
@@ -29,12 +29,12 @@
                                     <div class="col-xl-8">
                                         <!-- Account details card-->
                                         <div class="card mb-4">
-                                            <div class="card-header">Detalles de la Cuenta</div>
+                                            <div class="card-header">{{ __('Account details') }}</div>
                                             <div class="card-body">
-                                                <label for="dni">Ingrese DNI</label>
+                                                <label for="dni">{{ __('To write') }} DNI</label>
                                                 <div class="input-group">
-                                                    <input type="number" min="1" max="99999999" id="dni" class="form-control" placeholder="Documento" />&nbsp;
-                                                    <button class="btn btn-primary" id="buscardni" align="right" onClick="consultarDni()">Buscar</button>
+                                                    <input type="number" min="1" max="99999999" id="dni" class="form-control" placeholder="{{ __('Document') }}" />&nbsp;
+                                                    <button class="btn btn-primary" id="buscardni" align="right" onClick="consultarDni()">{{ __('Search') }}</button>
                                                 </div>
                                                 <form action="{{route('usuario.store')}}" method="post" enctype="multipart/form-data">
                                                     @csrf
@@ -51,39 +51,37 @@
                                                         </div>
                                                         <!-- Form Group (name)-->
                                                         <div class="col-md-6">
-                                                            <label class="small mb-1" for="inputName">Nombres</label>
+                                                            <label class="small mb-1" for="inputName">{{ __('Name') }}</label>
                                                             <input class="form-control" name="nombre" id="nombres"
-                                                                type="text" placeholder="Nombres" readonly/>
+                                                                type="text" placeholder="{{ __('Name') }}" readonly/>
                                                         </div>
                                                     </div>
                                                     <!-- Form Row-->
                                                     <div class="row gx-3 mb-3">
                                                         <!-- Form Group (last name)-->
                                                         <div class="col-md-6">
-                                                            <label class="small mb-1" for="inputFirstName">Apellido
-                                                                Paterno</label>
+                                                            <label class="small mb-1" for="inputFirstName"> {{ __('Fathers last name') }}</label>
                                                             <input class="form-control" name="apellido_paterno"
                                                             id="apellido_paterno" type="text"
-                                                                placeholder="Apellido Paterno" readonly />
+                                                                placeholder="{{ __('Fathers last name') }}" readonly />
                                                         </div>
                                                         <!-- Form Group (last name)-->
                                                         <div class="col-md-6">
-                                                            <label class="small mb-1" for="inputLastName">Apellido
-                                                                Materno</label>
+                                                            <label class="small mb-1" for="inputLastName">{{ __('Mothers last name') }}</label>
                                                             <input class="form-control" name="apellido_materno"
                                                             id="apellido_materno" type="text"
-                                                                placeholder="Apellido Materno" readonly />
+                                                                placeholder="{{ __('Mothers last name') }}" readonly />
                                                         </div>
                                                     </div>
                                                     <div class="row gx-3 mb-3">
                                                         <div class="col-md-6">
-                                                            <label class="small mb-1" for="inputEmail">correo electronico</label>
+                                                            <label class="small mb-1" for="inputEmail"> {{ __('Mail') }}</label>
                                                             <input class="form-control" name="correo"
                                                                 id="inputEmail" type="text"
                                                                 placeholder="example@rayosac.com" />
                                                         </div>
                                                         <div class="col-md-6">
-                                                            <label class="small mb-1" for="inputTelephone">teléfono</label>
+                                                            <label class="small mb-1" for="inputTelephone">{{ __('Telephone') }}</label>
                                                             <input class="form-control" name="telefono"
                                                                 id="inputTelephone" type="number"
                                                                 placeholder="9208033951" />
@@ -91,7 +89,7 @@
                                                     </div>
                                                     <div class="row gx-3 mb-3">
                                                         <div class="col-md-6">
-                                                            <label class="small mb-1" for="inputRol">Rol</label>
+                                                            <label class="small mb-1" for="inputRol">{{ __('Role') }}</label>
                                                             <select id="id_role" name="idrol" class="form-control">
                                                                 <option>------Seleccionar------</option>
                                                                 @foreach($roles as $role)
@@ -100,7 +98,7 @@
                                                          </select>
                                                         </div>
                                                         <div class="col-md-6">
-                                                            <label class="small mb-1" for="inputPassword">Contraseña</label>
+                                                            <label class="small mb-1" for="inputPassword">{{ __('Password') }}</label>
                                                             <input class="form-control" name="password"
                                                                 id="inputPassword" type="password"
                                                                 placeholder="***********" />
@@ -108,10 +106,10 @@
                                                     </div>
                                                     <div class="row gx-3 mb-3">
                                                         <div class="col-md-6">
-                                                            <label class="small mb-1" for="inputUser">Usuario</label>
+                                                            <label class="small mb-1" for="inputUser">{{ __('User') }}</label>
                                                             <input class="form-control" name="usuario"
                                                                 id="inputUser" type="text"
-                                                                placeholder="user" />
+                                                                placeholder="{{ __('User') }}" />
                                                         </div>
                                                     </div>
                                             </div>
@@ -119,10 +117,10 @@
                                             <div class="text-center">
                                                 <!-- Save changes button-->
                                                 <button class="btn btn-primary" type="submit"><em
-                                                        class='bx bxs-memory-card'></em>Guardar </button>
+                                                        class='bx bxs-memory-card'></em>{{ __('Save') }} </button>
                                                 <!-- cancel changes button-->
                                                 <button class="btn btn-primary" type="button"><em
-                                                        class='bx bxs-x-circle'></em>Cancelar </button>
+                                                        class='bx bxs-x-circle'></em>{{ __('Cancel') }} </button>
                                             </div>
 
                                             </form>
