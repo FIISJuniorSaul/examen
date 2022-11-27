@@ -10,7 +10,7 @@
                         <div class="row justify-content-center">
                             <div class="col-12 col-xl-auto">
                                 <h1 class="page-title">
-                                    NUESTROS CLIENTES
+                                    {{ __('OUR CLIENTS') }}
                                 </h1>
                             </div>
                         </div>
@@ -19,24 +19,24 @@
                 <div class="page-body page-body-light pt-3 px-2">
                     <div class="card card-header-actions">
                         <div class="card-header">
-                            Clientes/Datos en la tabla
+                            {{ __('Clients/ Data in the table') }}
                             <div>
-                                <a href="{{route('clienteJuridico.create')}}" class="btn btn-primary lift"><em class='bx bxs-user-plus'></em>{{ __('. Nuevo cliente') }}</a>
+                                <a href="{{route('clienteJuridico.create')}}" class="btn btn-primary lift"><em class='bx bxs-user-plus'></em>{{ __('. New client') }}</a>
                             </div>
 
                         </div>
                         <ul class="nav nav-tabs">
                             <li class="nav-item">
-                              <a class="nav-link active" aria-current="page" href="/admin/operaciones/clientes/index">Clientes Jurídicos</a>
+                              <a class="nav-link active" aria-current="page" href="/admin/operaciones/clientes/index">{{ __('Legal Clients') }}</a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link " href="/admin/operaciones/clientes/indexClienteNatural">Clientes Naturales</a>
+                              <a class="nav-link " href="/admin/operaciones/clientes/indexClienteNatural">{{ __('Natural Clients') }}</a>
                             </li>
 
                           </ul>
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end py-2 px-4">
                             <form class="input-group">
-                                <button class="btn btn-outline-primary btn-sm me-md-2" type="submit"> <em class='bx bx-search-alt'></em>Buscar</button>
+                                <button class="btn btn-outline-primary btn-sm me-md-2" type="submit"> <em class='bx bx-search-alt'></em>{{ __('Search') }}</button>
                                 <input name="busqueda" class="form-control " type="search" placeholder="Ingrese nombre de empresa" aria-label="Search" autocomplete="off">
 
                             </form>
@@ -45,16 +45,16 @@
                             <table class="table table-sm table-bordered table-hover " id="datatablesSimple">
                                 <thead>
                                     <tr>
-                                        <th>Nº de RUC</th>
-                                        <th>Razón Social</th>
-                                        <th>Estado</th>
-                                        <th>Departamento</th>
-                                        <th>Provincia</th>
-                                        <th>Distrito</th>
-                                        <th>Dirección</th>
-                                        <th>correo electronico</th>
-                                        <th>telefono</th>
-                                        <th>Acciones</th>
+                                        <th>{{ __('RUC number') }}</th>
+                                        <th>{{ __('Business name') }} </th>
+                                        <th>{{ __('Condition') }}</th>
+                                        <th>{{ __('Department') }}</th>
+                                        <th>{{ __('Province') }}</th>
+                                        <th>{{ __('District') }}</th>
+                                        <th>{{ __('Address') }}</th>
+                                        <th>{{ __('Email') }} </th>
+                                        <th>{{ __('Telephone') }}</th>
+                                        <th>{{ __('Actions') }}</th>
                                     </tr>
                                 </thead>
 

@@ -10,7 +10,7 @@
                         <div class="row justify-content-center">
                             <div class="col-12 col-xl-auto">
                                 <h1 class="page-title">
-                                    AGREGAR NUEVO CLIENTE
+                                    <th>{{ __('ADD NEW CUSTOMER') }}</th>
                                 </h1>
                             </div>
                         </div>
@@ -23,12 +23,10 @@
                         </div>
                         <ul class="nav nav-tabs">
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="{{route('clienteJuridico.create')}}">Cliente
-                                    Juridico</a>
+                                <a class="nav-link" aria-current="page" href="{{route('clienteJuridico.create')}}">{{ __('Legal Client') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="{{route('clienteNatural.create')}}">Cliente
-                                    Natural</a>
+                                <a class="nav-link active" href="{{route('clienteNatural.create')}}">{{ __('Natural Client') }}</a>
                             </li>
                         </ul>
                         <main>
@@ -39,18 +37,18 @@
                                     <div class="#">
                                         <!-- Account details card-->
                                         <div class="card mb-4">
-                                            <div class="card-header">Detalles del cliente Natural</div>
+                                            <div class="card-header">{{ __('Natural customer details') }}</div>
                                             <div class="card-body">
-                                                <label for="dni">Ingrese DNI</label>
+                                                <label for="dni">{{ __('Enter DNI') }}</label>
                                                 <div class="input-group">
                                                     <input type="number" min="1" max="99999999" id="dni"
-                                                        class="form-control" placeholder="Documento" />&nbsp;
+                                                        class="form-control" placeholder="********" />&nbsp;
                                                     <button class="btn btn-primary" id="buscardni" align="right"
-                                                        onClick="consultarDni()"><em class='bx bx-search-alt-2'></em>Buscar</button>
+                                                        onClick="consultarDni()"><em class='bx bx-search-alt-2'></em>{{ __('Search') }}</button>
                                                 </div>
                                                 <div class="col-md-5">
                                                     <small id="mensaje" style="color: red;display: none;font-size: 12pt;">
-                                                        <i class="fa fa-remove"></i> El numero de DNI no es valido.
+                                                        <i class="fa fa-remove"></i> {{ __('The DNI number is not valid.') }}
                                                     </small>
                                                 </div>
                                                 <form action="{{ route('clienteNatural.store') }}" method="post"
@@ -62,53 +60,50 @@
                                                     <!-- Form Group (username)-->
                                                     <div class="row gx-3 mb-3">
                                                         <div class="col-md-6">
-                                                            <label class="small mb-1" for="inputCode">Codigo</label>
+                                                            <label class="small mb-1" for="inputCode">{{ __('Code') }}</label>
                                                             <input class="form-control" name="codigo" id="codigo"
-                                                                type="text" placeholder="codigo" />
+                                                                type="text" placeholder="" />
                                                         </div>
                                                         <!-- Form Group (DNI)-->
                                                         <div class="col-md-6">
                                                             <label class="small mb-1" for="inputDNI">DNI</label>
                                                             <input class="form-control" name="dni" id="dni_ciudadano"
-                                                                type="text" placeholder="DNI" readonly />
+                                                                type="text" placeholder="********" readonly />
                                                         </div>
                                                         <!-- Form Group (name)-->
                                                         <div class="col-md-6">
-                                                            <label class="small mb-1" for="inputName">Nombres</label>
+                                                            <label class="small mb-1" for="inputName">{{ __('Names') }}</label>
                                                             <input class="form-control" name="nombre" id="nombres"
-                                                                type="text" placeholder="Nombres" readonly />
+                                                                type="text" placeholder="" readonly />
                                                         </div>
                                                     </div>
                                                     <!-- Form Row-->
                                                     <div class="row gx-3 mb-3">
                                                         <!-- Form Group (last name)-->
                                                         <div class="col-md-6">
-                                                            <label class="small mb-1" for="inputFirstName">Apellido
-                                                                Paterno</label>
+                                                            <label class="small mb-1" for="inputFirstName">{{ __('Fathers last name') }}</label>
                                                             <input class="form-control" name="apellido_paterno"
                                                                 id="apellido_paterno" type="text"
-                                                                placeholder="Apellido Paterno" readonly />
+                                                                placeholder="" readonly />
                                                         </div>
                                                         <!-- Form Group (last name)-->
                                                         <div class="col-md-6">
-                                                            <label class="small mb-1" for="inputLastName">Apellido
-                                                                Materno</label>
+                                                            <label class="small mb-1" for="inputLastName">{{ __('Mothers last name') }}</label>
                                                             <input class="form-control" name="apellido_materno"
                                                                 id="apellido_materno" type="text"
-                                                                placeholder="Apellido Materno" readonly />
+                                                                placeholder=" " readonly />
                                                         </div>
                                                     </div>
                                                     <div class="row gx-3 mb-3">
                                                         <div class="col-md-6">
-                                                            <label class="small mb-1" for="inputEmail">correo
-                                                                electronico</label>
+                                                            <label class="small mb-1" for="inputEmail">{{ __('E-Mail Address') }}</label>
                                                             <input class="form-control" name="correo" id="inputEmail"
                                                                 type="text" placeholder="example@rayosac.com" />
                                                         </div>
                                                         <div class="col-md-6">
-                                                            <label class="small mb-1" for="inputTelephone">telefono</label>
+                                                            <label class="small mb-1" for="inputTelephone">{{ __('Telephone') }}</label>
                                                             <input class="form-control" name="telefono" id="inputTelephone"
-                                                                type="number" placeholder="9208033951" />
+                                                                type="number" placeholder="*********" />
                                                         </div>
                                                     </div>
                                                     <!--estado roles y permisos-->
@@ -117,10 +112,10 @@
                                                     <div class="text-center">
                                                         <br>
                                                         <!-- Save changes button-->
-                                                        <button class="btn btn-primary" type="submit"><em class='bx bx-check'></em>Guardar </button>
+                                                        <button class="btn btn-primary" type="submit"><em class='bx bx-check'></em>{{ __('Save') }}</button>
                                                         <!-- cancel changes button-->
                                                         <button class="btn btn-primary" type="submit"><em
-                                                                class='bx bxs-x-circle'></em>Cancelar </button>
+                                                                class='bx bxs-x-circle'></em>{{ __('Cancel') }}</button>
                                                     </div>
 
                                                 </form>

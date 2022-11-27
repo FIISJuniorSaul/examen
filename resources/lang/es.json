@@ -147,22 +147,53 @@
   "COST":"COSTO",
   "WEIGHT":"PESO",
   "VEHICLE PLATE":"PLACA DE VEHÍCULO",
-  "ACTIONS":"ACCIONES"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  "ACTIONS":"ACCIONES",
+  "Burden data":"Datos de la carga",
+  "Additional Cargo Details":"Detalles Adicionales de la Carga",
+  "load code":"Código de la carga",
+  "Burden cost":"Costo de la carga",
+  "Burden description":"Descripción de la carga",
+  "Weight of the load":"Peso de la carga",
+  "Select vehicle":"Seleccionar vehículo",
+  "ROUTES":"RUTAS",
+  "List of Routes":"Listado de las Rutas",
+  ". New route":". Nueva Ruta",
+  "ORIGIN DEPARTMENT":"DEPARTAMENTO ORIGEN",
+  "PROVINCE ORIGIN":"PROVINCIA ORIGEN",
+  "ORIGIN DISTRICT":"DISTRITO ORIGEN",
+  "DESTINATION DEPARTMENT":"DEPARTAMENTO DESTINO",
+  "DESTINATION PROVINCE":"PROVINCIA DESTINO",
+  "DESTINATION DISTRICT":"DISTRITO DESTINO",
+  "Route Data":"Datos de la Ruta",
+  "ROUTE DETAILS":"DETALLES DE LA RUTA",
+  "point of origin":"Punto de origen",
+  "Department":"Departamento",
+  "Province":"Provincia",
+  "District":"Distrito",
+  "Destination point":"Punto de Destino",
+  "Select Vehicle":"Seleccionar Vehículo",
+  "OUR CLIENTS":"NUESTROS CLIENTES",
+  "Clients/ Data in the table":"Clientes/ Datos en la tabla",
+  ". New client":". Nuevo cliente",
+  "Legal Clients":"Clientes Jurídicos",
+  "Natural Clients":"Clientes Naturales",
+  "RUC number":"Nº de RUC",
+  "Business name":"Razón Social",
+  "Condition":"Estado",
+  "Address":"Dirección",
+  "ADD NEW CUSTOMER":"AGREGAR NUEVO CLIENTE",
+  "Client data":"Datos del cliente",
+  "Legal Client":"Cliente Jurídico",
+  "Natural Client":"Cliente Natural",
+  "Legal client details":"Detalles del cliente Jurídico",
+  "Enter RUC":"Ingrese RUC",
+  "The RUC number is not valid.":"El número de RUC no es valido.",
+  "Enter DNI":"Ingrese DNI",
+  "The DNI number is not valid.":"El numero de DNI no es valido.",
+  "Code":"Código",
+  "Names":"Nombres",
+  "DNI number":"Nº de DNI",
+  "Natural customer details":"Detalles del cliente Natural"
 
 
 }

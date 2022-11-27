@@ -10,7 +10,7 @@
                         <div class="row justify-content-center">
                             <div class="col-12 col-xl-auto">
                                 <h1 class="page-title">
-                                    NUESTROS CLIENTES
+                                    {{ __('OUR CLIENTS') }}
                                 </h1>
                             </div>
                         </div>
@@ -19,7 +19,7 @@
                 <div class="page-body page-body-light pt-3 px-2">
                     <div class="card card-header-actions">
                         <div class="card-header">
-                            Clientes/Datos en la tabla
+                            {{ __('Clients/ Data in the table') }}
                             <div>
                                 <a href="{{route('clienteNatural.create')}}" class="btn btn-primary lift"><em class='bx bx-trip'></em>{{ __('Nuevo cliente') }}</a>
                             </div>
@@ -27,16 +27,16 @@
                         </div>
                         <ul class="nav nav-tabs">
                             <li class="nav-item">
-                              <a class="nav-link " aria-current="page" href="/admin/operaciones/clientes/index">Clientes Jurídicos</a>
+                              <a class="nav-link " aria-current="page" href="/admin/operaciones/clientes/index">{{ __('Legal Clients') }}</a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link  active" href="/admin/operaciones/clientes/indexClienteNatural">Clientes Naturales</a>
+                              <a class="nav-link  active" href="/admin/operaciones/clientes/indexClienteNatural">{{ __('Natural Clients') }}</a>
                             </li>
 
                           </ul>
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end py-2 px-4">
                             <form class="input-group">
-                                <button class="btn btn-outline-primary btn-sm me-md-2" type="submit"> <em class='bx bx-search-alt'></em>Buscar</button>
+                                <button class="btn btn-outline-primary btn-sm me-md-2" type="submit"> <em class='bx bx-search-alt'></em>{{ __('Search') }}</button>
                                 <input name="busqueda" class="form-control " type="search" placeholder="Ingrese nombre de empresa" aria-label="Search" autocomplete="off">
 
                             </form>
@@ -45,13 +45,13 @@
                             <table class="table table-sm table-bordered table-hover " id="datatablesSimple">
                                 <thead>
                                     <tr>
-                                        <th>Nº de DNI</th>
-                                        <th>Nombre</th>
-                                        <th>Apellido Paterno</th>
-                                        <th>Apellido Materno</th>
-                                        <th>E-mail</th>
-                                        <th>Teléfono</th>
-                                        <th>Acciones</th>
+                                        <th>{{ __(' DNI number') }}</th>
+                                        <th>{{ __('Names') }}</th>
+                                        <th>{{ __('Fathers last name') }}</th>
+                                        <th>{{ __('Mothers last name') }}</th>
+                                        <th>{{ __('Email') }} </th>
+                                        <th>{{ __('Telephone') }}</th>
+                                        <th>{{ __('Actions') }}</th>
                                     </tr>
                                 </thead>
                                 <tbody>

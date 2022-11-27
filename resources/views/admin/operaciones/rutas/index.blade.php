@@ -10,7 +10,7 @@
                         <div class="row justify-content-center">
                             <div class="col-12 col-xl-auto">
                                 <h1 class="page-title">
-                                    RUTAS
+                                    {{ __('ROUTES') }}
                                 </h1>
                             </div>
                         </div>
@@ -19,14 +19,14 @@
                 <div class="page-body page-body-light pt-3 px-2">
                     <div class="card card-header-actions">
                         <div class="card-header">
-                            Listado de las Rutas
+                            {{ __('List of Routes') }}
                             <a href="{{ route('rutasdestino.create') }}" class="btn btn-primary lift"><em
-                                    class='bx bx-trip'></em>{{ __('Nueva Ruta') }}</a>
+                                    class='bx bx-trip'></em>{{ __('. New route') }}</a>
                         </div>
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end py-2 px-4">
                             <form class="input-group">
                                 <button class="btn btn-outline-primary btn-sm me-md-2" type="submit"> <em
-                                        class='bx bx-search-alt'></em>Buscar</button>
+                                        class='bx bx-search-alt'></em>{{ __('Search') }}</button>
                                 <input name="busqueda" class="form-control me-md-2" type="search"
                                     placeholder="Ingrese ruta" aria-label="Search" autocomplete="off">
 
@@ -36,10 +36,10 @@
                             <table class="table table-sm table-bordered table-hover " id="datatablesSimple">
                                 <thead>
                                     <tr>
-                                        <th>DPTO ORIGEN</th>
-                                        <th>PROV ORIGEN</th>
-                                        <th>DTTO ORIGEN</th>
-                                        <th>Acciones</th>
+                                        <th>{{ __('ORIGIN DEPARTMENT') }}</th>
+                                        <th>{{ __('PROVINCE ORIGIN') }}</th>
+                                        <th>{{ __('ORIGIN DISTRICT') }}</th>
+                                        <th>{{ __('ACTIONS') }}</th>
                                     </tr>
                                 </thead>
 
@@ -69,10 +69,10 @@
                             <table class="table table-sm table-bordered table-hover " id="datatablesSimple">
                                 <thead>
                                     <tr>
-                                        <th>DPTO DESTINO</th>
-                                        <th>PROV DESTINO</th>
-                                        <th>DTTO DESTINO</th>
-                                        <th>Acciones</th>
+                                        <th>{{ __('DESTINATION DEPARTMEN') }}T</th>
+                                        <th>{{ __('DESTINATION PROVINCE') }}</th>
+                                        <th>{{ __('DESTINATION DISTRICT') }}</th>
+                                        <th>{{ __('ACTIONS') }}</th>
                                     </tr>
                                 </thead>
 

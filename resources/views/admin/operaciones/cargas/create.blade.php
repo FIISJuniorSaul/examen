@@ -10,7 +10,7 @@
                         <div class="row justify-content-center">
                             <div class="col-12 col-xl-auto">
                                 <h1 class="page-title">
-                                    CARGAS
+                                    {{ __('BURDENS') }}
                                 </h1>
                             </div>
                         </div>
@@ -19,51 +19,46 @@
                 <div class="page-body page-body-light pt-3 px-2">
                     <div class="card card-header-actions">
                         <div class="card-header">
-                            Datos de la carga
+                            {{ __('Burden data') }}
                         </div>
                         <div class="card-body">
                             <br>
                             <form action="{{route('carga.store')}}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="row g-3 px-6">
-
-
-                                    <h6>Detalles Adicionales de la Carga</h6>
+                                    <h6>{{ __('Additional Cargo Details') }}</h6>
                                     <div class="row gx-3 mb-3">
                                         <div class="col-md-6">
-                                            <label class="small mb-1" for="inputDetailsBurden">Código de la
-                                                carga</label>
+                                            <label class="small mb-1" for="inputDetailsBurden">{{ __('load code') }}</label>
                                             <input class="form-control" id="inputDetailsBurden" name="codigo"
-                                                type="number" placeholder="123456"
+                                                type="number" placeholder="****"
                                                 value="" />
                                         </div>
 
                                         <div class="col-md-6">
-                                            <label class="small mb-1" for="inputDetailsBurden">Costo de la
-                                                carga</label>
+                                            <label class="small mb-1" for="inputDetailsBurden">{{ __('Burden cost') }}</label>
                                             <input class="form-control" id="inputDetailsBurden"
-                                                type="number" placeholder="00.0" name="costo"
+                                                type="number" placeholder="S/." name="costo"
                                                 value="" />
                                         </div>
                                         <div class="col-md-6">
-                                            <label class="small mb-1" for="inputCostBurden">Descripción de la carga</label>
+                                            <label class="small mb-1" for="inputCostBurden">{{ __('Burden description') }}</label>
                                             <input class="form-control" id="inputCostBurden"
-                                                type="text" placeholder="Descripción" name="descripcion"
+                                                type="text" placeholder="" name="descripcion"
                                                 value="" />
                                         </div>
                                         <div class="col-md-6">
-                                            <label class="small mb-1" for="inputDetailsBurden">Peso de la
-                                                carga</label>
+                                            <label class="small mb-1" for="inputDetailsBurden">{{ __('Weight of the load') }}</label>
                                             <input class="form-control" id="inputDetailsBurden"
-                                                type="number" placeholder="00" name="peso"
+                                                type="number" placeholder="***T" name="peso"
                                                 value="" />
                                         </div>
 
                                         <div class="col-md-6">
                                             <br>
-                                            <h6 class="small mb-1" for="inputRol">Seleccionar vehículo</h6>
-                                            <select id="id_vehiculo" name="vehiculos_id" class="form-control">
-                                                <option>------Seleccionar------</option>
+                                            <h6 class="small mb-1" for="inputRol">{{ __('Select vehicle') }}</h6>
+                                            <select id="id_vehiculo" name="vehiculos_id" class="form-control" style="color: #C1BEBE;">
+                                                <option>{{ __('Select') }}</option>
                                                 @foreach($vehiculos as $vehi)
                                                 <option value="{{ $vehi->id }}" >{{ $vehi->marca}} {{ $vehi->capacidad_carga}} toneladas</option>
                                             @endforeach
@@ -75,10 +70,10 @@
                                 <br>
                                 <div class="text-center">
                                     <!-- Save changes button-->
-                                    <button class="btn btn-primary" type="submit"><em class='bx bx-check'></em>Guardar
+                                    <button class="btn btn-primary" type="submit"><em class='bx bx-check'></em>{{ __('Save') }}
                                     </button>
                                     <!-- cancel changes button-->
-                                    <button class="btn btn-primary" type="submit"><em class='bx bxs-x-circle'></em>Cancelar
+                                    <button class="btn btn-primary" type="submit"><em class='bx bxs-x-circle'></em>{{ __('Cancel') }}
                                     </button>
                                 </div>
                             </form>

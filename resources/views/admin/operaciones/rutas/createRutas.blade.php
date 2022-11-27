@@ -10,7 +10,7 @@
                         <div class="row justify-content-center">
                             <div class="col-12 col-xl-auto">
                                 <h1 class="page-title">
-                                    RUTAS
+                                    {{ __('ROUTES') }}
                                 </h1>
                             </div>
                         </div>
@@ -19,7 +19,7 @@
                 <div class="page-body page-body-light pt-3 px-2">
                     <div class="card card-header-actions">
                         <div class="card-header">
-                            Datos de la Ruta
+                            {{ __(' Route Data') }}
                         </div>
                         <div class="card-body">
                             <br>
@@ -27,56 +27,56 @@
                                 @csrf
                                 <div class="row g-3 px-6">
                                     <div>
-                                        <h5>DETALLES DE LA RUTA</h5>
-                                        <h6>Punto de origen</h6>
+                                        <h5>{{ __('ROUTE DETAILS') }}</h5>
+                                        <h6>{{ __('point of origin') }}</h6>
                                         <!--estado roles y permisos-->
                                         <div class="row gx-2 mb-2">
                                             <!-- select Estate-->
                                             <div class="col-md-4">
                                                 <label class="small mb-1"
-                                                    for="inputDepartament">Departamento</label>
+                                                    for="inputDepartament">{{ __('Department') }}</label>
                                                 <select class="form-control state" name="departamento_origen"></select>
                                             </div>
                                             <!-- select roles and permissions-->
                                             <div class="col-md-4">
                                                 <label class="small mb-1"
-                                                    for="inputProvince">Provincia</label>
+                                                    for="inputProvince">{{ __('Province') }}</label>
                                                     <select class="form-control city" name="provincia_origen"></select>
                                             </div>
                                             <div class="col-md-4">
                                                 <label class="small mb-1"
-                                                    for="inputDistrit">Distrito</label>
+                                                    for="inputDistrit">{{ __('District') }}</label>
                                                     <select class="form-control district" name="distrito_origen"></select>
                                             </div>
 
                                         </div>
                                     </div>
                                     <div>
-                                        <h6>Punto de Destino</h6>
+                                        <h6>{{ __('Destination point') }}</h6>
                                         <!--estado roles y permisos-->
                                         <div class="row gx-2 mb-2">
                                             <!-- select Estate-->
                                             <div class="col-md-4">
                                                 <label class="small mb-1"
-                                                    for="inputDepartament">Departamento</label>
+                                                    for="inputDepartament">{{ __('Department') }}</label>
                                                     <select class="form-control state_destino" name="departamento_destino"></select>
                                             </div>
                                             <!-- select roles and permissions-->
                                             <div class="col-md-4">
                                                 <label class="small mb-1"
-                                                    for="inputProvince">Provincia</label>
+                                                    for="inputProvince">{{ __('Province') }}</label>
                                                     <select class="form-control city_destino" name="provincia_destino"></select>
                                             </div>
                                             <div class="col-md-4">
                                                 <label class="small mb-1"
-                                                    for="inputDistrit">Distrito</label>
+                                                    for="inputDistrit">{{ __('District') }}</label>
                                                     <select class="form-control district_destino" name="distrito_destino"></select>
                                             </div>
                                             <div class="col-md-4">
                                                 <br>
-                                                <h6 class="small mb-1" for="inputRol">Seleccionar Vehículo</h6>
+                                                <h6 class="small mb-1" for="inputRol">{{ __('Select Vehicle') }}</h6>
                                                 <select id="id_carga" name="vehiculos_id" class="form-control">
-                                                    <option>------Seleccionar------</option>
+                                                    <option>{{ __('Select') }}</option>
                                                     @foreach($vehiculos as $vehi)
                                                     <option value="{{ $vehi->id }}" > {{ $vehi->marca}} {{$vehi->capacidad_carga}} Toneladas</option>
                                                     @endforeach
@@ -84,9 +84,9 @@
                                             </div>
                                             <div class="col-md-4">
                                                 <br>
-                                                <h6 class="small mb-1" for="inputRol">Seleccionar distrito</h6>
+                                                <h6 class="small mb-1" for="inputRol">!!Seleccionar distrito</h6>
                                                 <select id="id_carga" name="distrito_id" class="form-control">
-                                                    <option>------Seleccionar------</option>
+                                                    <option>{{ __('Select') }}</option>
                                                     @foreach($distritos as $dis)
                                                     <option value="{{ $dis->id }}" > {{ $dis->nombre}}</option>
                                                     @endforeach
@@ -102,10 +102,10 @@
                                 <br>
                                 <div class="text-center">
                                     <!-- Save changes button-->
-                                    <button class="btn btn-primary" type="submit"><em class='bx bx-check'></em>Guardar
+                                    <button class="btn btn-primary" type="submit"><em class='bx bx-check'></em>{{ __('Save') }}
                                     </button>
                                     <!-- cancel changes button-->
-                                    <button class="btn btn-primary" type="button"><em class='bx bxs-x-circle'></em>Cancelar
+                                    <button class="btn btn-primary" type="button"><em class='bx bxs-x-circle'></em>{{ __('Cancel') }}
                                     </button>
                                 </div>
                             </form>
