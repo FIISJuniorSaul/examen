@@ -75,9 +75,10 @@
                                 <div class="text-center">
                                     <br>
                                     <button class="btn btn-primary me-md-2" type="submit"><em class='bx bx-check'></em>{{ __('Save') }}</button>
-                                    <button class="btn btn-primary" type="submit"><i
-                                            class='bx bxs-left-arrow-square'></i>{{ __('Cancel') }}</button>
-                                </div>
+                                    <form action="{{route('vehiculo.index')}}" method="POST">
+                                        <a class="btn btn-primary me-md-2" href="{{route('vehiculo.index')}}" onclick="return confirm('seguro que desea cancelar la edicion?');"><em class='bx bxs-left-arrow-square'></em> {{ __('Cancel') }}</a>
+                                        @csrf
+                                    </form>
                             </form>
                         </div>
                     </div>
