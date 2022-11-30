@@ -50,9 +50,12 @@
                                         <td>{{$car->peso}}</td>
                                         <td>{{$car->Vehiculo->placa}}</td>
                                         <td>
-                                            <button class="btn btn-datatable btn-icon btn-transparent-table me-2"><em class='bx bxs-edit-alt'></em></button>
-                                            <button class="btn btn-datatable btn-icon btn-transparent-table"><i class='bx bx-trash' ></i></button>
-                                            <button type="summit" oneclick="this.disable=true" class="btn btn-datatable btn-icon btn-transparent-table"><i class='bx bxs-file-pdf'></i></button>
+                                            <form action="{{route('carga.destroy',$car->id)}}" method="POST">
+                                                <a class="btn btn-primary btn-sm lift" href="{{route('carga.edit',$car->id)}}"><em class='bx bxs-edit-alt'></em></a>
+                                                @csrf
+                                                @method('DELETE')
+                                                <button class="btn btn-danger btn-sm lift" type="submit" onclick="return confirm('seguro que desea eliminar?');"><em class='bx bx-trash' ></em></button>
+                                            </form>
 
                                         </td>
 

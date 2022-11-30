@@ -60,7 +60,7 @@
                                             <h6 class="small mb-1" for="inputRol">{{ __('Select vehicle') }}</h6>
                                             <select id="id_vehiculo" name="vehiculos_id" class="form-control" style="color: #C1BEBE;">
                                                 <option>{{ __('Select') }}</option>
-                                                @foreach($vehiculos as $vehi)
+                                                @foreach($vehiculo as $vehi)
                                                 <option value="{{ $vehi->id }}" >{{ $vehi->marca}} {{ $vehi->capacidad_carga}} toneladas</option>
                                             @endforeach
                                          </select>
@@ -74,8 +74,10 @@
                                     <button class="btn btn-primary" type="submit"><em class='bx bx-check'></em>{{ __('Save') }}
                                     </button>
                                     <!-- cancel changes button-->
-                                    <button class="btn btn-primary" type="submit"><em class='bx bxs-x-circle'></em>{{ __('Cancel') }}
-                                    </button>
+                                    <form action="{{route('carga.index')}}" method="POST">
+                                        <a class="btn btn-primary me-md-2" href="{{route('carga.index')}}" onclick="return confirm('seguro que desea cancelar la edicion?');"><em class='bx bxs-left-arrow-square'></em> {{ __('Cancel') }}</a>
+                                        @csrf
+                                    </form>
                                 </div>
                             </form>
                         </div>
