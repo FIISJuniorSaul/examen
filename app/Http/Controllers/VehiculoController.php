@@ -21,12 +21,23 @@ class VehiculoController extends Controller
     public function store(Request $request){
         $vehiculos = new Vehiculo($request->all());
         $vehiculos->save();
-        return redirect()->route('vehiculos.index')->with('success', 'El vehiculo ha sido creado correctamente.');
+        return redirect()->route('vehiculo.index')->with('success', 'El vehiculo ha sido creado correctamente.');
+    }
+    public function edit($id){
+        $chofer= User::get();
+        $vehiculo= Vehiculo::findOrfail($id);
+        return view('admin.operaciones.vehiculos.edit', compact('vehiculo','chofer'));
+    }
+    public function update(Request $request,$id){
+        $vehiculo= Vehiculo::findOrfail($id);
+        $vehiculo->fill($request->all());
+        $vehiculo->save();
+        return redirect()->route('vehiculo.index')->with('success', 'El vehiculo ha sido actualizado correctamente.');
     }
     public function destroy($id){
         $vehiculos = Vehiculo::findOrFail($id);
         $vehiculos->delete();
-        return redirect()->route('vehiculos.index')->with('success', 'El vehiculo ha sido eliminado correctamente.');
+        return redirect()->route('vehiculo.index')->with('success', 'El vehiculo ha sido eliminado correctamente.');
     }
 
 }

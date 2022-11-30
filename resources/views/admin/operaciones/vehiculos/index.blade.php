@@ -51,15 +51,17 @@
                                         <td>{{$vehi->capacidad_carga}}</td>
                                         <td>{{$vehi->user->persona->nombre}}</td>
                                         <td>
-                                            <button class="btn btn-datatable btn-icon btn-transparent-table me-2"><em class='bx bxs-edit-alt'></em></button>
-                                            <button class="btn btn-datatable btn-icon btn-transparent-table"><em class='bx bx-trash' ></em></button>
-                                            <button class="btn btn-datatable btn-icon btn-transparent-table"><i class='bx bxs-file-pdf'></i></button>
+                                            <form action="{{route('vehiculo.destroy',$vehi->id)}}" method="POST">
+                                                <a class="btn btn-primary btn-sm lift" href="{{route('vehiculo.edit',$vehi->id)}}"><em class='bx bxs-edit-alt'></em></a>
+                                                @csrf
+                                                @method('DELETE')
+                                                <button class="btn btn-danger btn-sm lift" type="submit" onclick="return confirm('seguro que desea eliminar?');"><em class='bx bx-trash' ></em></button>
+                                            </form>
                                         </td>
                                     </tr>
                                     @endforeach
                                 </tbody>
                             </table>
-
                         </div>
                     </div>
                 </div>
