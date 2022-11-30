@@ -18,7 +18,17 @@ class CargaController extends Controller
         $vehiculos = Vehiculo::get();
         return view('admin.operaciones.cargas.create',compact('vehiculos'));
      }
-
+     public function edit($id){
+        $vehiculo= Vehiculo::get();
+        $carga= Carga::findOrfail($id);
+        return view('admin.operaciones.cargas.edit', compact('vehiculo','carga'));
+    }
+    public function update(Request $request,$id){
+        $carga= Carga::findOrfail($id);
+        $carga->fill($request->all());
+        $carga->save();
+        return redirect()->route('carga.index')->with('success', 'La carga ha sido actualizado correctamente.');
+    }
     public function store(Request $request){
         $cargas = new Carga($request->all());
         $cargas->save();
