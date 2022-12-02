@@ -46,7 +46,7 @@
                                             <div class="col-md-4">
                                                 <label class="small mb-1"
                                                     for="inputDistrit">{{ __('District') }}</label>
-                                                    <select class="form-control district" name="distrito_origen"></select>
+                                                    <select class="form-control district" name="distritoOrigen_id"></select>
                                             </div>
 
                                         </div>
@@ -70,7 +70,7 @@
                                             <div class="col-md-4">
                                                 <label class="small mb-1"
                                                     for="inputDistrit">{{ __('District') }}</label>
-                                                    <select class="form-control district_destino" name="distrito_destino"></select>
+                                                    <select class="form-control district_destino" name="distritoDestino_id"></select>
                                             </div>
                                             <div class="col-md-4">
                                                 <br>
@@ -82,22 +82,8 @@
                                                     @endforeach
                                              </select>
                                             </div>
-                                            <div class="col-md-4">
-                                                <br>
-                                                <h6 class="small mb-1" for="inputRol">!!Seleccionar distrito</h6>
-                                                <select id="id_carga" name="distrito_id" class="form-control">
-                                                    <option>{{ __('Select') }}</option>
-                                                    @foreach($distritos as $dis)
-                                                    <option value="{{ $dis->id }}" > {{ $dis->nombre}}</option>
-                                                    @endforeach
-                                             </select>
-                                            </div>
-
-
                                         </div>
                                     </div>
-
-
                                 </div>
                                 <br>
                                 <div class="text-center">

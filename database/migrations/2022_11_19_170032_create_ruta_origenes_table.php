@@ -17,13 +17,12 @@ class CreateRutaOrigenesTable extends Migration
             $table->id();
             $table->string('departamento_origen');
             $table->string('provincia_origen');
-            $table->string('distrito_origen');
             $table->timestamps();
             $table->unsignedBigInteger('vehiculos_id');
             $table->foreign('vehiculos_id')->references('id')->on('vehiculo')->onDelete('cascade');
 
-            $table->unsignedBigInteger('distrito_id');
-            $table->foreign('distrito_id')->references('id')->on('distritos')->onDelete('cascade');
+            $table->unsignedBigInteger('distritoOrigen_id');
+            $table->foreign('distritoOrigen_id')->references('id')->on('distritos')->onDelete('cascade');
         });
     }
 

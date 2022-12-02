@@ -9,13 +9,13 @@ class RutaDestino extends Model
 {
     use HasFactory;
     protected $table = 'ruta_destinos';
-    protected $fillable = ['departamento_destino', 'provincia_destino', 'distrito_destino', 'vehiculos_id', 'distrito_id'];
+    protected $fillable = ['departamento_destino', 'provincia_destino', 'vehiculos_id', 'distritoDestino_id'];
     public function vehiculo()
     {
         return $this->belongsTo('App\Models\Vehiculo','vehiculos_id');
     }
-    public function distrito()
+    public function distrito_destino()
     {
-        return $this->belongsTo('App\Models\Distrito','distrito_id');
+        return $this->belongsTo('App\Models\Distrito','distritoDestino_id');
     }
 }

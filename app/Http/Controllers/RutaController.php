@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-
+use App\Models\Carga;
 use App\Models\Distrito;
-use App\Models\Ruta;
 use App\Models\RutaDestino;
 use App\Models\RutaOrigen;
 use App\Models\Vehiculo;
@@ -22,7 +21,28 @@ class RutaController extends Controller
         $distritos= Distrito::get();
         return view('admin.operaciones.rutas.createRutas',compact('vehiculos', 'distritos'));
      }
-
+     public function edit_destino($id){
+        $carga= Carga::get();
+        $ruta_destino= RutaDestino::findOrfail($id);
+        return view('admin.operaciones.rutas.edit', compact('carga','ruta_destino','ruta_origen'));
+    }
+    public function edit_origen($id){
+        $carga= Carga::get();
+        $ruta_origen= RutaOrigen::findOrfail($id);
+        return view('admin.operaciones.rutas.edit', compact('carga','ruta_destino','ruta_origen'));
+    }
+    public function update_destino(Request $request,$id){
+        $ruta_destino= RutaDestino::findOrfail($id);
+        $ruta_destino->fill($request->all());
+        $ruta_destino->save();
+        return redirect()->route('ruta.index')->with('success', 'La carga ha sido actualizado correctamente.');
+    }
+    public function update_origen(Request $request,$id){
+        $ruta_origen= RutaOrigen::findOrfail($id);
+        $ruta_origen->fill($request->all());
+        $ruta_origen->save();
+        return redirect()->route('ruta.index')->with('success', 'La carga ha sido actualizado correctamente.');
+    }
     public function store(Request $request){
         $rutas_destino = new RutaDestino($request->all());
         $rutas_origen = new RutaOrigen($request->all());
@@ -30,9 +50,12 @@ class RutaController extends Controller
         $rutas_destino->save();
         return redirect()->route('ruta.index')->with('success', 'La ruta ha sido creado correctamente.');
     }
+
     public function destroy($id){
-        $rutas = RutaDestino::findOrFail($id);
-        $rutas->delete();
+        $ruta_destino = RutaDestino::findOrFail($id);
+        $ruta_origen = RutaOrigen::findOrFail($id);
+        $ruta_origen->delete();
+        $ruta_destino->delete();
         return redirect()->route('ruta.index')->with('success', 'La ruta ha sido eliminado correctamente.');
     }
 }

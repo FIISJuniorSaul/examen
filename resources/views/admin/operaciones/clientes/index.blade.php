@@ -25,22 +25,17 @@
                             </div>
 
                         </div>
-                        <ul class="nav nav-tabs">
-                            <li class="nav-item">
-                              <a class="nav-link active" aria-current="page" href="/admin/operaciones/clientes/index">{{ __('Legal Clients') }}</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link " href="/admin/operaciones/clientes/indexClienteNatural">{{ __('Natural Clients') }}</a>
-                            </li>
-
-                          </ul>
-                        <div class="d-grid gap-2 d-md-flex justify-content-md-end py-2 px-4">
-                            <form class="input-group">
-                                <button class="btn btn-outline-primary btn-sm me-md-2" type="submit"> <em class='bx bx-search-alt'></em>{{ __('Search') }}</button>
-                                <input name="busqueda" class="form-control " type="search" placeholder="Ingrese nombre de empresa" aria-label="Search" autocomplete="off">
-
-                            </form>
+                        <div>
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item">
+                                  <a class="nav-link active" aria-current="page" href="/admin/operaciones/clientes/index">{{ __('Legal Clients') }}</a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link " href="/admin/operaciones/clientes/indexClienteNatural">{{ __('Natural Clients') }}</a>
+                                </li>
+                              </ul>
                         </div>
+
                         <div class="card-body py-2">
                             <table class="table table-sm table-bordered table-hover " id="datatablesSimple">
                                 <thead>

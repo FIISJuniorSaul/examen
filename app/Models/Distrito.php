@@ -10,9 +10,13 @@ class Distrito extends Model
     use HasFactory;
     protected $table = 'distritos';
     protected $fillable = ['nombre','ubigeo', 'activo','provincia_id'];
-    public function ruta()
+    public function ruta_destino()
     {
-        return $this->hasMany('App\Models\Ruta' );
+        return $this->hasMany('App\Models\RutaDestino' );
+    }
+    public function ruta_origen()
+    {
+        return $this->hasMany('App\Models\RutaOrigen' );
     }
     public function provincia()
     {
