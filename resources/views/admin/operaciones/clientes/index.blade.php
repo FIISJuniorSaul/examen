@@ -35,7 +35,6 @@
                                 </li>
                               </ul>
                         </div>
-
                         <div class="card-body py-2">
                             <table class="table table-sm table-bordered table-hover " id="datatablesSimple">
                                 <thead>
