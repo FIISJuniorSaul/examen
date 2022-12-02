@@ -73,8 +73,10 @@
                                     <button class="btn btn-primary" type="submit"><em class='bx bx-check'></em>{{ __('Save') }}
                                     </button>
                                     <!-- cancel changes button-->
-                                    <button class="btn btn-primary" type="submit"><em class='bx bxs-x-circle'></em>{{ __('Cancel') }}
-                                    </button>
+                                    <form action="{{route('carga.index')}}" method="POST">
+                                        <a class="btn btn-primary me-md-2" href="{{route('carga.index')}}" onclick="return confirm('seguro que desea cancelar?');"><em class='bx bxs-left-arrow-square'></em> {{ __('Cancel') }}</a>
+                                        @csrf
+                                    </form>
                                 </div>
                             </form>
                         </div>

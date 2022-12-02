@@ -51,8 +51,12 @@
                                         <td>{{$item->rol}}</td>
                                         <td>{{$item->condicion}}</td>
                                         <td>
-                                                <button class="btn btn-datatable btn-icon btn-transparent-table me-2"><em class='bx bxs-edit-alt'></em></button>
-                                                <a class="btn btn-datatable btn-icon btn-transparent-table"  ><i class='bx bx-trash' ></i> </a>
+                                            <form action="{{route('usuario.destroy',$item->id)}}" method="POST">
+                                                <a class="btn btn-primary btn-sm lift" href="{{route('usuario.edit',$item->id)}}"><em class='bx bxs-edit-alt'></em></a>
+                                                @csrf
+                                                @method('DELETE')
+                                                <button class="btn btn-danger btn-sm lift" type="submit" onclick="return confirm('seguro que desea eliminar?');"><em class='bx bx-trash' ></em></button>
+                                            </form>
                                         </td>
                                     </tr>
 

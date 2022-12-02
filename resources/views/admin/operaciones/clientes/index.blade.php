@@ -27,13 +27,14 @@
                         </div>
                         <ul class="nav nav-tabs">
                             <li class="nav-item">
-                              <a class="nav-link active" aria-current="page" href="/admin/operaciones/clientes/index">{{ __('Legal Clients') }}</a>
+                                <a class="nav-link active" aria-current="page"
+                                    href="{{ route('clienteJuridico.store') }}">{{ __('Legal Client') }}</a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link " href="/admin/operaciones/clientes/indexClienteNatural">{{ __('Natural Clients') }}</a>
+                                <a class="nav-link"
+                                    href="{{ route('clienteNatural.store') }}">{{ __('Natural Client') }}</a>
                             </li>
-
-                          </ul>
+                        </ul>
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end py-2 px-4">
                             <form class="input-group">
                                 <button class="btn btn-outline-primary btn-sm me-md-2" type="submit"> <em class='bx bx-search-alt'></em>{{ __('Search') }}</button>

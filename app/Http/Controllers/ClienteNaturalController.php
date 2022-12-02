@@ -42,6 +42,17 @@ class ClienteNaturalController extends Controller
             DB::rollBack();
         }
     }
+    public function edit($id){
+        $chofer= User::get();
+        $vehiculo= Vehiculo::findOrfail($id);
+        return view('admin.operaciones.vehiculos.edit', compact('vehiculo','chofer'));
+    }
+    public function update(Request $request,$id){
+        $clientesn= ClienteNatural::findOrfail($id);
+        $clientesn->fill($request->all());
+        $clientesn->save();
+        return redirect()->route('clientes.index')->with('success', 'El usuario ha sido actualizado correctamente.');
+    }
     public function destroy($id){
         $clientesn = ClienteNatural::findOrFail($id);
         $clientesn->delete();

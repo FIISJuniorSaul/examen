@@ -22,13 +22,7 @@
                             {{ __('List of Loads') }}
                             <a href='{{route('carga.create')}}' class="btn btn-primary lift"><em class='bx bxs-package'></em>{{ __('. New Load') }}</a>
                         </div>
-                        <div class="d-grid gap-2 d-md-flex justify-content-md-end py-2 px-4">
-                            <form class="input-group">
-                            <button class="btn btn-outline-primary btn-sm me-md-2" type="submit"> <em class='bx bx-search-alt'></em>{{ __('Search') }}</button>
-                                <input name="busqueda" class="form-control me-md-2" type="search" placeholder="Ingrese ruta" aria-label="Search" autocomplete="off">
 
-                            </form>
-                        </div>
                         <div class="card-body py-2">
                             <table class="table table-sm table-bordered table-hover " id="datatablesSimple">
                                 <thead>

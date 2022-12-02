@@ -72,7 +72,7 @@ class UsersController extends Controller
         $persona = Persona::find($id);
         $user = User::find($id);
 
-        return view('admin.configuracion.usuario.editar', compact('persona','user'));
+        return view('admin.configuracion.usuario.edit', compact('persona','user'));
     }
 
     public function update(Request $request)
@@ -96,11 +96,15 @@ class UsersController extends Controller
             $user->idrol = $request->idrol;
             $user->save();
 
+            $user->fill($request->all());
+            $user->save();
             DB::commit();
         } catch (Exception $e) {
             DB::rollBack();
         }
-        return redirect()->route('usuario.idex')->with('success','El usuario se registrpo con exito');
+
+
+        return redirect()->route('user.index')->with('success','El usuario se registró con exito');
     }
 
     public function desactivar(Request $request)
@@ -115,5 +119,10 @@ class UsersController extends Controller
         $user = User::findOrFail($request->id);
         $user->condicion = '1';
         $user->save();
+    }
+    public function destroy($id){
+        $user = User::findOrFail($id);
+        $user->delete();
+        return redirect()->route('usuario.index')->with('success', 'El usuario ha sido eliminado correctamente.');
     }
 }

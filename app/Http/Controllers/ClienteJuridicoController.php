@@ -49,10 +49,21 @@ class ClienteJuridicoController extends Controller
             DB::rollBack();
         }
     }
+    public function edit($id){
+        $chofer= User::get();
+        $vehiculo= Vehiculo::findOrfail($id);
+        return view('admin.operaciones.clientes.editj', compact('vehiculo','chofer'));
+    }
+    public function update(Request $request,$id){
+        $clientesju= ClienteJuridico::findOrfail($id);
+        $clientesju->fill($request->all());
+        $clientesju->save();
+        return redirect()->route('clientes.editj')->with('success', 'Cliente jurídico actualizado correctamente.');
+    }
     public function destroy($id){
         $clientesju = ClienteJuridico::findOrFail($id);
         $clientesju->delete();
-        return redirect()->route('clientes.index')->with('success', 'El usuario ha sido eliminado correctamente.');
+        return redirect()->route('clientes.index')->with('success', 'Cliente jurídico  eliminado correctamente.');
     }
 
 }
