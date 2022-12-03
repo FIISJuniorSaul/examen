@@ -23,6 +23,13 @@
                             <a href="{{ route('rutasdestino.create') }}" class="btn btn-primary lift"><em
                                     class='bx bx-trip'></em>{{ __('. New route') }}</a>
                         </div>
+                        @if (\Session::has('success'))
+                                    <div class="alert alert-success">
+                                        <ul>
+                                            <li>{{ \Session::get('success') }}</li>
+                                        </ul>
+                                    </div>
+                                @endif
                         <div class="input-group">
                             <div class="col-md-6 col-sm-6">
                                 <div class="d-grid gap-2 d-md-flex justify-content-md-end py-2 px-4">
@@ -33,13 +40,7 @@
                                             placeholder="Ingrese ruta" aria-label="Search" autocomplete="off">
                                     </form>
                                 </div>
-                                @if (\Session::has('success'))
-                                    <div class="alert alert-success">
-                                        <ul>
-                                            <li>{{ \Session::get('success') }}</li>
-                                        </ul>
-                                    </div>
-                                @endif
+
                                 <div class="card-body py-2">
                                     <table class="table table-sm table-bordered table-hover " id="datatablesSimple">
                                         <thead>
