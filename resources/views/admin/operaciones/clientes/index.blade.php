@@ -28,10 +28,10 @@
                         <div>
                             <ul class="nav nav-tabs">
                                 <li class="nav-item">
-                                  <a class="nav-link active" aria-current="page" href="{{route('clienteJuridico')}}">{{ __('Legal Clients') }}</a>
+                                  <a class="nav-link active" aria-current="page" href="{{route('clienteJuridico.index')}}">{{ __('Legal Clients') }}</a>
                                 </li>
                                 <li class="nav-item">
-                                  <a class="nav-link " href="{{route('clienteNatural')}}">{{ __('Natural Clients') }}</a>
+                                  <a class="nav-link " href="{{route('clienteNatural.index')}}">{{ __('Natural Clients') }}</a>
                                 </li>
                               </ul>
                         </div>

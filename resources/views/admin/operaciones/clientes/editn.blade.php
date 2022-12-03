@@ -58,8 +58,7 @@
                                                         <i class="fa fa-remove"></i> {{ __('The DNI number is not valid.') }}
                                                     </small>
                                                 </div>
-                                                <form action="{{ route('clienteNatural.update', $clienteNatural) }}" method="post"
-                                                    enctype="multipart/form-data">
+                                                <form action="{{ route('clienteNatural.update', $clientenatural) }}" method="post" enctype="multipart/form-data">
                                                     {{method_field('PATCH')}}
                                                     @csrf
                                                     <!--search-->
@@ -70,19 +69,19 @@
                                                         <div class="col-md-6">
                                                             <label class="small mb-1" for="inputCode">{{ __('Code') }}</label>
                                                             <input class="form-control" name="codigo" id="codigo"
-                                                                type="text" placeholder="" value="{{$clienteNatural->codigo}}">
+                                                                type="text" placeholder="" value="{{$clientenatural->codigo}}">
                                                         </div>
                                                         <!-- Form Group (DNI)-->
                                                         <div class="col-md-6">
                                                             <label class="small mb-1" for="inputDNI">DNI</label>
                                                             <input class="form-control" name="dni" id="dni_ciudadano"
-                                                                type="text" placeholder="********" readonly  value="{{$clienteNatural->dni}}">
+                                                                type="text" placeholder="********" readonly  value="{{$clientenatural->persona->dni}}">
                                                         </div>
                                                         <!-- Form Group (name)-->
                                                         <div class="col-md-6">
                                                             <label class="small mb-1" for="inputName">{{ __('Names') }}</label>
                                                             <input class="form-control" name="nombre" id="nombres"
-                                                                type="text" placeholder="" readonly  value="{{$clienteNatural->nombre}}">
+                                                                type="text" placeholder="" readonly  value="{{$clientenatural->persona->nombre}}">
                                                         </div>
                                                     </div>
                                                     <!-- Form Row-->
@@ -92,26 +91,26 @@
                                                             <label class="small mb-1" for="inputFirstName">{{ __('Fathers last name') }}</label>
                                                             <input class="form-control" name="apellido_paterno"
                                                                 id="apellido_paterno" type="text"
-                                                                placeholder="" readonly  value="{{$clienteNatural->apellido_paterno}}">
+                                                                placeholder="" readonly  value="{{$clientenatural->persona->apellido_paterno}}">
                                                         </div>
                                                         <!-- Form Group (last name)-->
                                                         <div class="col-md-6">
                                                             <label class="small mb-1" for="inputLastName">{{ __('Mothers last name') }}</label>
                                                             <input class="form-control" name="apellido_materno"
                                                                 id="apellido_materno" type="text"
-                                                                placeholder=" " readonly  value="{{$clienteNatural->apellido_materno}}">
+                                                                placeholder=" " readonly  value="{{$clientenatural->persona->apellido_materno}}">
                                                         </div>
                                                     </div>
                                                     <div class="row gx-3 mb-3">
                                                         <div class="col-md-6">
                                                             <label class="small mb-1" for="inputEmail">{{ __('E-Mail Address') }}</label>
                                                             <input class="form-control" name="correo" id="inputEmail"
-                                                                type="text" placeholder="example@rayosac.com"  value="{{$clienteNatural->correo}}">
+                                                                type="text" placeholder="example@rayosac.com"  value="{{$clientenatural->persona->correo}}">
                                                         </div>
                                                         <div class="col-md-6">
                                                             <label class="small mb-1" for="inputTelephone">{{ __('Telephone') }}</label>
                                                             <input class="form-control" name="telefono" id="inputTelephone"
-                                                                type="number" placeholder="*********"  value="{{$clienteNatural->telefono}}">
+                                                                type="number" placeholder=""  value="{{$clientenatural->persona->telefono}}">
                                                         </div>
                                                     </div>
                                                     <!--estado roles y permisos-->

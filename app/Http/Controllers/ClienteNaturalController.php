@@ -50,8 +50,9 @@ class ClienteNaturalController extends Controller
     public function edit($id)
     {
         try {
-            $persona = Vehiculo::findOrfail($id);
-            return view('admin.operaciones.clientes.editn', compact( 'persona'));
+            $clientenatural = ClienteNatural::findOrfail($id);
+            $persona = Persona::get();
+            return view('admin.operaciones.clientes.editn', compact( 'persona','clientenatural'));
         } catch (\Exception $ex) {
             return back()->with('warning', 'ocurrio un error');
         }
