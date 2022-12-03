@@ -52,7 +52,7 @@
                                                     <td>{{ $ru->distrito_origen->nombre }}</td>
                                                     <td>
                                                         <form action="{{route('ruta.destroy',$ru->id)}}" method="POST">
-                                                            <a class="btn btn-primary btn-sm lift" href="{{route('ruta.edit',$ru->id)}}"><em class='bx bxs-edit-alt'></em></a>
+                                                            <a class="btn btn-primary btn-sm lift" href="{{route('editarOrigen',$ru->id)}}"><em class='bx bxs-edit-alt'></em></a>
                                                             @csrf
                                                             @method('DELETE')
                                                             <button class="btn btn-danger btn-sm lift" type="submit" onclick="return confirm('seguro que desea eliminar?');"><em class='bx bx-trash' ></em></button>

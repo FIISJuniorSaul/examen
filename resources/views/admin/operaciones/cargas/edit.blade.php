@@ -58,7 +58,7 @@
                                         <div class="col-md-6">
                                             <br>
                                             <h6 class="small mb-1" for="inputRol">{{ __('Select vehicle') }}</h6>
-                                            <select id="id_vehiculo" name="vehiculos_id" class="form-control" style="color: #C1BEBE;">
+                                            <select id="id_vehiculo" name="vehiculos_id" class="form-control" style="color: #C1BEBE;" >
                                                 <option>{{ __('Select') }}</option>
                                                 @foreach($vehiculo as $vehi)
                                                 <option value="{{ $vehi->id }}" >{{ $vehi->marca}} {{ $vehi->capacidad_carga}} toneladas</option>

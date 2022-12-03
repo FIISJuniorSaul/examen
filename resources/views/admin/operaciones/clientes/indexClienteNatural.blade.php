@@ -28,10 +28,10 @@
                         <div>
                             <ul class="nav nav-tabs">
                                 <li class="nav-item">
-                                  <a class="nav-link " aria-current="page" href="/admin/operaciones/clientes/index">{{ __('Legal Clients') }}</a>
+                                  <a class="nav-link " aria-current="page" href="{{route('clienteJuridico')}}">{{ __('Legal Clients') }}</a>
                                 </li>
                                 <li class="nav-item">
-                                  <a class="nav-link  active" href="/admin/operaciones/clientes/indexClienteNatural">{{ __('Natural Clients') }}</a>
+                                  <a class="nav-link  active" href="{{route('clienteNatural')}}">{{ __('Natural Clients') }}</a>
                                 </li>
                               </ul>
                         </div>
@@ -58,12 +58,7 @@
                                         <td>fiorela@gmail.com</td>
                                         <td>930959507</td>
                                         <td>
-                                            <form action="{{route('cliente.destroy',$vehi->id)}}" method="POST">
-                                                <a class="btn btn-primary btn-sm lift" href="{{route('vehiculo.edit',$vehi->id)}}"><em class='bx bxs-edit-alt'></em></a>
-                                                @csrf
-                                                @method('DELETE')
-                                                <button class="btn btn-danger btn-sm lift" type="submit" onclick="return confirm('seguro que desea eliminar?');"><em class='bx bx-trash' ></em></button>
-                                            </form>
+
 
                                         </td>
 

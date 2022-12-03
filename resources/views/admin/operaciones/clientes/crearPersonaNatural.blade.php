@@ -108,7 +108,6 @@
                                                     </div>
                                                     <!--estado roles y permisos-->
 
-
                                                     <div class="text-center">
                                                         <br>
                                                         <!-- Save changes button-->

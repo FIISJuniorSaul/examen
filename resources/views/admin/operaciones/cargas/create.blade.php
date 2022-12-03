@@ -23,6 +23,13 @@
                         </div>
                         <div class="card-body">
                             <br>
+                            @if (\Session::has('warning'))
+                            <div class="alert alert-danger">
+                                <ul>
+                                    <li>{{\Session::get('warning')}}</li>
+                                </ul>
+                            </div>
+                            @endif
                             <form action="{{route('carga.store')}}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="row g-3 px-6">
@@ -61,6 +68,16 @@
                                                 <option>{{ __('Select') }}</option>
                                                 @foreach($vehiculos as $vehi)
                                                 <option value="{{ $vehi->id }}" >{{ $vehi->marca}} {{ $vehi->capacidad_carga}} toneladas</option>
+                                            @endforeach
+                                         </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <br>
+                                            <h6 class="small mb-1" for="inputRol">{{ __('Select vehicle') }}</h6>
+                                            <select id="cliente_id" name="cliente_id" class="form-control" style="color: #050505;">
+                                                <option>{{ __('Select') }}</option>
+                                                @foreach($cliente as $cli)
+                                                <option  style="color: #050505;" value="{{ $cli->id }}" >{{ $cli->persona->nombre}} </option>
                                             @endforeach
                                          </select>
                                         </div>

@@ -24,12 +24,12 @@ class RutaController extends Controller
      public function edit_destino($id){
         $carga= Carga::get();
         $ruta_destino= RutaDestino::findOrfail($id);
-        return view('admin.operaciones.rutas.edit', compact('carga','ruta_destino','ruta_origen'));
+        return view('admin.operaciones.rutas.ediDestino', compact('carga','ruta_destino'));
     }
     public function edit_origen($id){
         $carga= Carga::get();
         $ruta_origen= RutaOrigen::findOrfail($id);
-        return view('admin.operaciones.rutas.edit', compact('carga','ruta_destino','ruta_origen'));
+        return view('admin.operaciones.rutas.editOrigen', compact('carga','ruta_origen'));
     }
     public function update_destino(Request $request,$id){
         $ruta_destino= RutaDestino::findOrfail($id);

@@ -23,6 +23,8 @@ class CargasCrearTabla extends Migration
             $table->timestamps();
             $table->unsignedBigInteger('vehiculos_id');
             $table->foreign('vehiculos_id')->references('id')->on('vehiculo')->onDelete('cascade');
+            $table->unsignedBigInteger('cliente_id');
+            $table->foreign('cliente_id')->references('id')->on('cliente')->onDelete('cascade');
         });
 
     }

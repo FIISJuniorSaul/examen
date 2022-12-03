@@ -28,10 +28,10 @@
                         <div>
                             <ul class="nav nav-tabs">
                                 <li class="nav-item">
-                                  <a class="nav-link active" aria-current="page" href="/admin/operaciones/clientes/index">{{ __('Legal Clients') }}</a>
+                                  <a class="nav-link active" aria-current="page" href="{{route('clienteJuridico')}}">{{ __('Legal Clients') }}</a>
                                 </li>
                                 <li class="nav-item">
-                                  <a class="nav-link " href="/admin/operaciones/clientes/indexClienteNatural">{{ __('Natural Clients') }}</a>
+                                  <a class="nav-link " href="{{route('clienteNatural')}}">{{ __('Natural Clients') }}</a>
                                 </li>
                               </ul>
                         </div>
@@ -51,19 +51,10 @@
                                         <th>{{ __('Actions') }}</th>
                                     </tr>
                                 </thead>
-
                                 <tbody>
-
-                                        <td>
-                                            <button class="btn btn-datatable btn-icon btn-transparent-table me-2"><em class='bx bxs-edit-alt'></em></button>
-                                            <button class="btn btn-datatable btn-icon btn-transparent-table"><i class='bx bx-trash' ></i></button>
-                                            <button class="btn btn-datatable btn-icon btn-transparent-table"><i class='bx bxs-file-pdf'></i></button>
-                                        </td>
-                                    </tr>
 
                                 </tbody>
                             </table>
-
                         </div>
                     </div>
                 </div>
