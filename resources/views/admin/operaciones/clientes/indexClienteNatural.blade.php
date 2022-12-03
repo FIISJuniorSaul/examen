@@ -56,29 +56,26 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($clientesn as $clientesn)
+                                    @foreach ($clientesn as $clienN)
                                     <tr>
-                                        <td>{{$clientesn->dni}}</td>
-                                        <td>{{$clientesn->nombre}}</td>
-                                        <td>{{$clientesn->apellido_paterno}}</td>
-                                        <td>{{$clientesn->apellido_materno}}</td>
-                                        <td>{{$clientesn->telefono}}</td>
-                                        <td>{{$clientesn->correo}}</td>
+                                        <td>{{$clienN->persona->dni}}</td>
+                                        <td>{{$clienN->persona->nombre}}</td>
+                                        <td>{{$clienN->persona->apellido_paterno}}</td>
+                                        <td>{{$clienN->persona->apellido_materno}}</td>
+                                        <td>{{$clienN->persona->telefono}}</td>
+                                        <td>{{$clienN->persona->correo}}</td>
                                         <td>
-                                            <form action="{{route('clienteNatural.destroy',$clientesn->id)}}" method="POST">
-                                                <a class="btn btn-primary btn-sm lift" href="{{route('clienteNatural.edit',$clientesn->id)}}"><em class='bx bxs-edit-alt'></em></a>
+                                            <form action="{{route('clienteNatural.destroy',$clienN->id)}}" method="POST">
+                                                <a class="btn btn-primary btn-sm lift" href="{{route('clienteNatural.edit',$clienN->id)}}"><em class='bx bxs-edit-alt'></em></a>
                                                 @csrf
                                                 @method('DELETE')
                                                 <button class="btn btn-danger btn-sm lift" type="submit" onclick="return confirm('seguro que desea eliminar?');"><em class='bx bx-trash' ></em></button>
                                             </form>
-
                                         </td>
-
                                     </tr>
                                     @endforeach
                                 </tbody>
                             </table>
-
                         </div>
                     </div>
                 </div>

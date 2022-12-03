@@ -55,7 +55,6 @@
                                                         placeholder="***********" />&nbsp;
                                                     <button class="btn btn-primary" id="btnbuscar" align="right"><em
                                                             class='bx bx-search-alt-2'></em>{{ __('Search') }}</button>
-
                                                 </div>
                                                 <div class="col-md-5">
                                                     <small id="mensaje" style="color: red;display: none;font-size: 12pt;">
@@ -77,8 +76,8 @@
                                                             class="fa fa-remove"></i>{{ __('The DNI number is not valid.') }}
                                                     </small>
                                                 </div>
-                                                <form action="{{ route('clienteJuridico.store') }}" method="post"
-                                                    enctype="multipart/form-data">
+                                                <form action="{{ route('clienteJuridico.update', $clientejuridico) }}" method="post" enctype="multipart/form-data">
+                                                    {{ method_field('PATCH') }}
                                                     @csrf
                                                     <!-- Form Group (username)-->
                                                     <div class="row gx-3 mb-3">
@@ -87,18 +86,16 @@
                                                             <label class="small mb-1"
                                                                 for="inputNºDERUC">{{ __('RUC number') }} </label>
                                                             <input class="form-control" id="txtruc" type="text"
-                                                                name="ruc" placeholder="" value="" readonly />
+                                                                name="ruc" placeholder="" value="{{$clientejuridico->ruc}}" readonly />
                                                         </div>
                                                         <!-- Form Group (last name)-->
-
                                                         <div class="col-md-6">
                                                             <label class="small mb-1"
                                                                 for="inputRazónSocial">{{ __('Business name') }}</label>
                                                             <input class="form-control" id="txtrazon" type="text"
-                                                                name="razon_social" placeholder="" value=""
+                                                                name="razon_social" placeholder="" value="{{$clientejuridico->razon_social}}"
                                                                 readonly />
                                                         </div>
-
                                                     </div>
                                                     <!-- Form Row-->
                                                     <div class="row gx-3 mb-3">
@@ -107,15 +104,14 @@
                                                             <label class="small mb-1"
                                                                 for="inputNameEmpresa">{{ __('State') }}</label>
                                                             <input class="form-control" id="txtgrupo" type="text"
-                                                                name="estado" placeholder="" value="" readonly />
+                                                                name="estado" placeholder="" value="{{$clientejuridico->estado}}" readonly />
                                                         </div>
                                                         <!-- Form Group (last name)-->
                                                         <div class="col-md-6">
                                                             <label class="small mb-1"
                                                                 for="inputDirección">{{ __('Address') }}</label>
-
                                                             <input class="form-control" id="txtdireccion" type="text"
-                                                                name="direccion" placeholder="" value="" readonly />
+                                                                name="direccion" placeholder="" value="{{$clientejuridico->direccion}}" readonly />
                                                         </div>
                                                     </div>
                                                     <!-- Form Row-->
@@ -126,27 +122,23 @@
                                                                 for="inputNameEmpresa">{{ __('Department') }}</label>
                                                             <input class="form-control" id="txtdepartamento"
                                                                 type="text" name="departamento" placeholder=""
-                                                                value="" readonly />
+                                                                value="{{$clientejuridico->departamento}}" readonly />
                                                         </div>
-
                                                         <div class="col-md-4">
                                                             <label class="small mb-1"
                                                                 for="inputDirección">{{ __('Province') }}</label>
-
                                                             <input class="form-control" id="txtprovincia" type="text"
-                                                                name="provincia" placeholder="" value=""
+                                                                name="provincia" placeholder="" value="{{$clientejuridico->provincia}}"
                                                                 readonly />
                                                         </div>
                                                         <div class="col-md-4">
                                                             <label class="small mb-1"
                                                                 for="inputNameEmpresa">{{ __('District') }}</label>
                                                             <input class="form-control" id="txtdistrito" type="text"
-                                                                name="distrito" placeholder="" value="" readonly />
+                                                                name="distrito" placeholder="" value="{{$clientejuridico->distrito}}" readonly />
                                                         </div>
                                                     </div>
-
                                                     <!-- Form Row-->
-
                                                     <div class="card-body">
                                                         <!--search-->
                                                         <div
@@ -158,21 +150,21 @@
                                                             <div class="col-md-6">
                                                                 <label class="small mb-1"
                                                                     for="inputCode">{{ __('Code') }}</label>
-                                                                <input class="form-control" name="codigo" id="codigo"
+                                                                <input class="form-control" name="codigo" id="codigo" value="{{$clientejuridico->codigo}}"
                                                                     type="text" placeholder="" />
                                                             </div>
                                                             <div class="col-md-6">
                                                                 <label class="small mb-1" for="inputDNI">DNI</label>
                                                                 <input class="form-control" name="dni"
                                                                     id="dni_ciudadano" type="text"
-                                                                    placeholder="********" readonly />
+                                                                    placeholder="********" readonly value="{{$clientejuridico->persona->dni}}" />
                                                             </div>
                                                             <!-- Form Group (name)-->
                                                             <div class="col-md-6">
                                                                 <label class="small mb-1"
                                                                     for="inputName">{{ __('Names') }}</label>
                                                                 <input class="form-control" name="nombre" id="nombres"
-                                                                    type="text" placeholder="" readonly />
+                                                                    type="text" placeholder="" readonly  value="{{$clientejuridico->persona->nombre}}"/>
                                                             </div>
                                                         </div>
                                                         <!-- Form Row-->
@@ -182,7 +174,7 @@
                                                                 <label class="small mb-1"
                                                                     for="inputFirstName">{{ __('Fathers last name') }}</label>
                                                                 <input class="form-control" name="apellido_paterno"
-                                                                    id="apellido_paterno" type="text" placeholder=""
+                                                                    id="apellido_paterno" type="text" placeholder="" value="{{$clientejuridico->persona->apellido_paterno}}"
                                                                     readonly />
                                                             </div>
                                                             <!-- Form Group (last name)-->
@@ -190,7 +182,7 @@
                                                                 <label class="small mb-1"
                                                                     for="inputLastName">{{ __('Mothers last name') }}</label>
                                                                 <input class="form-control" name="apellido_materno"
-                                                                    id="apellido_materno" type="text" placeholder=""
+                                                                    id="apellido_materno" type="text" placeholder="" value="{{$clientejuridico->persona->apellido_materno}}"
                                                                     readonly />
                                                             </div>
                                                         </div>
@@ -200,18 +192,16 @@
                                                                     for="inputEmail">{{ __('E-Mail Address') }}</label>
                                                                 <input class="form-control" name="correo"
                                                                     id="inputEmail" type="text"
-                                                                    placeholder="example@rayosac.com" />
+                                                                    placeholder="" value="{{$clientejuridico->persona->correo}}" />
                                                             </div>
                                                             <div class="col-md-6">
                                                                 <label class="small mb-1"
                                                                     for="inputTelephone">{{ __('Telephone') }}</label>
                                                                 <input class="form-control" name="telefono"
                                                                     id="inputTelephone" type="number"
-                                                                    placeholder="*********" />
+                                                                    placeholder="" value="{{$clientejuridico->persona->telefono}}" />
                                                             </div>
                                                         </div>
-
-
                                                         <div class="text-center">
                                                             <br>
                                                             <!-- Save changes button-->

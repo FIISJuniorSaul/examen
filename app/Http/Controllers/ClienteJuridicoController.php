@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\ClienteJuridico;
+use App\Models\ClienteNatural;
 use Illuminate\Support\Facades\DB;
 use App\Models\Persona;
 use App\Models\User;
 use App\Models\Vehiculo;
+use Faker\Provider\ar_EG\Person;
 use Illuminate\Http\Request;
 
 class ClienteJuridicoController extends Controller
@@ -56,9 +58,9 @@ class ClienteJuridicoController extends Controller
     public function edit($id)
     {
         try {
-            $chofer = User::get();
-            $vehiculo = Vehiculo::findOrfail($id);
-            return view('admin.operaciones.clientes.editj', compact('vehiculo', 'chofer'));
+            $clientejuridico = ClienteJuridico::findOrfail($id);
+            $persona= Persona::get();
+            return view('admin.operaciones.clientes.editj', compact('persona','clientejuridico'));
         } catch (\Exception $ex) {
             return back()->with('warning', 'ocurrio un error');
         }
@@ -69,7 +71,7 @@ class ClienteJuridicoController extends Controller
             $clientesju = ClienteJuridico::findOrfail($id);
             $clientesju->fill($request->all());
             $clientesju->save();
-            return redirect()->route('clientes.editj')->with('success', 'Cliente jurídico actualizado correctamente.');
+            return redirect()->route('clientes.index')->with('success', 'Cliente jurídico actualizado correctamente.');
         } catch (\Exception $ex) {
             return back()->with('warning', 'ocurrio un error');
         }

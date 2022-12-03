@@ -68,6 +68,8 @@
                                         <td>{{$clienteju->provincia}}</td>
                                         <td>{{$clienteju->distrito}}</td>
                                         <td>{{$clienteju->direccion}}</td>
+                                        <td>{{$clienteju->persona->correo}}</td>
+                                        <td>{{$clienteju->persona->telefono}}</td>
                                         <td>
                                             <form action="{{route('clienteJuridico.destroy',$clienteju->id)}}" method="POST">
                                                 <a class="btn btn-primary btn-sm lift" href="{{route('clienteJuridico.edit',$clienteju->id)}}"><em class='bx bxs-edit-alt'></em></a>
@@ -78,7 +80,6 @@
                                         </td>
                                     </tr>
                                     @endforeach
-
                                 </tbody>
                             </table>
                         </div>

@@ -24,23 +24,14 @@
                                     class='bx bx-trip'></em>{{ __('. New route') }}</a>
                         </div>
                         @if (\Session::has('success'))
-                                    <div class="alert alert-success">
-                                        <ul>
-                                            <li>{{ \Session::get('success') }}</li>
-                                        </ul>
-                                    </div>
-                                @endif
+                            <div class="alert alert-success">
+                                <ul>
+                                    <li>{{ \Session::get('success') }}</li>
+                                </ul>
+                            </div>
+                        @endif
                         <div class="input-group">
                             <div class="col-md-6 col-sm-6">
-                                <div class="d-grid gap-2 d-md-flex justify-content-md-end py-2 px-4">
-                                    <form class="input-group">
-                                        <button class="btn btn-outline-primary btn-sm me-md-2" type="submit"> <em
-                                                class='bx bx-search-alt'></em>{{ __('Search') }}</button>
-                                        <input name="busqueda" class="form-control me-md-2" type="search"
-                                            placeholder="Ingrese ruta" aria-label="Search" autocomplete="off">
-                                    </form>
-                                </div>
-
                                 <div class="card-body py-2">
                                     <table class="table table-sm table-bordered table-hover " id="datatablesSimple">
                                         <thead>
@@ -77,52 +68,41 @@
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6">
-                                <div class="d-grid gap-2 d-md-flex justify-content-md-end py-2 px-4">
-                                    <form class="input-group">
-                                        <button class="btn btn-outline-primary btn-sm me-md-2" type="submit"> <em
-                                                class='bx bx-search-alt'></em>{{ __('Search') }}</button>
-                                        <input name="busqueda" class="form-control me-md-2" type="search"
-                                            placeholder="Ingrese ruta" aria-label="Search" autocomplete="off">
-                                    </form>
-                                </div>
-
                                 <div class="card-body py-2">
-                                    <div class="card-body py-2">
-                                        <table class="table table-sm table-bordered table-hover " id="datatablesSimple">
-                                            <thead>
-                                                <tr>
-                                                    <th>{{ __('DESTINATION DEPARTMEN') }}T</th>
-                                                    <th>{{ __('DESTINATION PROVINCE') }}</th>
-                                                    <th>{{ __('DESTINATION DISTRICT') }}</th>
-                                                    <th>{{ __('ACTIONS') }}</th>
-                                                </tr>
-                                            </thead>
+                                    <table class="table table-sm table-bordered table-hover " id="datatablesSimple">
+                                        <thead>
+                                            <tr>
+                                                <th>{{ __('DESTINATION DEPARTMEN') }}T</th>
+                                                <th>{{ __('DESTINATION PROVINCE') }}</th>
+                                                <th>{{ __('DESTINATION DISTRICT') }}</th>
+                                                <th>{{ __('ACTIONS') }}</th>
+                                            </tr>
+                                        </thead>
 
-                                            <tbody>
-                                                @foreach ($rutas_destinos as $ru_d)
-                                                    <tr>
-                                                        <td>{{ $ru_d->distrito_destino->provincia->departamento->nombre }}
-                                                        </td>
-                                                        <td>{{ $ru_d->distrito_destino->provincia->nombre }}</td>
-                                                        <td>{{ $ru_d->distrito_destino->nombre }}</td>
-                                                        <td>
-                                                            <form action="{{ route('rutasdestino.destroy', $ru_d->id) }}"
-                                                                method="POST">
-                                                                <a class="btn btn-primary btn-sm lift"
-                                                                    href="{{ route('rutasdestino.edit', $ru_d->id) }}"><em
-                                                                        class='bx bxs-edit-alt'></em></a>
-                                                                @csrf
-                                                                @method('DELETE')
-                                                                <button class="btn btn-danger btn-sm lift" type="submit"
-                                                                    onclick="return confirm('seguro que desea eliminar?');"><em
-                                                                        class='bx bx-trash'></em></button>
-                                                            </form>
-                                                        </td>
-                                                    </tr>
-                                                @endforeach
-                                            </tbody>
-                                        </table>
-                                    </div>
+                                        <tbody>
+                                            @foreach ($rutas_destinos as $ru_d)
+                                                <tr>
+                                                    <td>{{ $ru_d->distrito_destino->provincia->departamento->nombre }}
+                                                    </td>
+                                                    <td>{{ $ru_d->distrito_destino->provincia->nombre }}</td>
+                                                    <td>{{ $ru_d->distrito_destino->nombre }}</td>
+                                                    <td>
+                                                        <form action="{{ route('rutasdestino.destroy', $ru_d->id) }}"
+                                                            method="POST">
+                                                            <a class="btn btn-primary btn-sm lift"
+                                                                href="{{ route('rutasdestino.edit', $ru_d->id) }}"><em
+                                                                    class='bx bxs-edit-alt'></em></a>
+                                                            @csrf
+                                                            @method('DELETE')
+                                                            <button class="btn btn-danger btn-sm lift" type="submit"
+                                                                onclick="return confirm('seguro que desea eliminar?');"><em
+                                                                    class='bx bx-trash'></em></button>
+                                                        </form>
+                                                    </td>
+                                                </tr>
+                                            @endforeach
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>

@@ -16,7 +16,7 @@ class ClienteNaturalController extends Controller
     {
         $clientesn = ClienteNatural::get();
 
-        return view('admin.operaciones.clientes.index', compact('clientesn'));
+        return view('admin.operaciones.clientes.indexClienteNatural', compact('clientesn'));
     }
     public function create()
     {
@@ -50,9 +50,8 @@ class ClienteNaturalController extends Controller
     public function edit($id)
     {
         try {
-            $chofer = User::get();
-            $vehiculo = Vehiculo::findOrfail($id);
-            return view('admin.operaciones.vehiculos.edit', compact('vehiculo', 'chofer'));
+            $persona = Vehiculo::findOrfail($id);
+            return view('admin.operaciones.clientes.editn', compact( 'persona'));
         } catch (\Exception $ex) {
             return back()->with('warning', 'ocurrio un error');
         }
@@ -63,7 +62,7 @@ class ClienteNaturalController extends Controller
             $clientesn = ClienteNatural::findOrfail($id);
             $clientesn->fill($request->all());
             $clientesn->save();
-            return redirect()->route('clientes.index')->with('success', 'El usuario ha sido actualizado correctamente.');
+            return redirect()->route('clientes.indexClienteNatural')->with('success', 'El usuario ha sido actualizado correctamente.');
         } catch (\Exception $ex) {
             return back()->with('warning', 'ocurrio un error');
         }

@@ -13,6 +13,6 @@ class ClienteJuridico extends Model
 
     public function persona()
     {
-        return $this->belongsTo('App\Models\Persona');
+        return $this->belongsTo('App\Models\Persona','id');
     }
 }
