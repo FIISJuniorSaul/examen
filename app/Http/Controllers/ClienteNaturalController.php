@@ -12,16 +12,19 @@ use Illuminate\Support\Facades\DB;
 class ClienteNaturalController extends Controller
 {
     //
-    public function index(){
-        $clientesn=ClienteNatural::get();
+    public function index()
+    {
+        $clientesn = ClienteNatural::get();
 
         return view('admin.operaciones.clientes.index', compact('clientesn'));
     }
-    public function create() {
+    public function create()
+    {
         return view('admin.operaciones.clientes.crearPersonaNatural');
-     }
+    }
 
-    public function store(Request $request){
+    public function store(Request $request)
+    {
         try {
             DB::beginTransaction();
 
@@ -44,18 +47,29 @@ class ClienteNaturalController extends Controller
             DB::rollBack();
         }
     }
-    public function edit($id){
-        $chofer= User::get();
-        $vehiculo= Vehiculo::findOrfail($id);
-        return view('admin.operaciones.vehiculos.edit', compact('vehiculo','chofer'));
+    public function edit($id)
+    {
+        try {
+            $chofer = User::get();
+            $vehiculo = Vehiculo::findOrfail($id);
+            return view('admin.operaciones.vehiculos.edit', compact('vehiculo', 'chofer'));
+        } catch (\Exception $ex) {
+            return back()->with('warning', 'ocurrio un error');
+        }
     }
-    public function update(Request $request,$id){
-        $clientesn= ClienteNatural::findOrfail($id);
-        $clientesn->fill($request->all());
-        $clientesn->save();
-        return redirect()->route('clientes.index')->with('success', 'El usuario ha sido actualizado correctamente.');
+    public function update(Request $request, $id)
+    {
+        try {
+            $clientesn = ClienteNatural::findOrfail($id);
+            $clientesn->fill($request->all());
+            $clientesn->save();
+            return redirect()->route('clientes.index')->with('success', 'El usuario ha sido actualizado correctamente.');
+        } catch (\Exception $ex) {
+            return back()->with('warning', 'ocurrio un error');
+        }
     }
-    public function destroy($id){
+    public function destroy($id)
+    {
         $clientesn = ClienteNatural::findOrFail($id);
         $clientesn->delete();
         return redirect()->route('clientes.indexClienteNatural')->with('success', 'El usuario ha sido eliminado correctamente.');

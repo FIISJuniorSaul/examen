@@ -19,35 +19,55 @@ class RutaController extends Controller
     }
     public function create()
     {
-        $vehiculos = Vehiculo::get();
-        $distritos = Distrito::get();
-        return view('admin.operaciones.rutas.createRutas', compact('vehiculos', 'distritos'));
+        try {
+            $vehiculos = Vehiculo::get();
+            $distritos = Distrito::get();
+            return view('admin.operaciones.rutas.createRutas', compact('vehiculos', 'distritos'));
+        } catch (\Exception $ex) {
+            return back()->with('warning', 'ocurrio un error');
+        }
     }
     public function edit_destino($id)
     {
-        $carga = Carga::get();
-        $ruta_destino = RutaDestino::findOrfail($id);
-        return view('admin.operaciones.rutas.ediDestino', compact('carga', 'ruta_destino'));
+        try {
+            $carga = Carga::get();
+            $ruta_destino = RutaDestino::findOrfail($id);
+            return view('admin.operaciones.rutas.ediDestino', compact('carga', 'ruta_destino'));
+        } catch (\Exception $ex) {
+            return back()->with('warning', 'ocurrio un error');
+        }
     }
     public function edit_origen($id)
     {
-        $carga = Carga::get();
-        $ruta_origen = RutaOrigen::findOrfail($id);
-        return view('admin.operaciones.rutas.editOrigen', compact('carga', 'ruta_origen'));
+        try {
+            $carga = Carga::get();
+            $ruta_origen = RutaOrigen::findOrfail($id);
+            return view('admin.operaciones.rutas.editOrigen', compact('carga', 'ruta_origen'));
+        } catch (\Exception $ex) {
+            return back()->with('warning', 'ocurrio un error');
+        }
     }
     public function update_destino(Request $request, $id)
     {
-        $ruta_destino = RutaDestino::findOrfail($id);
-        $ruta_destino->fill($request->all());
-        $ruta_destino->save();
-        return redirect()->route('ruta.index')->with('success', 'La carga ha sido actualizado correctamente.');
+        try {
+            $ruta_destino = RutaDestino::findOrfail($id);
+            $ruta_destino->fill($request->all());
+            $ruta_destino->save();
+            return redirect()->route('ruta.index')->with('success', 'La carga ha sido actualizado correctamente.');
+        } catch (\Exception $ex) {
+            return back()->with('warning', 'ocurrio un error');
+        }
     }
     public function update_origen(Request $request, $id)
     {
-        $ruta_origen = RutaOrigen::findOrfail($id);
-        $ruta_origen->fill($request->all());
-        $ruta_origen->save();
-        return redirect()->route('ruta.index')->with('success', 'La carga ha sido actualizado correctamente.');
+        try {
+            $ruta_origen = RutaOrigen::findOrfail($id);
+            $ruta_origen->fill($request->all());
+            $ruta_origen->save();
+            return redirect()->route('ruta.index')->with('success', 'La carga ha sido actualizado correctamente.');
+        } catch (\Exception $ex) {
+            return back()->with('warning', 'ocurrio un error');
+        }
     }
     public function store(Request $request)
     {

@@ -12,16 +12,19 @@ use Illuminate\Http\Request;
 class ClienteJuridicoController extends Controller
 {
     //
-    public function index(){
-        $clientesju=ClienteJuridico::get();
-       // return ['clientes'=>$clientesju];
+    public function index()
+    {
+        $clientesju = ClienteJuridico::get();
+        // return ['clientes'=>$clientesju];
         return view('admin.operaciones.clientes.index', compact('clientesju'));
     }
-    public function create() {
+    public function create()
+    {
         return view('admin.operaciones.clientes.crear');
-     }
+    }
 
-    public function store(Request $request){
+    public function store(Request $request)
+    {
         try {
             DB::beginTransaction();
 
@@ -51,21 +54,32 @@ class ClienteJuridicoController extends Controller
             DB::rollBack();
         }
     }
-    public function edit($id){
-        $chofer= User::get();
-        $vehiculo= Vehiculo::findOrfail($id);
-        return view('admin.operaciones.clientes.editj', compact('vehiculo','chofer'));
+    public function edit($id)
+    {
+        try {
+            $chofer = User::get();
+            $vehiculo = Vehiculo::findOrfail($id);
+            return view('admin.operaciones.clientes.editj', compact('vehiculo', 'chofer'));
+        } catch (\Exception $ex) {
+            return back()->with('warning', 'ocurrio un error');
+        }
     }
-    public function update(Request $request,$id){
-        $clientesju= ClienteJuridico::findOrfail($id);
-        $clientesju->fill($request->all());
-        $clientesju->save();
-        return redirect()->route('clientes.editj')->with('success', 'Cliente jurídico actualizado correctamente.');
+    public function update(Request $request, $id)
+    {
+        try {
+            $clientesju = ClienteJuridico::findOrfail($id);
+            $clientesju->fill($request->all());
+            $clientesju->save();
+            return redirect()->route('clientes.editj')->with('success', 'Cliente jurídico actualizado correctamente.');
+        } catch (\Exception $ex) {
+            return back()->with('warning', 'ocurrio un error');
+        }
+
     }
-    public function destroy($id){
+    public function destroy($id)
+    {
         $clientesju = ClienteJuridico::findOrFail($id);
         $clientesju->delete();
         return redirect()->route('clientes.index')->with('success', 'Cliente jurídico  eliminado correctamente.');
     }
-
 }

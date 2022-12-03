@@ -15,7 +15,26 @@ class PersonaController extends Controller
     public function create() {
         return view('admin.configuracion.usuario.crear');
      }
-
+     public function edit($id)
+    {
+        try {
+            $persona = Persona::get();
+            return view('admin.operaciones.usuario.edit', compact('persona'));
+        } catch (\Exception $ex) {
+            return back()->with('warning', 'ocurrio un error');
+        }
+    }
+    public function update(Request $request, $id)
+    {
+        try {
+            $persona = Persona::findOrfail($id);
+            $persona->fill($request->all());
+            $persona->save();
+            return redirect()->route('user.index')->with('success', 'La persona ha sido actualizado correctamente.');
+        } catch (\Exception $ex) {
+            return back()->with('warning', 'ocurrio un error');
+        }
+    }
     public function store(Request $request){
         try {
             $persona = new Persona($request->all());
