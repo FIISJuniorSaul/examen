@@ -25,7 +25,13 @@
                                 <a href="{{route('vehiculo.create')}}" class="btn btn-primary lift"><em class='bx bxs-truck'></em>{{ __('New') }} {{ __('Vehicle') }}</a>
                             </div>
                         </div>
-
+                        @if (\Session::has('success'))
+                        <div class="alert alert-success">
+                            <ul>
+                                <li>{{\Session::get('success')}}</li>
+                            </ul>
+                        </div>
+                    @endif
                         <div class="card-body py-2">
                             <table class="table table-sm table-bordered table-hover " id="datatablesSimple">
                                 <thead>

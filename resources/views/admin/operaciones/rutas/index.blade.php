@@ -33,6 +33,13 @@
                                             placeholder="Ingrese ruta" aria-label="Search" autocomplete="off">
                                     </form>
                                 </div>
+                                @if (\Session::has('success'))
+                                    <div class="alert alert-success">
+                                        <ul>
+                                            <li>{{ \Session::get('success') }}</li>
+                                        </ul>
+                                    </div>
+                                @endif
                                 <div class="card-body py-2">
                                     <table class="table table-sm table-bordered table-hover " id="datatablesSimple">
                                         <thead>
@@ -51,11 +58,15 @@
                                                     <td>{{ $ru->distrito_origen->provincia->nombre }}</td>
                                                     <td>{{ $ru->distrito_origen->nombre }}</td>
                                                     <td>
-                                                        <form action="{{route('ruta.destroy',$ru->id)}}" method="POST">
-                                                            <a class="btn btn-primary btn-sm lift" href="{{route('editarOrigen',$ru->id)}}"><em class='bx bxs-edit-alt'></em></a>
+                                                        <form action="{{ route('ruta.destroy', $ru->id) }}" method="POST">
+                                                            <a class="btn btn-primary btn-sm lift"
+                                                                href="{{ route('editarOrigen', $ru->id) }}"><em
+                                                                    class='bx bxs-edit-alt'></em></a>
                                                             @csrf
                                                             @method('DELETE')
-                                                            <button class="btn btn-danger btn-sm lift" type="submit" onclick="return confirm('seguro que desea eliminar?');"><em class='bx bx-trash' ></em></button>
+                                                            <button class="btn btn-danger btn-sm lift" type="submit"
+                                                                onclick="return confirm('seguro que desea eliminar?');"><em
+                                                                    class='bx bx-trash'></em></button>
                                                         </form>
                                                     </td>
                                                 </tr>
@@ -89,15 +100,21 @@
                                             <tbody>
                                                 @foreach ($rutas_destinos as $ru_d)
                                                     <tr>
-                                                        <td>{{ $ru_d->distrito_destino->provincia->departamento->nombre }}</td>
+                                                        <td>{{ $ru_d->distrito_destino->provincia->departamento->nombre }}
+                                                        </td>
                                                         <td>{{ $ru_d->distrito_destino->provincia->nombre }}</td>
                                                         <td>{{ $ru_d->distrito_destino->nombre }}</td>
                                                         <td>
-                                                            <form action="{{route('rutasdestino.destroy',$ru_d->id)}}" method="POST">
-                                                                <a class="btn btn-primary btn-sm lift" href="{{route('rutasdestino.edit',$ru_d->id)}}"><em class='bx bxs-edit-alt'></em></a>
+                                                            <form action="{{ route('rutasdestino.destroy', $ru_d->id) }}"
+                                                                method="POST">
+                                                                <a class="btn btn-primary btn-sm lift"
+                                                                    href="{{ route('rutasdestino.edit', $ru_d->id) }}"><em
+                                                                        class='bx bxs-edit-alt'></em></a>
                                                                 @csrf
                                                                 @method('DELETE')
-                                                                <button class="btn btn-danger btn-sm lift" type="submit" onclick="return confirm('seguro que desea eliminar?');"><em class='bx bx-trash' ></em></button>
+                                                                <button class="btn btn-danger btn-sm lift" type="submit"
+                                                                    onclick="return confirm('seguro que desea eliminar?');"><em
+                                                                        class='bx bx-trash'></em></button>
                                                             </form>
                                                         </td>
                                                     </tr>

@@ -23,7 +23,15 @@
                         </div>
                         <div class="card-body">
                             <br>
-                            <form action="{{route('actualizarOrigen', $ruta_origen)}}" method="post" enctype="multipart/form-data">
+                            @if (\Session::has('warning'))
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        <li>{{ \Session::get('warning') }}</li>
+                                    </ul>
+                                </div>
+                            @endif
+                            <form action="{{ route('actualizarOrigen', $ruta_origen) }}" method="post"
+                                enctype="multipart/form-data">
                                 @method('PUT')
                                 @csrf
                                 <div class="row g-3 px-6">
@@ -36,22 +44,20 @@
                                             <div class="col-md-4">
                                                 <label class="small mb-1"
                                                     for="inputDepartament">{{ __('Department') }}</label>
-                                                <select class="form-control state" name="departamento_origen" >
+                                                <select class="form-control state" name="departamento_origen">
                                                 </select>
-                                                <p>{{$ruta_origen->distrito_origen->provincia->departamento->nombre}}</p>
+                                                <p>{{ $ruta_origen->distrito_origen->provincia->departamento->nombre }}</p>
                                             </div>
                                             <!-- select roles and permissions-->
                                             <div class="col-md-4">
-                                                <label class="small mb-1"
-                                                    for="inputProvince">{{ __('Province') }}</label>
-                                                    <select class="form-control city" name="provincia_origen"></select>
-                                                    <p>{{$ruta_origen->distrito_origen->provincia->nombre }}</p>
+                                                <label class="small mb-1" for="inputProvince">{{ __('Province') }}</label>
+                                                <select class="form-control city" name="provincia_origen"></select>
+                                                <p>{{ $ruta_origen->distrito_origen->provincia->nombre }}</p>
                                             </div>
                                             <div class="col-md-4">
-                                                <label class="small mb-1"
-                                                    for="inputDistrit">{{ __('District') }}</label>
-                                                    <select class="form-control district" name="distritoOrigen_id"></select>
-                                                    <p>{{$ruta_origen->distrito_origen->nombre}}</p>
+                                                <label class="small mb-1" for="inputDistrit">{{ __('District') }}</label>
+                                                <select class="form-control district" name="distritoOrigen_id"></select>
+                                                <p>{{ $ruta_origen->distrito_origen->nombre }}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -59,10 +65,12 @@
                                 <br>
                                 <div class="text-center">
                                     <!-- Save changes button-->
-                                    <button class="btn btn-primary" type="submit"><em class='bx bx-check'></em>{{ __('Save') }}
+                                    <button class="btn btn-primary" type="submit"><em
+                                            class='bx bx-check'></em>{{ __('Save') }}
                                     </button>
                                     <!-- cancel changes button-->
-                                    <button class="btn btn-primary" type="button"><em class='bx bxs-x-circle'></em>{{ __('Cancel') }}
+                                    <button class="btn btn-primary" type="button"><em
+                                            class='bx bxs-x-circle'></em>{{ __('Cancel') }}
                                     </button>
                                 </div>
                             </form>

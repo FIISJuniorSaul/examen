@@ -22,7 +22,13 @@
                             {{ __('Vehicle data') }}
                         </div>
                         <div class="card-body">
-
+                            @if (\Session::has('warning'))
+                            <div class="alert alert-danger">
+                                <ul>
+                                    <li>{{ \Session::get('warning') }}</li>
+                                </ul>
+                            </div>
+                        @endif
 
                             <br>
                             <form action="{{route('vehiculo.store')}}" method="post" enctype="multipart/form-data">

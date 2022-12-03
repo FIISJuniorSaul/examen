@@ -31,6 +31,13 @@
                                         <div class="card mb-4">
                                             <div class="card-header">{{ __('Account details') }}</div>
                                             <div class="card-body">
+                                                @if (\Session::has('warning'))
+                                                    <div class="alert alert-danger">
+                                                        <ul>
+                                                            <li>{{ \Session::get('warning') }}</li>
+                                                        </ul>
+                                                    </div>
+                                                @endif
                                                 <label for="dni">{{ __('To write') }} DNI</label>
                                                 <div class="input-group">
                                                     <input type="number" min="1" max="99999999" id="dni" class="form-control" placeholder="{{ __('Document') }}" />&nbsp;

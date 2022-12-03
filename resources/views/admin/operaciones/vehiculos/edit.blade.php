@@ -23,6 +23,13 @@
                         </div>
                         <div class="card-body">
                             <br>
+                            @if (\Session::has('warning'))
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        <li>{{ \Session::get('warning') }}</li>
+                                    </ul>
+                                </div>
+                            @endif
                             <form action="{{route('vehiculo.update', $vehiculo)}}" method="post" enctype="multipart/form-data">
                                 {{method_field('PATCH')}}
                                 @csrf

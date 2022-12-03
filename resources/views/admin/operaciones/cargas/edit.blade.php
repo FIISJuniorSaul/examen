@@ -23,8 +23,15 @@
                         </div>
                         <div class="card-body">
                             <br>
-                            <form action="{{route('carga.update', $carga)}}" method="post" enctype="multipart/form-data">
-                                {{method_field('PATCH')}}
+                            @if (\Session::has('warning'))
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        <li>{{ \Session::get('warning') }}</li>
+                                    </ul>
+                                </div>
+                            @endif
+                            <form action="{{ route('carga.update', $carga) }}" method="post" enctype="multipart/form-data">
+                                {{ method_field('PATCH') }}
                                 @csrf
                                 <div class="row g-3 px-6">
                                     <h6>{{ __('Additional Cargo Details') }}</h6>
@@ -32,38 +39,39 @@
                                         <div class="col-md-6">
                                             <label class="small mb-1" for="inputDetailsBurden">{{ __('load code') }}</label>
                                             <input class="form-control" id="inputDetailsBurden" name="codigo"
-                                                type="number" placeholder="****"
-                                                value="{{$carga->codigo}}" />
+                                                type="number" placeholder="****" value="{{ $carga->codigo }}" />
                                         </div>
 
                                         <div class="col-md-6">
-                                            <label class="small mb-1" for="inputDetailsBurden">{{ __('Burden cost') }}</label>
-                                            <input class="form-control" id="inputDetailsBurden"
-                                                type="number" placeholder="S/." name="costo"
-                                                value="{{$carga->costo}}" />
+                                            <label class="small mb-1"
+                                                for="inputDetailsBurden">{{ __('Burden cost') }}</label>
+                                            <input class="form-control" id="inputDetailsBurden" type="number"
+                                                placeholder="S/." name="costo" value="{{ $carga->costo }}" />
                                         </div>
                                         <div class="col-md-6">
-                                            <label class="small mb-1" for="inputCostBurden">{{ __('Burden description') }}</label>
-                                            <input class="form-control" id="inputCostBurden"
-                                                type="text" placeholder="" name="descripcion"
-                                                value="{{$carga->descripcion}}" />
+                                            <label class="small mb-1"
+                                                for="inputCostBurden">{{ __('Burden description') }}</label>
+                                            <input class="form-control" id="inputCostBurden" type="text" placeholder=""
+                                                name="descripcion" value="{{ $carga->descripcion }}" />
                                         </div>
                                         <div class="col-md-6">
-                                            <label class="small mb-1" for="inputDetailsBurden">{{ __('Weight of the load') }}</label>
-                                            <input class="form-control" id="inputDetailsBurden"
-                                                type="number" placeholder="***T" name="peso"
-                                                value="{{$carga->peso}}" />
+                                            <label class="small mb-1"
+                                                for="inputDetailsBurden">{{ __('Weight of the load') }}</label>
+                                            <input class="form-control" id="inputDetailsBurden" type="number"
+                                                placeholder="***T" name="peso" value="{{ $carga->peso }}" />
                                         </div>
 
                                         <div class="col-md-6">
                                             <br>
                                             <h6 class="small mb-1" for="inputRol">{{ __('Select vehicle') }}</h6>
-                                            <select id="id_vehiculo" name="vehiculos_id" class="form-control" style="color: #C1BEBE;" >
+                                            <select id="id_vehiculo" name="vehiculos_id" class="form-control"
+                                                style="color: #C1BEBE;">
                                                 <option>{{ __('Select') }}</option>
-                                                @foreach($vehiculo as $vehi)
-                                                <option value="{{ $vehi->id }}" >{{ $vehi->marca}} {{ $vehi->capacidad_carga}} toneladas</option>
-                                            @endforeach
-                                         </select>
+                                                @foreach ($vehiculo as $vehi)
+                                                    <option value="{{ $vehi->id }}">{{ $vehi->marca }}
+                                                        {{ $vehi->capacidad_carga }} toneladas</option>
+                                                @endforeach
+                                            </select>
                                         </div>
                                     </div>
 
@@ -71,11 +79,14 @@
                                 <br>
                                 <div class="text-center">
                                     <!-- Save changes button-->
-                                    <button class="btn btn-primary" type="submit"><em class='bx bx-check'></em>{{ __('Save') }}
+                                    <button class="btn btn-primary" type="submit"><em
+                                            class='bx bx-check'></em>{{ __('Save') }}
                                     </button>
                                     <!-- cancel changes button-->
-                                    <form action="{{route('carga.index')}}" method="POST">
-                                        <a class="btn btn-primary me-md-2" href="{{route('carga.index')}}" onclick="return confirm('seguro que desea cancelar la edicion?');"><em class='bx bxs-left-arrow-square'></em> {{ __('Cancel') }}</a>
+                                    <form action="{{ route('carga.index') }}" method="POST">
+                                        <a class="btn btn-primary me-md-2" href="{{ route('carga.index') }}"
+                                            onclick="return confirm('seguro que desea cancelar la edicion?');"><em
+                                                class='bx bxs-left-arrow-square'></em> {{ __('Cancel') }}</a>
                                         @csrf
                                     </form>
                                 </div>

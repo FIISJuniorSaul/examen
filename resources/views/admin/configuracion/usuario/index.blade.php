@@ -21,6 +21,13 @@
                         <div class="card-header"> {{ __('List of all users') }}
                             <a href="{{route('usuario.create')}}" class="btn btn-primary lift"><em class='bx bxs-user-plus'></em>{{ __('Create user') }}</a>
                         </div>
+                        @if (\Session::has('success'))
+                            <div class="alert alert-success">
+                                <ul>
+                                    <li>{{\Session::get('success')}}</li>
+                                </ul>
+                            </div>
+                        @endif
                         <div class="card-body py-2">
                             <table class="table table-sm table-bordered table-hover " id="datatablesSimple">
                                 <thead>

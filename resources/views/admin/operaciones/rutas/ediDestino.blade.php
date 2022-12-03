@@ -23,7 +23,14 @@
                         </div>
                         <div class="card-body">
                             <br>
-                            <form action="{{route('rutasdestino.store')}}" method="post" enctype="multipart/form-data">
+                            @if (\Session::has('warning'))
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        <li>{{ \Session::get('warning') }}</li>
+                                    </ul>
+                                </div>
+                            @endif
+                            <form action="{{ route('rutasdestino.store') }}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="row g-3 px-6">
                                     <div>
@@ -39,14 +46,12 @@
                                             </div>
                                             <!-- select roles and permissions-->
                                             <div class="col-md-4">
-                                                <label class="small mb-1"
-                                                    for="inputProvince">{{ __('Province') }}</label>
-                                                    <select class="form-control city" name="provincia_origen"></select>
+                                                <label class="small mb-1" for="inputProvince">{{ __('Province') }}</label>
+                                                <select class="form-control city" name="provincia_origen"></select>
                                             </div>
                                             <div class="col-md-4">
-                                                <label class="small mb-1"
-                                                    for="inputDistrit">{{ __('District') }}</label>
-                                                    <select class="form-control district" name="distritoOrigen_id"></select>
+                                                <label class="small mb-1" for="inputDistrit">{{ __('District') }}</label>
+                                                <select class="form-control district" name="distritoOrigen_id"></select>
                                             </div>
 
                                         </div>
@@ -59,28 +64,29 @@
                                             <div class="col-md-4">
                                                 <label class="small mb-1"
                                                     for="inputDepartament">{{ __('Department') }}</label>
-                                                    <select class="form-control state_destino" name="departamento_destino"></select>
+                                                <select class="form-control state_destino"
+                                                    name="departamento_destino"></select>
                                             </div>
                                             <!-- select roles and permissions-->
                                             <div class="col-md-4">
-                                                <label class="small mb-1"
-                                                    for="inputProvince">{{ __('Province') }}</label>
-                                                    <select class="form-control city_destino" name="provincia_destino"></select>
+                                                <label class="small mb-1" for="inputProvince">{{ __('Province') }}</label>
+                                                <select class="form-control city_destino" name="provincia_destino"></select>
                                             </div>
                                             <div class="col-md-4">
-                                                <label class="small mb-1"
-                                                    for="inputDistrit">{{ __('District') }}</label>
-                                                    <select class="form-control district_destino" name="distritoDestino_id"></select>
+                                                <label class="small mb-1" for="inputDistrit">{{ __('District') }}</label>
+                                                <select class="form-control district_destino"
+                                                    name="distritoDestino_id"></select>
                                             </div>
                                             <div class="col-md-4">
                                                 <br>
                                                 <h6 class="small mb-1" for="inputRol">{{ __('Select Vehicle') }}</h6>
                                                 <select id="id_carga" name="vehiculos_id" class="form-control">
                                                     <option>{{ __('Select') }}</option>
-                                                    @foreach($vehiculos as $vehi)
-                                                    <option value="{{ $vehi->id }}" > {{ $vehi->marca}} {{$vehi->capacidad_carga}} Toneladas</option>
+                                                    @foreach ($vehiculos as $vehi)
+                                                        <option value="{{ $vehi->id }}"> {{ $vehi->marca }}
+                                                            {{ $vehi->capacidad_carga }} Toneladas</option>
                                                     @endforeach
-                                             </select>
+                                                </select>
                                             </div>
                                         </div>
                                     </div>
@@ -88,10 +94,12 @@
                                 <br>
                                 <div class="text-center">
                                     <!-- Save changes button-->
-                                    <button class="btn btn-primary" type="submit"><em class='bx bx-check'></em>{{ __('Save') }}
+                                    <button class="btn btn-primary" type="submit"><em
+                                            class='bx bx-check'></em>{{ __('Save') }}
                                     </button>
                                     <!-- cancel changes button-->
-                                    <button class="btn btn-primary" type="button"><em class='bx bxs-x-circle'></em>{{ __('Cancel') }}
+                                    <button class="btn btn-primary" type="button"><em
+                                            class='bx bxs-x-circle'></em>{{ __('Cancel') }}
                                     </button>
                                 </div>
                             </form>

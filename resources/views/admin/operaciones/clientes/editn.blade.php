@@ -39,6 +39,13 @@
                                         <div class="card mb-4">
                                             <div class="card-header">{{ __('Natural customer details') }}</div>
                                             <div class="card-body">
+                                                @if (\Session::has('warning'))
+                                                    <div class="alert alert-danger">
+                                                        <ul>
+                                                            <li>{{ \Session::get('warning') }}</li>
+                                                        </ul>
+                                                    </div>
+                                                @endif
                                                 <label for="dni">{{ __('Enter DNI') }}</label>
                                                 <div class="input-group">
                                                     <input type="number" min="1" max="99999999" id="dni"

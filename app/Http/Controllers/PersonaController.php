@@ -17,9 +17,14 @@ class PersonaController extends Controller
      }
 
     public function store(Request $request){
-        $persona = new Persona($request->all());
-        $persona->save();
-        return redirect()->route('user.index')->with('success', 'El usuario ha sido creado correctamente.');
+        try {
+            $persona = new Persona($request->all());
+            $persona->save();
+            return redirect()->route('user.index')->with('success', 'El usuario ha sido creado correctamente.');
+        } catch (\Exception $ex) {
+            return back()->with('warning', 'ocurrio un error');
+        }
+
     }
     public function destroy($id){
         $persona = Persona::findOrFail($id);
