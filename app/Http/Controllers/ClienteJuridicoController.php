@@ -27,7 +27,6 @@ class ClienteJuridicoController extends Controller
     {
         try {
             DB::beginTransaction();
-
             $persona = new Persona();
             $persona->dni = $request->dni;
             $persona->nombre = $request->nombre;

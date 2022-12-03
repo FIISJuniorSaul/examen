@@ -99,9 +99,6 @@
                                                             <label class="small mb-1" for="inputRol">{{ __('Role') }}</label>
                                                             <select id="id_role" name="idrol" class="form-control">
                                                                 <option>------Seleccionar------</option>
-                                                                @foreach($persona as $role)
-                                                                <option value="{{ $role->id }}">{{ $role->nombre }}</option>
-                                                                @endforeach
                                                          </select>
                                                         </div>
                                                         <div class="col-md-6">

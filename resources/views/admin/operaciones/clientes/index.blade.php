@@ -59,10 +59,30 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach ($clientesju as $clienteju)
+                                    <tr>
+                                        <td>{{$clienteju->ruc}}</td>
+                                        <td>{{$clienteju->razon_social}}</td>
+                                        <td>{{$clienteju->estado}}</td>
+                                        <td>{{$clienteju->departamento}}</td>
+                                        <td>{{$clienteju->provincia}}</td>
+                                        <td>{{$clienteju->distrito}}</td>
+                                        <td>{{$clienteju->direccion}}</td>
+                                        <td>
+                                            <form action="{{route('clienteJuridico.destroy',$clienteju->id)}}" method="POST">
+                                                <a class="btn btn-primary btn-sm lift" href="{{route('clienteJuridico.edit',$clienteju->id)}}"><em class='bx bxs-edit-alt'></em></a>
+                                                @csrf
+                                                @method('DELETE')
+                                                <button class="btn btn-danger btn-sm lift" type="submit" onclick="return confirm('seguro que desea eliminar?');"><em class='bx bx-trash' ></em></button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                    @endforeach
 
                                 </tbody>
                             </table>
                         </div>
+
                     </div>
                 </div>
             </main>

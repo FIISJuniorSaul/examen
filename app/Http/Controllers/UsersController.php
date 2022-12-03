@@ -102,9 +102,7 @@ class UsersController extends Controller
         } catch (Exception $e) {
             DB::rollBack();
         }
-
-
-        return redirect()->route('user.index')->with('success','El usuario se registró con exito');
+        return redirect()->route('user.index')->with('success','El usuario se actualizo con exito');
     }
 
     public function desactivar(Request $request)

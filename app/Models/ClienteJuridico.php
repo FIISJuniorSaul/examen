@@ -11,11 +11,8 @@ class ClienteJuridico extends Model
     protected $table = 'cliente_empresa';
     protected $fillable = ['codigo','ruc', 'razon_social', 'estado', 'direccion','departamento','provincia','distrito'];
 
-    # por modificar
     public function persona()
     {
         return $this->belongsTo('App\Models\Persona');
     }
-
-
 }

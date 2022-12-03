@@ -56,19 +56,26 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach ($clientesn as $clientesn)
                                     <tr>
-                                        <td>202203045</td>
-                                        <td>Fiorela</td>
-                                        <td>Zambrano</td>
-                                        <td>Nazario</td>
-                                        <td>fiorela@gmail.com</td>
-                                        <td>930959507</td>
+                                        <td>{{$clientesn->dni}}</td>
+                                        <td>{{$clientesn->nombre}}</td>
+                                        <td>{{$clientesn->apellido_paterno}}</td>
+                                        <td>{{$clientesn->apellido_materno}}</td>
+                                        <td>{{$clientesn->telefono}}</td>
+                                        <td>{{$clientesn->correo}}</td>
                                         <td>
-
+                                            <form action="{{route('clienteNatural.destroy',$clientesn->id)}}" method="POST">
+                                                <a class="btn btn-primary btn-sm lift" href="{{route('clienteNatural.edit',$clientesn->id)}}"><em class='bx bxs-edit-alt'></em></a>
+                                                @csrf
+                                                @method('DELETE')
+                                                <button class="btn btn-danger btn-sm lift" type="submit" onclick="return confirm('seguro que desea eliminar?');"><em class='bx bx-trash' ></em></button>
+                                            </form>
 
                                         </td>
 
                                     </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
 
