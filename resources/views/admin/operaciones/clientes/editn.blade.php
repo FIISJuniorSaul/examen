@@ -23,10 +23,8 @@
                         </div>
                         <ul class="nav nav-tabs">
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="{{route('clienteJuridico.create')}}">{{ __('Legal Client') }}</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="{{route('clienteNatural.create')}}">{{ __('Natural Client') }}</a>
+                                <a class="nav-link" aria-current="page"
+                                    href="{{ route('clienteJuridico.create') }}">{{ __('Legal Client') }}</a>
                             </li>
                         </ul>
                         <main>
@@ -51,15 +49,18 @@
                                                     <input type="number" min="1" max="99999999" id="dni"
                                                         class="form-control" placeholder="********" />&nbsp;
                                                     <button class="btn btn-primary" id="buscardni" align="right"
-                                                        onClick="consultarDni()"><em class='bx bx-search-alt-2'></em>{{ __('Search') }}</button>
+                                                        onClick="consultarDni()"><em
+                                                            class='bx bx-search-alt-2'></em>{{ __('Search') }}</button>
                                                 </div>
                                                 <div class="col-md-5">
                                                     <small id="mensaje" style="color: red;display: none;font-size: 12pt;">
-                                                        <i class="fa fa-remove"></i> {{ __('The DNI number is not valid.') }}
+                                                        <i class="fa fa-remove"></i>
+                                                        {{ __('The DNI number is not valid.') }}
                                                     </small>
                                                 </div>
-                                                <form action="{{ route('clienteNatural.update', $clientenatural) }}" method="post" enctype="multipart/form-data">
-                                                    {{method_field('PATCH')}}
+                                                <form action="{{ route('clienteNatural.update', $clientenatural) }}"
+                                                    method="post" enctype="multipart/form-data">
+                                                    {{ method_field('PATCH') }}
                                                     @csrf
                                                     <!--search-->
                                                     <div class="d-grid gap-2 d-md-flex justify-content-md-end py-2 px-4">
@@ -67,62 +68,70 @@
                                                     <!-- Form Group (username)-->
                                                     <div class="row gx-3 mb-3">
                                                         <div class="col-md-6">
-                                                            <label class="small mb-1" for="inputCode">{{ __('Code') }}</label>
+                                                            <label class="small mb-1"
+                                                                for="inputCode">{{ __('Code') }}</label>
                                                             <input class="form-control" name="codigo" id="codigo"
-                                                                type="text" placeholder="" value="{{$clientenatural->codigo}}">
+                                                                type="text" placeholder=""
+                                                                value="{{ $clientenatural->codigo }}">
                                                         </div>
                                                         <!-- Form Group (DNI)-->
                                                         <div class="col-md-6">
                                                             <label class="small mb-1" for="inputDNI">DNI</label>
                                                             <input class="form-control" name="dni" id="dni_ciudadano"
-                                                                type="text" placeholder="********" readonly  value="{{$clientenatural->persona->dni}}">
+                                                                type="text" placeholder="********" readonly
+                                                                value="{{ $clientenatural->persona->dni }}">
                                                         </div>
                                                         <!-- Form Group (name)-->
                                                         <div class="col-md-6">
-                                                            <label class="small mb-1" for="inputName">{{ __('Names') }}</label>
+                                                            <label class="small mb-1"
+                                                                for="inputName">{{ __('Names') }}</label>
                                                             <input class="form-control" name="nombre" id="nombres"
-                                                                type="text" placeholder="" readonly  value="{{$clientenatural->persona->nombre}}">
+                                                                type="text" placeholder="" readonly
+                                                                value="{{ $clientenatural->persona->nombre }}">
                                                         </div>
                                                     </div>
                                                     <!-- Form Row-->
                                                     <div class="row gx-3 mb-3">
                                                         <!-- Form Group (last name)-->
                                                         <div class="col-md-6">
-                                                            <label class="small mb-1" for="inputFirstName">{{ __('Fathers last name') }}</label>
+                                                            <label class="small mb-1"
+                                                                for="inputFirstName">{{ __('Fathers last name') }}</label>
                                                             <input class="form-control" name="apellido_paterno"
-                                                                id="apellido_paterno" type="text"
-                                                                placeholder="" readonly  value="{{$clientenatural->persona->apellido_paterno}}">
+                                                                id="apellido_paterno" type="text" placeholder="" readonly
+                                                                value="{{ $clientenatural->persona->apellido_paterno }}">
                                                         </div>
                                                         <!-- Form Group (last name)-->
                                                         <div class="col-md-6">
-                                                            <label class="small mb-1" for="inputLastName">{{ __('Mothers last name') }}</label>
+                                                            <label class="small mb-1"
+                                                                for="inputLastName">{{ __('Mothers last name') }}</label>
                                                             <input class="form-control" name="apellido_materno"
-                                                                id="apellido_materno" type="text"
-                                                                placeholder=" " readonly  value="{{$clientenatural->persona->apellido_materno}}">
+                                                                id="apellido_materno" type="text" placeholder=" "
+                                                                readonly
+                                                                value="{{ $clientenatural->persona->apellido_materno }}">
                                                         </div>
                                                     </div>
                                                     <div class="row gx-3 mb-3">
                                                         <div class="col-md-6">
-                                                            <label class="small mb-1" for="inputEmail">{{ __('E-Mail Address') }}</label>
+                                                            <label class="small mb-1"
+                                                                for="inputEmail">{{ __('E-Mail Address') }}</label>
                                                             <input class="form-control" name="correo" id="inputEmail"
-                                                                type="text" placeholder="example@rayosac.com"  value="{{$clientenatural->persona->correo}}">
+                                                                type="text" placeholder="example@rayosac.com"
+                                                                value="{{ $clientenatural->persona->correo }}">
                                                         </div>
                                                         <div class="col-md-6">
-                                                            <label class="small mb-1" for="inputTelephone">{{ __('Telephone') }}</label>
-                                                            <input class="form-control" name="telefono" id="inputTelephone"
-                                                                type="number" placeholder=""  value="{{$clientenatural->persona->telefono}}">
+                                                            <label class="small mb-1"
+                                                                for="inputTelephone">{{ __('Telephone') }}</label>
+                                                            <input class="form-control" name="telefono"
+                                                                id="inputTelephone" type="number" placeholder=""
+                                                                value="{{ $clientenatural->persona->telefono }}">
                                                         </div>
                                                     </div>
                                                     <!--estado roles y permisos-->
-
-
                                                     <div class="text-center">
                                                         <br>
-                                                        <!-- Save changes button-->
-                                                        <button class="btn btn-primary" type="submit"><em class='bx bx-check'></em>{{ __('Save') }}</button>
-                                                        <!-- cancel changes button-->
-                                                        <form action="{{route('clienteNatural.indexClienteNatural')}}" method="POST">
-                                                            <a class="btn btn-primary me-md-2" href="{{route('clienteNatural.indexClienteNatural')}}" onclick="return confirm('seguro que desea cancelar la edicion?');"><em class='bx bxs-left-arrow-square'></em> {{ __('Cancel') }}</a>
+                                                        <button class="btn btn-primary me-md-2" type="submit"><em class='bx bx-check'></em>{{ __('Save') }}</button>
+                                                        <form action="{{route('clienteNatural.index')}}" method="POST">
+                                                            <a class="btn btn-primary me-md-2" href="{{route('clienteNatural.index')}}" onclick="return confirm('seguro que desea cancelar la edicion?');"><em class='bx bxs-left-arrow-square'></em> {{ __('Cancel') }}</a>
                                                             @csrf
                                                         </form>
                                                     </div>

@@ -30,8 +30,7 @@
                                     </ul>
                                 </div>
                             @endif
-                            <form action="{{ route('actualizarOrigen', $ruta_origen) }}" method="post"
-                                enctype="multipart/form-data">
+                            <form action="{{ route('actualizarOrigen', $ruta_origen) }}" method="post" enctype="multipart/form-data">
                                 @method('PUT')
                                 @csrf
                                 <div class="row g-3 px-6">
@@ -64,14 +63,12 @@
                                 </div>
                                 <br>
                                 <div class="text-center">
-                                    <!-- Save changes button-->
-                                    <button class="btn btn-primary" type="submit"><em
-                                            class='bx bx-check'></em>{{ __('Save') }}
-                                    </button>
-                                    <!-- cancel changes button-->
-                                    <button class="btn btn-primary" type="button"><em
-                                            class='bx bxs-x-circle'></em>{{ __('Cancel') }}
-                                    </button>
+                                    <br>
+                                    <button class="btn btn-primary me-md-2" type="submit"><em class='bx bx-check'></em>{{ __('Save') }}</button>
+                                    <form action="{{route('ruta.index')}}" method="POST">
+                                        <a class="btn btn-primary me-md-2" href="{{route('ruta.index')}}" onclick="return confirm('seguro que desea cancelar la edicion?');"><em class='bx bxs-left-arrow-square'></em> {{ __('Cancel') }}</a>
+                                        @csrf
+                                    </form>
                                 </div>
                             </form>
                         </div>

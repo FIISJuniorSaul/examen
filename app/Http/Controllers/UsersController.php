@@ -71,8 +71,7 @@ class UsersController extends Controller
     {
         $persona = Persona::find($id);
         $user = User::find($id);
-
-        return view('admin.configuracion.usuario.edit', compact('persona','user'));
+        return view('admin.configuracion.usuario.edit', compact('persona','user', 'roles'));
     }
 
     public function update(Request $request)

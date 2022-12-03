@@ -73,7 +73,7 @@ class ClienteJuridicoController extends Controller
             $clientesju->save();
             return redirect()->route('clientes.index')->with('success', 'Cliente jurídico actualizado correctamente.');
         } catch (\Exception $ex) {
-            return back()->with('warning', 'ocurrio un error');
+            return back()->with('warning', 'ocurrio un error j');
         }
 
     }

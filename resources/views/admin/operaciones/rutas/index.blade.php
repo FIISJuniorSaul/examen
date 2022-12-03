@@ -90,7 +90,7 @@
                                                         <form action="{{ route('rutasdestino.destroy', $ru_d->id) }}"
                                                             method="POST">
                                                             <a class="btn btn-primary btn-sm lift"
-                                                                href="{{ route('rutasdestino.edit', $ru_d->id) }}"><em
+                                                                href="{{ route('editarDestino', $ru_d->id) }}"><em
                                                                     class='bx bxs-edit-alt'></em></a>
                                                             @csrf
                                                             @method('DELETE')

@@ -104,11 +104,8 @@
                                 </div>
                             </form>
                         </div>
-
                     </div>
-
                 </div>
-
             </main>
             <footer class="footer-admin mt-auto footer-light">
                 <div class="container-xl px-4">

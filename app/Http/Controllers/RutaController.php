@@ -32,7 +32,7 @@ class RutaController extends Controller
         try {
             $carga = Carga::get();
             $ruta_destino = RutaDestino::findOrfail($id);
-            return view('admin.operaciones.rutas.ediDestino', compact('carga', 'ruta_destino'));
+            return view('admin.operaciones.rutas.editDestino', compact('carga', 'ruta_destino'));
         } catch (\Exception $ex) {
             return back()->with('warning', 'ocurrio un error');
         }

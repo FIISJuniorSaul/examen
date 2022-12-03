@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\ClienteNatural;
 use App\Models\Persona;
-use App\Models\User;
-use App\Models\Vehiculo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -27,7 +25,6 @@ class ClienteNaturalController extends Controller
     {
         try {
             DB::beginTransaction();
-
             $persona = new Persona();
             $persona->dni = $request->dni;
             $persona->nombre = $request->nombre;
@@ -50,8 +47,8 @@ class ClienteNaturalController extends Controller
     public function edit($id)
     {
         try {
-            $clientenatural = ClienteNatural::findOrfail($id);
             $persona = Persona::get();
+            $clientenatural = ClienteNatural::findOrfail($id);
             return view('admin.operaciones.clientes.editn', compact( 'persona','clientenatural'));
         } catch (\Exception $ex) {
             return back()->with('warning', 'ocurrio un error');
@@ -71,7 +68,9 @@ class ClienteNaturalController extends Controller
     public function destroy($id)
     {
         $clientesn = ClienteNatural::findOrFail($id);
+        $persona = Persona::findOrFail($id);
         $clientesn->delete();
+        $persona->delete();
         return redirect()->route('clientes.indexClienteNatural')->with('success', 'El usuario ha sido eliminado correctamente.');
     }
 }

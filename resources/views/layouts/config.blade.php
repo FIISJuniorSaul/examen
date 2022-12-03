@@ -101,14 +101,9 @@
             })
         })()
         </script>
-
-
-
     <script>
         //INTEGRACION DE APPI RENIEC
-
         var Conruc;
-
         consultarDni = function () {
             Conruc = document.getElementById("dni").value;
             consulta = {

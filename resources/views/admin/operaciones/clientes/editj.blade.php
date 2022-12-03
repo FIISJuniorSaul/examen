@@ -26,10 +26,6 @@
                                 <a class="nav-link active" aria-current="page"
                                     href="{{ route('clienteJuridico.create') }}">{{ __('Legal Client') }}</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link"
-                                    href="{{ route('clienteNatural.create') }}">{{ __('Natural Client') }}</a>
-                            </li>
                         </ul>
                         <main>
                             <!-- Main page content-->
@@ -37,17 +33,18 @@
                                 <hr class="mt-0 mb-4" />
                                 <div class="row">
                                     <div class="#">
-                                        <!-- Account details card-->
-                                        <div class="card mb-4">
-                                            <div class="card-header">{{ __('Legal client details') }}</div>
-                                            <div class="card-body">
-                                                @if (\Session::has('warning'))
+                                        @if (\Session::has('warning'))
                                                     <div class="alert alert-danger">
                                                         <ul>
                                                             <li>{{ \Session::get('warning') }}</li>
                                                         </ul>
                                                     </div>
                                                 @endif
+                                        <!-- Account details card-->
+                                        <div class="card mb-4">
+                                            <div class="card-header">{{ __('Legal client details') }}</div>
+                                            <div class="card-body">
+
                                                 <label for="dni">{{ __('Enter RUC') }}</label>
                                                 <div class="input-group">
                                                     <input type="number" min="1" max="99999999999" id="ruc"
@@ -204,12 +201,11 @@
                                                         </div>
                                                         <div class="text-center">
                                                             <br>
-                                                            <!-- Save changes button-->
-                                                            <button class="btn btn-primary" type="submit"><em
-                                                                    class='bx bx-check'></em>{{ __('Save') }}</button>
-                                                            <!-- cancel changes button-->
-                                                            <button class="btn btn-primary" type="submit"><em
-                                                                    class='bx bxs-x-circle'></em>{{ __('Cancel') }}</button>
+                                                            <button class="btn btn-primary me-md-2" type="submit"><em class='bx bx-check'></em>{{ __('Save') }}</button>
+                                                            <form action="{{route('clienteJuridico.index')}}" method="POST">
+                                                                <a class="btn btn-primary me-md-2" href="{{route('clienteJuridico.index')}}" onclick="return confirm('seguro que desea cancelar la edicion?');"><em class='bx bxs-left-arrow-square'></em> {{ __('Cancel') }}</a>
+                                                                @csrf
+                                                            </form>
                                                         </div>
                                                 </form>
                                             </div>

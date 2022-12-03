@@ -114,14 +114,13 @@
                                                         </div>
                                                     </div>
                                                     <!--estado roles y permisos-->
-
                                                     <div class="text-center">
                                                         <br>
-                                                        <!-- Save changes button-->
-                                                        <button class="btn btn-primary" type="submit"><em class='bx bx-check'></em>{{ __('Save') }}</button>
-                                                        <!-- cancel changes button-->
-                                                        <button class="btn btn-primary" type="submit"><em
-                                                                class='bx bxs-x-circle'></em>{{ __('Cancel') }}</button>
+                                                        <button class="btn btn-primary me-md-2" type="submit" onclick="return confirm('estas  apunto de registrar un vehiculo');"><em class='bx bx-check'></em>{{ __('Save') }}</button>
+                                                        <form action="{{route('clienteNatural.index')}}" method="POST">
+                                                            <a class="btn btn-primary me-md-2" href="{{route('clienteNatural.index')}}" onclick="return confirm('seguro que desea cancelar?');"><em class='bx bxs-left-arrow-square'></em> {{ __('Cancel') }}</a>
+                                                            @csrf
+                                                        </form>
                                                     </div>
 
                                                 </form>

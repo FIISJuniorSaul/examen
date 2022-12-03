@@ -46,7 +46,8 @@
                                                         onClick="consultarDni()">{{ __('Search') }}</button>
                                                 </div>
                                                 <form action="{{ route('usuario.update', $user) }}" method="post"
-                                                    enctype="multipart/form-data" {{ method_field('PATCH') }}>
+                                                    enctype="multipart/form-data">
+                                                    {{ method_field('PATCH') }}
                                                     @csrf
                                                     <!--search-->
                                                     <div class="d-grid gap-2 d-md-flex justify-content-md-end py-2 px-4">
@@ -112,8 +113,6 @@
                                                                 for="inputRol">{{ __('Role') }}</label>
                                                             <select id="id_role" name="idrol" class="form-control">
                                                                 <option>------Seleccionar------</option>
-                                                                <option>{{ __('Select') }}</option>
-
                                                             </select>
                                                         </div>
                                                         <div class="col-md-6">

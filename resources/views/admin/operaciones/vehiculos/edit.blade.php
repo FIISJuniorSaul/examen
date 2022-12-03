@@ -86,6 +86,7 @@
                                         <a class="btn btn-primary me-md-2" href="{{route('vehiculo.index')}}" onclick="return confirm('seguro que desea cancelar la edicion?');"><em class='bx bxs-left-arrow-square'></em> {{ __('Cancel') }}</a>
                                         @csrf
                                     </form>
+                                </div>
                             </form>
                         </div>
                     </div>

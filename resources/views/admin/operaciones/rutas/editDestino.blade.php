@@ -30,7 +30,8 @@
                                     </ul>
                                 </div>
                             @endif
-                            <form action="{{ route('rutasdestino.store') }}" method="post" enctype="multipart/form-data">
+                            <form action="{{ route('actualizarDestino', $ruta_destino) }}" method="post" enctype="multipart/form-data">
+                                @method('PUT')
                                 @csrf
                                 <div class="row g-3 px-6">
                                     <div>
@@ -42,73 +43,37 @@
                                             <div class="col-md-4">
                                                 <label class="small mb-1"
                                                     for="inputDepartament">{{ __('Department') }}</label>
-                                                <select class="form-control state" name="departamento_origen"></select>
-                                            </div>
-                                            <!-- select roles and permissions-->
-                                            <div class="col-md-4">
-                                                <label class="small mb-1" for="inputProvince">{{ __('Province') }}</label>
-                                                <select class="form-control city" name="provincia_origen"></select>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <label class="small mb-1" for="inputDistrit">{{ __('District') }}</label>
-                                                <select class="form-control district" name="distritoOrigen_id"></select>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <h6>{{ __('Destination point') }}</h6>
-                                        <!--estado roles y permisos-->
-                                        <div class="row gx-2 mb-2">
-                                            <!-- select Estate-->
-                                            <div class="col-md-4">
-                                                <label class="small mb-1"
-                                                    for="inputDepartament">{{ __('Department') }}</label>
-                                                <select class="form-control state_destino"
-                                                    name="departamento_destino"></select>
-                                            </div>
-                                            <!-- select roles and permissions-->
-                                            <div class="col-md-4">
-                                                <label class="small mb-1" for="inputProvince">{{ __('Province') }}</label>
-                                                <select class="form-control city_destino" name="provincia_destino"></select>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <label class="small mb-1" for="inputDistrit">{{ __('District') }}</label>
-                                                <select class="form-control district_destino"
-                                                    name="distritoDestino_id"></select>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <br>
-                                                <h6 class="small mb-1" for="inputRol">{{ __('Select Vehicle') }}</h6>
-                                                <select id="id_carga" name="vehiculos_id" class="form-control">
-                                                    <option>{{ __('Select') }}</option>
-                                                    @foreach ($vehiculos as $vehi)
-                                                        <option value="{{ $vehi->id }}"> {{ $vehi->marca }}
-                                                            {{ $vehi->capacidad_carga }} Toneladas</option>
-                                                    @endforeach
+                                                <select class="form-control state" name="departamento_destino">
                                                 </select>
+                                                <p>{{ $ruta_destino->distrito_destino->provincia->departamento->nombre }}</p>
+                                            </div>
+                                            <!-- select roles and permissions-->
+                                            <div class="col-md-4">
+                                                <label class="small mb-1" for="inputProvince">{{ __('Province') }}</label>
+                                                <select class="form-control city" name="provincia_destino"></select>
+                                                <p>{{ $ruta_destino->distrito_destino->provincia->nombre }}</p>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="small mb-1" for="inputDistrit">{{ __('District') }}</label>
+                                                <select class="form-control district" name="distritoDestino_id"></select>
+                                                <p>{{ $ruta_destino->distrito_destino->nombre }}</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <br>
                                 <div class="text-center">
-                                    <!-- Save changes button-->
-                                    <button class="btn btn-primary" type="submit"><em
-                                            class='bx bx-check'></em>{{ __('Save') }}
-                                    </button>
-                                    <!-- cancel changes button-->
-                                    <button class="btn btn-primary" type="button"><em
-                                            class='bx bxs-x-circle'></em>{{ __('Cancel') }}
-                                    </button>
+                                    <br>
+                                    <button class="btn btn-primary me-md-2" type="submit"><em class='bx bx-check'></em>{{ __('Save') }}</button>
+                                    <form action="{{route('rutasdestino.index')}}" method="POST">
+                                        <a class="btn btn-primary me-md-2" href="{{route('rutasdestino.index')}}" onclick="return confirm('seguro que desea cancelar la edicion?');"><em class='bx bxs-left-arrow-square'></em> {{ __('Cancel') }}</a>
+                                        @csrf
+                                    </form>
                                 </div>
                             </form>
                         </div>
-
                     </div>
-
                 </div>
-
             </main>
             <footer class="footer-admin mt-auto footer-light">
                 <div class="container-xl px-4">
