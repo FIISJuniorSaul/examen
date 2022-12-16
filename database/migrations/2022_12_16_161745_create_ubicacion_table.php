@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateClienteEmpresaTable extends Migration
+class CreateUbicacionTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,15 @@ class CreateClienteEmpresaTable extends Migration
      */
     public function up()
     {
-        Schema::create('cliente_empresa', function (Blueprint $table) {
-            $table->unsignedBigInteger('id');
-            $table->foreign('id')->references('id')->on('personas')->onDelete('cascade');
-            $table->string('codigo',8)->unique();
-            $table->string('ruc')->unique();
-            $table->string('razon_social');
-            $table->string('estado');
-            $table->string('direccion');
+        Schema::create('ubicacion', function (Blueprint $table) {
+            $table->id();
             $table->string('departamento');
             $table->string('provincia');
             $table->string('distrito');
+            $table->string('referencia');
             $table->timestamps();
+            $table->unsignedBigInteger('incidente_id');
+            $table->foreign('incidente_id')->references('id')->on('incidente')->onDelete('cascade');
         });
     }
 
@@ -35,6 +32,6 @@ class CreateClienteEmpresaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cliente_empresa');
+        Schema::dropIfExists('ubicacion');
     }
 }

@@ -57,12 +57,8 @@
                 <div class="collapse" id="collapseOperation" data-bs-parent="#accordionSidenav">
                     <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPages">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('vehiculo.index')}}"> <em class='bx bxs-truck'></em>{{ __('Vehicles') }}</a>
-
-
-                            <a class="nav-link" href="{{route('carga.index')}}"><em class='bx bxs-package'></em>{{ __('Burdens') }}</a>
-                            <a class="nav-link" href="{{route('ruta.index')}}"><em class='bx bx-trip'></em>{{ __('Routes') }}</a>
-                            <a class="nav-link" href="{{route('clienteJuridico.index')}}"> <em class='bx bx-group'></em>{{ __('Clients') }}</a>
+                            <a class="nav-link" href="{{route('incidente.index')}}"> <em class='bx bxs-truck'></em>{{ __('Incidente') }}</a>
+                            <a class="nav-link" href="{{route('ubicacion.index')}}"><em class='bx bxs-package'></em>{{ __('Ubicacion') }}</a>
                         </li>
                     </nav>
                 </div>

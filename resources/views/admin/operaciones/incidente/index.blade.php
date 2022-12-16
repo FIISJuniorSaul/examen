@@ -10,7 +10,7 @@
                         <div class="row justify-content-center">
                             <div class="col-12 col-xl-auto">
                                 <h1 class="page-title">
-                                    {{ __('VEHICLES') }}
+                                    {{ __('INCIDENTE') }}
                                 </h1>
                             </div>
                         </div>
@@ -19,10 +19,10 @@
                 <div class="page-body page-body-light pt-3 px-2">
                     <div class="card card-header-actions">
                         <div class="card-header">
-                            {{ __('List') }} {{ __('Vehicles') }}
+                            {{ __('List') }} {{ __('incidente') }}
                             <div>
 
-                                <a href="{{route('vehiculo.create')}}" class="btn btn-primary lift"><em class='bx bxs-truck'></em>{{ __('New') }} {{ __('Vehicle') }}</a>
+                                <a href="{{route('incidente.create')}}" class="btn btn-primary lift"><em class='bx bxs-truck'></em>{{ __('New') }} {{ __('incidente') }}</a>
                             </div>
                         </div>
                         @if (\Session::has('success'))
@@ -36,29 +36,25 @@
                             <table class="table table-sm table-bordered table-hover " id="datatablesSimple">
                                 <thead>
                                     <tr>
-                                        <th>{{ __('Type of') }} {{ __('Vehicle') }}</th>
-                                        <th>{{ __('License plate') }}</th>
-                                        <th>{{ __('Brand') }}</th>
-                                        <th>{{ __('Gasoline consumption') }} /gal</th>
-                                        <th>{{ __('Loading capacity') }}/T</th>
-                                        <th>{{ __('Driver') }}</th>
+                                        <th>{{ __('estado') }}</th>
+                                        <th>{{ __('descripcion') }}</th>
+                                        <th>{{ __('valoracion') }}</th>
+                                        <th>{{ __('usuario reportador') }}</th>
                                         <th>{{ __('Actions') }}</th>
 
                                     </tr>
                                 </thead>
 
                                 <tbody>
-                                    @foreach ($vehiculos as $vehi)
+                                    @foreach ($incidente as $in)
                                     <tr>
-                                        <td>{{$vehi->modelo}}</td>
-                                        <td>{{$vehi->placa}}</td>
-                                        <td>{{$vehi->marca}}</td>
-                                        <td>{{$vehi->consumo_gasolina}}</td>
-                                        <td>{{$vehi->capacidad_carga}}</td>
-                                        <td>{{$vehi->user->persona->nombre}}</td>
+                                        <td>{{$in->estado}}</td>
+                                        <td>{{$in->descripcion}}</td>
+                                        <td>{{$in->valoracion}}</td>
+                                        <td>{{$in->User->persona->nombre}}</td>
                                         <td>
-                                            <form action="{{route('vehiculo.destroy',$vehi->id)}}" method="POST">
-                                                <a class="btn btn-primary btn-sm lift" href="{{route('vehiculo.edit',$vehi->id)}}"><em class='bx bxs-edit-alt'></em></a>
+                                            <form action="{{route('incidente.destroy',$in->id)}}" method="POST">
+                                                <a class="btn btn-primary btn-sm lift" href="{{route('incidente.edit',$in->id)}}"><em class='bx bxs-edit-alt'></em></a>
                                                 @csrf
                                                 @method('DELETE')
                                                 <button class="btn btn-danger btn-sm lift" type="submit" onclick="return confirm('seguro que desea eliminar?');"><em class='bx bx-trash' ></em></button>

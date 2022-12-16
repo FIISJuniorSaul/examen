@@ -25,7 +25,7 @@ class UserSeederTable extends Seeder
         for ($i = 0; $i < 3; $i++) {
             DB::table('users')->insert(array(
                 'id' => $persona->id,
-                'usuario' => $faker->randomElement(['Maiz', 'Diego','Jorge']),
+                'usuario' => $faker->randomElement(['bryan@gmail.com', 'Diego@gmail.com','Jorge@gmail.com']),
                 'password' => bcrypt($faker->randomElement(['123456', '123456','123456'])),
                 'condicion' => 1,
                 'idrol' => $rol->id,
